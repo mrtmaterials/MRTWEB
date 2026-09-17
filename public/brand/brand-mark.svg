@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">MRT Materials placeholder brand mark</title>
+  <desc id="desc">An abstract green molecular orbit mark used only as a temporary app icon fallback.</desc>
+  <defs>
+    <linearGradient id="mark-gradient" x1="96" y1="74" x2="423" y2="448" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2FBF84" />
+      <stop offset="1" stop-color="#0E8A5F" />
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="#F4F6F7" />
+  <circle cx="256" cy="256" r="115" fill="none" stroke="url(#mark-gradient)" stroke-width="34" />
+  <path d="M104 304C154 184 300 121 408 194" fill="none" stroke="#0F1A17" stroke-linecap="round" stroke-width="24" />
+  <circle cx="111" cy="304" r="25" fill="#0E8A5F" />
+  <circle cx="408" cy="194" r="25" fill="#2FBF84" />
+  <path d="M196 321V223l60 68 60-68v98" fill="none" stroke="#0F1A17" stroke-linecap="round" stroke-linejoin="round" stroke-width="22" />
+</svg>

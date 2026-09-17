@@ -1,0 +1,9 @@
+---
+description: Code quality
+globs: ["**/*.ts", "**/*.tsx"]
+---
+- Strict TypeScript, no any. Server components by default; "use client" only where needed.
+- Components small, colocated, named exports. Tailwind + cn() helper.
+- next/image with width/height; next/font; no layout shift.
+- Accessibility: semantic landmarks, aria for menus/dialogs, visible focus.
+- No unused deps. Pin versions actually installed; never fabricate package names.

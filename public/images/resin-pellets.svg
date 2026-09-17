@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" fill="none">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1200" y2="800" gradientUnits="userSpaceOnUse"><stop stop-color="#F4F6F7"/><stop offset="1" stop-color="#DDE3E6"/></linearGradient><radialGradient id="pellet"><stop stop-color="#FFF"/><stop offset=".64" stop-color="#D9EEE3"/><stop offset="1" stop-color="#7FBF9D"/></radialGradient></defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <g fill="url(#pellet)" stroke="#0E8A5F" stroke-opacity=".16" stroke-width="2">
+    <circle cx="170" cy="178" r="88"/><circle cx="384" cy="139" r="74"/><circle cx="604" cy="174" r="106"/><circle cx="864" cy="150" r="78"/><circle cx="1056" cy="214" r="102"/><circle cx="248" cy="432" r="112"/><circle cx="501" cy="399" r="84"/><circle cx="736" cy="432" r="121"/><circle cx="1004" cy="452" r="91"/><circle cx="125" cy="716" r="88"/><circle cx="409" cy="674" r="112"/><circle cx="655" cy="681" r="83"/><circle cx="892" cy="676" r="121"/><circle cx="1106" cy="690" r="75"/>
+  </g>
+  <g fill="#FFF" opacity=".76"><circle cx="143" cy="150" r="17"/><circle cx="579" cy="143" r="21"/><circle cx="710" cy="399" r="24"/><circle cx="979" cy="423" r="18"/><circle cx="379" cy="641" r="20"/><circle cx="867" cy="637" r="24"/></g>
+</svg>

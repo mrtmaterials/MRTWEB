@@ -1,0 +1,10 @@
+---
+description: Visual system & motion
+globs: ["app/**", "components/**", "styles/**"]
+---
+- Light, bright, silver + green palette via CSS vars only. No random hex values in components.
+- Prefer whitespace over borders. Tables borderless, green header text.
+- Motion: GSAP ScrollTrigger + Lenis for scroll, Motion for UI. Durations 300-900ms, ease cubic-bezier(0.22,1,0.36,1).
+- Every animated component must handle prefers-reduced-motion and pointer:coarse.
+- Heavy visuals (WebGL) dynamic import, ssr:false, idle-loaded, static fallback.
+- Mono micro-labels for technical feel. Max 2 font families.

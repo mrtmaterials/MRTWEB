@@ -1,0 +1,10 @@
+---
+description: MRT Materials project ground rules
+alwaysApply: true
+---
+- Static Next.js App Router + TS + Tailwind. output: 'export'. No server runtime features.
+- Never invent company facts, certifications, stats, clients, supplier or country links (never mention Australia). Unknown = TODO(owner).
+- All user-facing text comes from i18n dictionaries (en, vi). No hardcoded copy in components.
+- Catalog-driven: products/categories only from data/catalog.ts.
+- Do not ask the user questions; decide using this repo's MASTER PROMPT, log assumptions in TODO.md.
+- After each major step run build + lint and fix.

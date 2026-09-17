@@ -1,0 +1,81 @@
+export const vi = {
+  locale: "vi",
+  nav: {
+    products: "Sản phẩm", industries: "Ngành hàng", about: "Giới thiệu", quality: "Chất lượng", contact: "Liên hệ",
+    requestQuote: "Yêu cầu báo giá", openMenu: "Mở menu sản phẩm", closeMenu: "Đóng menu", skipToContent: "Chuyển đến nội dung",
+  },
+  footer: { privacy: "Chính sách bảo mật", terms: "Điều khoản sử dụng" },
+  common: {
+    exploreProducts: "Khám phá sản phẩm", learnMore: "Tìm hiểu thêm", viewAll: "Xem tất cả sản phẩm", requestQuote: "Yêu cầu báo giá",
+    relatedProducts: "Sản phẩm liên quan", applications: "Ứng dụng tiêu biểu", availableGrades: "Phân hạng hiện có",
+    packaging: "Quy cách đóng gói", specifications: "Thông số", specificationsOnRequest: "Thông số kỹ thuật được cung cấp theo yêu cầu.",
+    documentationOnRequest: "Tài liệu như COA, SDS và TDS được cung cấp theo yêu cầu.", backToProducts: "Quay lại sản phẩm",
+    searchProducts: "Tìm kiếm sản phẩm", noProducts: "Không có sản phẩm phù hợp với tìm kiếm của bạn.", allCategories: "Tất cả danh mục",
+  },
+  catalog: {
+    eyebrow: "[ DANH MỤC ]",
+    title: "Sản phẩm",
+    intro: "Khám phá các nhóm nguyên liệu hiện có hoặc gửi yêu cầu cho một nhu cầu cụ thể.",
+    catalogueLabel: "Danh mục sản phẩm",
+    filterLabel: "Bộ lọc nhóm sản phẩm",
+    item: "Hạng mục",
+    value: "Giá trị",
+  },
+  home: {
+    eyebrow: "MRT Materials / Việt Nam", title: "Nguyên liệu được tìm nguồn với sự chính xác.",
+    summary: "MRT Materials cung cấp nguyên liệu, hóa chất và vật liệu công nghiệp cho các nhà sản xuất tại Việt Nam.",
+    marquee: ["NATRI", "MAGIÊ", "NHỰA PET", "SÁP PARAFFIN", "CHẤT LÀM ĐẶC", "TÌM NGUỒN NGUYÊN LIỆU"],
+    categories: { eyebrow: "[ 01 / DANH MỤC ]", title: "Vật liệu phù hợp với nhu cầu sản xuất thực tế.", body: "Khám phá danh mục hiện có theo từng nhóm nguyên liệu." },
+    industries: { eyebrow: "[ 02 / NGÀNH HÀNG ]", title: "Đồng hành cùng doanh nghiệp sản xuất đa lĩnh vực.", items: ["Thực phẩm bảo vệ sức khỏe & dinh dưỡng", "Thực phẩm & đồ uống", "Mỹ phẩm & chăm sóc cá nhân", "Bao bì nhựa", "Sản xuất công nghiệp"] },
+    process: { eyebrow: "[ 03 / QUY TRÌNH ]", title: "Lộ trình rõ ràng từ nhu cầu đến giao hàng.", steps: [
+      { title: "Tìm nguồn", body: "Quý doanh nghiệp chia sẻ nguyên liệu, ứng dụng và yêu cầu đang cần xem xét." },
+      { title: "Xác minh tài liệu", body: "Chúng tôi phối hợp cung cấp tài liệu và thông tin hiện có để Quý khách đánh giá." },
+      { title: "Báo giá", body: "Quý khách nhận báo giá dựa trên các thông tin đã cung cấp." },
+      { title: "Giao hàng", body: "Chúng tôi phối hợp các bước tiếp theo cho phương án cung ứng đã thống nhất." },
+    ] },
+    why: { eyebrow: "[ 04 / MRT MATERIALS ]", title: "Hỗ trợ tập trung cho từng nhu cầu tìm nguồn.", items: [
+      { title: "Tìm nguồn linh hoạt", body: "Hỗ trợ các vật liệu trong danh mục và nhu cầu cần tìm nguồn riêng." },
+      { title: "Hỗ trợ tài liệu", body: "Có thể phối hợp cung cấp COA, SDS và TDS theo yêu cầu." },
+      { title: "Báo giá kịp thời", body: "Trao đổi rõ ràng về các thông tin cần thiết để chuẩn bị báo giá." },
+      { title: "Phối hợp logistics", body: "Phối hợp thực tế khi đơn hàng tiến đến giai đoạn giao nhận." },
+    ] },
+    featured: { eyebrow: "[ 05 / SẢN PHẨM NỔI BẬT ]", title: "Bắt đầu từ danh mục hiện có." },
+    cta: { title: "Chưa thấy vật liệu Quý khách cần?", body: "Hãy cho chúng tôi biết thông số hoặc yêu cầu — chúng tôi sẽ xem xét nhu cầu tìm nguồn.", button: "Trao đổi nhu cầu" },
+  },
+  industries: {
+    eyebrow: "Ngành hàng", title: "Vật liệu phù hợp với nhu cầu của nhà sản xuất.", intro: "Chúng tôi hỗ trợ trao đổi nhu cầu tìm nguồn trong các lĩnh vực sau.",
+    items: [
+      { title: "Thực phẩm bảo vệ sức khỏe & dinh dưỡng", body: "Nguyên liệu và tá dược phục vụ các hoạt động sản xuất phù hợp.", categories: ["Nguyên liệu thực phẩm & dinh dưỡng"] },
+      { title: "Thực phẩm & đồ uống", body: "Các nguyên liệu được lựa chọn cho ứng dụng sản xuất thực phẩm và đồ uống.", categories: ["Nguyên liệu thực phẩm & dinh dưỡng"] },
+      { title: "Mỹ phẩm & chăm sóc cá nhân", body: "Vật liệu cho yêu cầu công thức và sản xuất liên quan.", categories: ["Nguyên liệu thực phẩm & dinh dưỡng", "Vật liệu công nghiệp & bao bì"] },
+      { title: "Bao bì nhựa", body: "Tìm nguồn nhựa cho chai, thổi khuôn và nhu cầu bao bì.", categories: ["Vật liệu công nghiệp & bao bì"] },
+      { title: "Sản xuất công nghiệp", body: "Vật liệu và hóa chất được xem xét theo nhu cầu sản xuất từng dự án.", categories: ["Vật liệu công nghiệp & bao bì", "Hóa chất"] },
+    ],
+  },
+  about: { eyebrow: "Về MRT Materials", title: "Đối tác tìm nguồn nguyên liệu tại Việt Nam.", body: "MRT Materials kết nối các nhà sản xuất với nguồn nguyên liệu phù hợp cho nhu cầu nguyên liệu, hóa chất và vật liệu công nghiệp.", valuesTitle: "Cách chúng tôi làm việc", values: ["Chất lượng", "Minh bạch", "Phản hồi kịp thời", "Hợp tác dài hạn"] },
+  quality: { eyebrow: "Chất lượng & tuân thủ", title: "Tiếp cận cẩn trọng với thông tin nguyên liệu.", intro: "Chúng tôi hỗ trợ quy trình xem xét thực tế cho từng nhu cầu tìm nguồn.", items: [
+    { title: "Đánh giá nguồn cung", body: "Nguồn cung được xem xét dựa trên yêu cầu đã chia sẻ đối với từng nguyên liệu." },
+    { title: "Tài liệu theo yêu cầu", body: "COA, SDS và TDS hiện có có thể được phối hợp cung cấp để xem xét theo yêu cầu." },
+    { title: "Truy xuất lô hàng", body: "Thông tin lô hàng phù hợp được trao đổi trong phạm vi tài liệu hiện có cho đơn hàng." },
+    { title: "Lưu kho & xử lý", body: "Các lưu ý về lưu kho và xử lý có thể được trao đổi tùy theo yêu cầu nguyên liệu." },
+  ], note: "MRT Materials không đưa ra tuyên bố chứng nhận trên website này. Vui lòng liên hệ để trao đổi yêu cầu về tài liệu của Quý khách." },
+  contact: {
+    eyebrow: "Liên hệ / RFQ", title: "Hãy cho chúng tôi biết nhu cầu của bộ phận sản xuất.", intro: "Vui lòng cung cấp các thông tin hiện có; chúng tôi sẽ xem xét yêu cầu của Quý khách.",
+    sales: "Kinh doanh", accounts: "Kế toán", address: "Địa chỉ", map: "Mở vị trí trên OpenStreetMap", phone: "Điện thoại",
+    form: { company: "Tên công ty", contactPerson: "Người liên hệ", email: "Email", phone: "Điện thoại", country: "Quốc gia", product: "Sản phẩm / nguyên liệu", grade: "Phân hạng / thông số", quantity: "Số lượng & đơn vị", deliveryDate: "Ngày giao hàng dự kiến", message: "Nội dung", submit: "Gửi yêu cầu", required: "Bắt buộc", honeypot: "Không điền vào trường này", fileNote: "Đối với tệp đính kèm hoặc thông số chi tiết, vui lòng gửi về sales@mrtmaterials.com.", success: "Bản nháp email của Quý khách đã sẵn sàng để gửi.", error: "Vui lòng hoàn tất các trường bắt buộc và cung cấp email hợp lệ." },
+  },
+  legal: {
+    privacy: { title: "Chính sách bảo mật", updated: "Cập nhật lần cuối: TODO(owner)", intro: "Thông báo này giải thích cách MRT Materials xử lý thông tin được gửi qua website.", sections: [
+      { title: "Thông tin Quý khách cung cấp", body: "Chúng tôi có thể tiếp nhận thông tin liên hệ và nội dung yêu cầu do Quý khách tự nguyện gửi qua biểu mẫu hoặc email." },
+      { title: "Mục đích sử dụng thông tin", body: "Thông tin được sử dụng để xem xét và phản hồi các yêu cầu kinh doanh, bao gồm yêu cầu báo giá." },
+      { title: "Liên hệ", body: "Vui lòng liên hệ sales@mrtmaterials.com đối với các vấn đề liên quan đến bảo mật." },
+    ] },
+    terms: { title: "Điều khoản sử dụng", updated: "Cập nhật lần cuối: TODO(owner)", intro: "Khi sử dụng website này, Quý khách đồng ý sử dụng thông tin cho mục đích kinh doanh hợp pháp.", sections: [
+      { title: "Thông tin trên website", body: "Thông tin danh mục được cung cấp để tham khảo trong hoạt động kinh doanh. Khả năng cung ứng và tài liệu sẽ được xem xét theo từng yêu cầu." },
+      { title: "Không phải chào bán", body: "Nội dung trên website không cấu thành cam kết chào bán bất kỳ nguyên liệu nào." },
+      { title: "Liên hệ", body: "Vui lòng liên hệ MRT Materials để trao đổi về nhu cầu nguyên liệu cụ thể." },
+    ] },
+  },
+  notFound: { eyebrow: "404", title: "Phân tử này đã trôi ngoài phạm vi.", body: "Trang Quý khách tìm kiếm hiện không khả dụng.", button: "Về trang chủ" },
+  seo: { siteName: "MRT Materials", defaultDescription: "Nguyên liệu, hóa chất và vật liệu công nghiệp cho các nhà sản xuất tại Việt Nam." },
+} as const;

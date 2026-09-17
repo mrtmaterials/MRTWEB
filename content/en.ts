@@ -1,0 +1,81 @@
+export const en = {
+  locale: "en",
+  nav: {
+    products: "Products", industries: "Industries", about: "About", quality: "Quality", contact: "Contact",
+    requestQuote: "Request a Quote", openMenu: "Open products menu", closeMenu: "Close menu", skipToContent: "Skip to content",
+  },
+  footer: { privacy: "Privacy", terms: "Terms of Use" },
+  common: {
+    exploreProducts: "Explore Products", learnMore: "Learn more", viewAll: "View all products", requestQuote: "Request a Quote",
+    relatedProducts: "Related products", applications: "Typical applications", availableGrades: "Available grades",
+    packaging: "Available packaging", specifications: "Specifications", specificationsOnRequest: "Specifications available upon request.",
+    documentationOnRequest: "Documentation such as COA, SDS and TDS is available upon request.", backToProducts: "Back to products",
+    searchProducts: "Search products", noProducts: "No products match your search.", allCategories: "All categories",
+  },
+  catalog: {
+    eyebrow: "[ CATALOGUE ]",
+    title: "Products",
+    intro: "Browse the current material categories or send us a requirement for a specific need.",
+    catalogueLabel: "Product catalogue",
+    filterLabel: "Product category filters",
+    item: "Item",
+    value: "Value",
+  },
+  home: {
+    eyebrow: "MRT Materials / Vietnam", title: "Raw materials & ingredients, sourced with precision.",
+    summary: "MRT Materials supplies ingredients, chemicals and industrial materials to manufacturers across Vietnam.",
+    marquee: ["SODIUM", "MAGNESIUM", "PET RESIN", "PARAFFIN WAX", "THICKENERS", "MATERIAL SOURCING"],
+    categories: { eyebrow: "[ 01 / CATEGORIES ]", title: "Materials for practical manufacturing needs.", body: "Explore the current catalogue by material category." },
+    industries: { eyebrow: "[ 02 / INDUSTRIES ]", title: "Supporting manufacturers across sectors.", items: ["Dietary supplements & nutraceuticals", "Food & beverage", "Cosmetics & personal care", "Plastic packaging", "General manufacturing"] },
+    process: { eyebrow: "[ 03 / HOW WE WORK ]", title: "A clear route from requirement to delivery.", steps: [
+      { title: "Source", body: "Share the material, application and requirement your team is assessing." },
+      { title: "Verify documents", body: "We coordinate available documentation and details for your review." },
+      { title: "Quote", body: "Receive a responsive quotation aligned with the information provided." },
+      { title: "Deliver", body: "We coordinate the next steps for an agreed supply arrangement." },
+    ] },
+    why: { eyebrow: "[ 04 / WHY MRT ]", title: "Focused support for sourcing conversations.", items: [
+      { title: "Flexible sourcing", body: "Support for listed materials and requirements that need to be sourced." },
+      { title: "Documentation support", body: "COA, SDS and TDS documentation can be coordinated upon request." },
+      { title: "Responsive quotations", body: "Clear communication around the details needed to prepare a quote." },
+      { title: "Logistics coordination", body: "Practical coordination as an order moves toward delivery." },
+    ] },
+    featured: { eyebrow: "[ 05 / FEATURED MATERIALS ]", title: "Start with the current catalogue." },
+    cta: { title: "Need a material not listed?", body: "Tell us the specification — we will review your sourcing requirement.", button: "Discuss your requirement" },
+  },
+  industries: {
+    eyebrow: "Industries", title: "Materials aligned with manufacturing needs.", intro: "We support sourcing conversations across the following sectors.",
+    items: [
+      { title: "Dietary supplements & nutraceuticals", body: "Ingredient and excipient requirements for relevant manufacturing operations.", categories: ["Nutraceutical & Food Ingredients"] },
+      { title: "Food & beverage", body: "Selected ingredients for food and beverage manufacturing applications.", categories: ["Nutraceutical & Food Ingredients"] },
+      { title: "Cosmetics & personal care", body: "Materials for formulation and related production requirements.", categories: ["Nutraceutical & Food Ingredients", "Industrial & Packaging Materials"] },
+      { title: "Plastic packaging", body: "Resin sourcing for bottle, blow moulding and packaging requirements.", categories: ["Industrial & Packaging Materials"] },
+      { title: "General manufacturing", body: "Materials and chemicals considered for project-specific manufacturing needs.", categories: ["Industrial & Packaging Materials", "Chemicals"] },
+    ],
+  },
+  about: { eyebrow: "About MRT Materials", title: "A Vietnam-based partner for material sourcing.", body: "MRT Materials connects manufacturers with dependable raw material sources for ingredient, chemical and industrial material requirements.", valuesTitle: "How we work", values: ["Quality", "Transparency", "Responsiveness", "Long-term partnership"] },
+  quality: { eyebrow: "Quality & Compliance", title: "A careful approach to material information.", intro: "We support a practical review process for each sourcing requirement.", items: [
+    { title: "Supplier vetting", body: "Sources are considered against the requirements shared for the relevant material." },
+    { title: "Documentation on request", body: "Available COA, SDS and TDS documentation can be coordinated for review upon request." },
+    { title: "Batch and lot traceability", body: "Relevant batch or lot information is addressed within the documentation available for an order." },
+    { title: "Storage & handling", body: "Storage and handling considerations can be discussed in relation to the material requirement." },
+  ], note: "MRT Materials does not make certification claims on this website. Please contact us with your documentation requirements." },
+  contact: {
+    eyebrow: "Contact / RFQ", title: "Tell us what your production team needs.", intro: "Provide the available requirement details and we will review your request.",
+    sales: "Sales", accounts: "Accounts", address: "Address", map: "Open location in OpenStreetMap", phone: "Phone",
+    form: { company: "Company name", contactPerson: "Contact person", email: "Email", phone: "Phone", country: "Country", product: "Product / material", grade: "Grade / specification", quantity: "Quantity & unit", deliveryDate: "Target delivery date", message: "Message", submit: "Send request", required: "Required", honeypot: "Leave this field empty", fileNote: "For files or detailed specifications, please email sales@mrtmaterials.com.", success: "Your email draft is ready to send.", error: "Please complete the required fields and provide a valid email address." },
+  },
+  legal: {
+    privacy: { title: "Privacy", updated: "Last updated: TODO(owner)", intro: "This notice explains how MRT Materials handles information submitted through this website.", sections: [
+      { title: "Information you provide", body: "We may receive the contact and request details you choose to send through the contact form or by email." },
+      { title: "How information is used", body: "Information is used to review and respond to business enquiries, including requests for quotations." },
+      { title: "Contact", body: "For privacy-related enquiries, contact sales@mrtmaterials.com." },
+    ] },
+    terms: { title: "Terms of Use", updated: "Last updated: TODO(owner)", intro: "By using this website, you agree to use its information for lawful business purposes.", sections: [
+      { title: "Information on this website", body: "Catalogue information is provided for general business reference. Availability and documentation are subject to review for each request." },
+      { title: "No offer", body: "Website content does not constitute a binding offer to supply any material." },
+      { title: "Contact", body: "Contact MRT Materials to discuss a specific material requirement." },
+    ] },
+  },
+  notFound: { eyebrow: "404", title: "This molecule has drifted out of range.", body: "The page you are looking for is not available.", button: "Return home" },
+  seo: { siteName: "MRT Materials", defaultDescription: "Raw materials, ingredients, chemicals and industrial materials for manufacturers in Vietnam." },
+} as const;
