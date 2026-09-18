@@ -20,11 +20,11 @@ export function BrandLogo({
     <Image
       alt="MRT Materials"
       className={className}
-      height={858}
+      height={867}
       priority={priority}
       sizes={sizes}
-      src="/brand/logo-cropped.webp"
-      width={1053}
+      src="/brand/logo-transparent.webp"
+      width={1064}
     />
   );
 }

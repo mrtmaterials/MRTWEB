@@ -8,6 +8,7 @@ import { ButtonLink } from "@/components/ui/button-link";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { categories, products } from "@/data/catalog";
+import { getCategoryKnowledge } from "@/data/knowledge";
 import type { Dictionary, Locale } from "@/lib/i18n";
 
 type HomePageProps = {
@@ -23,7 +24,7 @@ export function HomePage({ dictionary, locale }: HomePageProps) {
   return (
     <>
       <HomeScrollEffects />
-      <section className="relative isolate min-h-[calc(100svh-5rem)] overflow-hidden bg-[var(--ink)] text-white">
+      <section className="relative isolate min-h-[calc(100svh-5.25rem)] overflow-hidden bg-[var(--ink)] text-white">
         <Image
           alt="Quality-control specialist working in a controlled laboratory environment"
           className="hero-media absolute inset-0 h-full w-full object-cover object-[62%_center]"
@@ -34,7 +35,7 @@ export function HomePage({ dictionary, locale }: HomePageProps) {
         />
         <div aria-hidden="true" className="absolute inset-0 bg-[linear-gradient(90deg,rgba(6,20,16,0.98)_0%,rgba(6,20,16,0.92)_42%,rgba(6,20,16,0.42)_72%,rgba(6,20,16,0.12)_100%)] max-lg:bg-[linear-gradient(180deg,rgba(6,20,16,0.78)_0%,rgba(6,20,16,0.92)_64%,rgba(6,20,16,0.98)_100%)]" />
         <div aria-hidden="true" className="film-grain absolute inset-0 opacity-[0.08] mix-blend-soft-light" />
-        <Container className="relative flex min-h-[calc(100svh-5rem)] items-end py-14 sm:py-20 lg:items-center lg:py-24">
+        <Container className="relative flex min-h-[calc(100svh-5.25rem)] items-end py-14 sm:py-20 lg:items-center lg:py-24">
           <div className="relative z-10 max-w-[58rem]">
             <Reveal>
               <p className="font-mono text-xs font-semibold uppercase tracking-[0.22em] text-[var(--accent-mint)]">
@@ -159,6 +160,36 @@ export function HomePage({ dictionary, locale }: HomePageProps) {
                 <p className="mt-3 max-w-lg leading-7 text-white/65">{item.body}</p>
               </Reveal>
             ))}
+          </div>
+        </Container>
+      </section>
+
+      <section className="bg-white py-24 sm:py-32">
+        <Container>
+          <Reveal>
+            <SectionHeading
+              description={locale === "vi" ? "Kiến thức thực tế giúp đội ngũ mua hàng và kỹ thuật chuẩn bị yêu cầu rõ ràng trước khi đánh giá nguồn cung." : "Practical guidance for procurement and technical teams preparing a clear material sourcing brief."}
+              eyebrow={locale === "vi" ? "[ KIẾN THỨC VẬT LIỆU ]" : "[ MATERIAL KNOWLEDGE ]"}
+              title={locale === "vi" ? "Chuẩn bị yêu cầu tốt hơn trước khi báo giá." : "Prepare a better brief before requesting a quote."}
+            />
+          </Reveal>
+          <div className="mt-12 grid gap-5 lg:grid-cols-3">
+            {categories.map((category, index) => {
+              const knowledge = getCategoryKnowledge(category.slug, locale);
+              if (!knowledge) return null;
+              return (
+                <Reveal delay={index * 0.06} key={category.slug}>
+                  <article className="flex h-full flex-col rounded-[var(--radius-card)] border border-[var(--line)] bg-[var(--bg)] p-7 sm:p-8">
+                    <p className="font-mono text-xs font-semibold text-[var(--green-600)]">0{index + 1}</p>
+                    <h3 className="mt-8 font-display text-2xl font-semibold leading-tight tracking-[-0.025em]">{knowledge.title}</h3>
+                    <p className="mt-4 line-clamp-4 leading-7 text-[var(--muted)]">{knowledge.introduction}</p>
+                    <Link className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-[var(--green-600)]" href={path(`/products/${category.slug}`)}>
+                      {common.learnMore}<ArrowUpRight aria-hidden="true" size={16} />
+                    </Link>
+                  </article>
+                </Reveal>
+              );
+            })}
           </div>
         </Container>
       </section>

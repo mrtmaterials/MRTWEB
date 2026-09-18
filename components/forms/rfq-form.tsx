@@ -3,6 +3,8 @@
 import { useState, type FormEvent } from "react";
 import { useSearchParams } from "next/navigation";
 
+import { salesEmail } from "@/data/company";
+
 type FormLabels = {
   company: string;
   contactPerson: string;
@@ -71,7 +73,7 @@ export function RfqForm({ defaultProduct = "", labels, locale }: RfqFormProps) {
       .join("\n");
     const material = String(data.get(labels.product) || initialProduct || "RFQ");
     const subject = locale === "vi" ? `Yêu cầu báo giá — ${material}` : `Request for quote — ${material}`;
-    window.location.href = `mailto:sales@mrtmaterials.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines)}`;
+    window.location.href = `mailto:${salesEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines)}`;
     setStatus("success");
   }
 

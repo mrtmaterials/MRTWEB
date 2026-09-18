@@ -8,6 +8,7 @@ export function pageMetadata(
   title: string,
   description: string,
   pathname = "",
+  image = "/brand/og-card.webp",
 ): Metadata {
   const path = pathname ? `/${pathname.replace(/^\/+/, "")}` : "";
   const canonical = `${company.url}/${locale}${path}`;
@@ -20,6 +21,7 @@ export function pageMetadata(
       languages: {
         en: `${company.url}/en${path}`,
         vi: `${company.url}/vi${path}`,
+        "x-default": `${company.url}/en${path}`,
       },
     },
     openGraph: {
@@ -29,8 +31,13 @@ export function pageMetadata(
       description,
       url: canonical,
       locale: locale === "vi" ? "vi_VN" : "en_US",
-      images: [{ url: `${company.url}/brand/logo.jpg`, width: 1280, height: 960 }],
+      images: [{ url: `${company.url}${image}`, width: 1200, height: 630, alt: `${company.name} — material sourcing in Vietnam` }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [`${company.url}${image}`],
     },
   };
 }
-

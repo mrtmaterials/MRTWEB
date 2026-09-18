@@ -51,7 +51,15 @@ body {
   color: var(--ink);
   overflow-x: clip;
   font-family: var(--font-manrope), Arial, Helvetica, sans-serif;
+  font-synthesis: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+}
+
+.font-mono {
+  letter-spacing: 0.12em;
+  font-variant-ligatures: none;
 }
 
 ::selection { background: var(--accent-mint); color: var(--ink); }
@@ -154,4 +162,15 @@ textarea { font: inherit; }
     transition-duration: 0.01ms !important;
   }
   .category-card:hover { transform: none; }
+}
+
+@media (max-width: 639px) {
+  .hero-word {
+    overflow: visible;
+    letter-spacing: -0.035em;
+  }
+
+  .font-mono {
+    letter-spacing: 0.1em;
+  }
 }

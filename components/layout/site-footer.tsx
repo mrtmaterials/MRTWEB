@@ -16,20 +16,22 @@ type SiteFooterProps = {
   address: string;
   labels: FooterLabels;
   locale: Locale;
+  phone: { display: string; e164: string };
 };
 
-export function SiteFooter({ address, labels, locale }: SiteFooterProps) {
+export function SiteFooter({ address, labels, locale, phone }: SiteFooterProps) {
   const path = (suffix = "") => `/${locale}${suffix}`;
 
   return (
     <footer className="overflow-hidden bg-[var(--ink)] pt-16 text-white sm:pt-20">
       <div className="mx-auto grid max-w-[1440px] gap-12 px-5 sm:px-8 md:grid-cols-[1.2fr_repeat(3,1fr)] lg:px-12">
         <div>
-          <BrandLogo className="h-auto w-40 rounded-lg bg-white p-1" sizes="160px" />
+          <BrandLogo className="h-auto w-44" sizes="176px" />
         </div>
         <address className="not-italic">
           <p className="mb-3 font-mono text-xs uppercase tracking-[0.15em] text-[var(--accent-mint)]">{labels.sales}</p>
           <EmailLink className="break-all text-sm text-white/78 transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--green-400)]" domain="mrtmaterials.com" local="sales" />
+          <a className="mt-3 block text-sm text-white/78 transition-colors hover:text-white" href={`tel:${phone.e164}`}>{phone.display}</a>
         </address>
         <address className="not-italic">
           <p className="mb-3 font-mono text-xs uppercase tracking-[0.15em] text-[var(--accent-mint)]">{labels.accounts}</p>

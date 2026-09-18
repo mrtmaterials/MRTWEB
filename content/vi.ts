@@ -65,12 +65,12 @@ export const vi = {
     form: { company: "Tên công ty", contactPerson: "Người liên hệ", email: "Email", phone: "Điện thoại", country: "Quốc gia", product: "Sản phẩm / nguyên liệu", grade: "Phân hạng / thông số", quantity: "Số lượng & đơn vị", deliveryDate: "Ngày giao hàng dự kiến", message: "Nội dung", submit: "Gửi yêu cầu", required: "Bắt buộc", honeypot: "Không điền vào trường này", fileNote: "Đối với tệp đính kèm hoặc thông số chi tiết, vui lòng gửi về sales@mrtmaterials.com.", success: "Bản nháp email của Quý khách đã sẵn sàng để gửi.", error: "Vui lòng hoàn tất các trường bắt buộc và cung cấp email hợp lệ." },
   },
   legal: {
-    privacy: { title: "Chính sách bảo mật", updated: "Cập nhật lần cuối: TODO(owner)", intro: "Thông báo này giải thích cách MRT Materials xử lý thông tin được gửi qua website.", sections: [
+    privacy: { title: "Chính sách bảo mật", updated: "Cập nhật lần cuối: 18/09/2026", intro: "Thông báo này giải thích cách MRT Materials xử lý thông tin được gửi qua website.", sections: [
       { title: "Thông tin Quý khách cung cấp", body: "Chúng tôi có thể tiếp nhận thông tin liên hệ và nội dung yêu cầu do Quý khách tự nguyện gửi qua biểu mẫu hoặc email." },
       { title: "Mục đích sử dụng thông tin", body: "Thông tin được sử dụng để xem xét và phản hồi các yêu cầu kinh doanh, bao gồm yêu cầu báo giá." },
       { title: "Liên hệ", body: "Vui lòng liên hệ sales@mrtmaterials.com đối với các vấn đề liên quan đến bảo mật." },
     ] },
-    terms: { title: "Điều khoản sử dụng", updated: "Cập nhật lần cuối: TODO(owner)", intro: "Khi sử dụng website này, Quý khách đồng ý sử dụng thông tin cho mục đích kinh doanh hợp pháp.", sections: [
+    terms: { title: "Điều khoản sử dụng", updated: "Cập nhật lần cuối: 18/09/2026", intro: "Khi sử dụng website này, Quý khách đồng ý sử dụng thông tin cho mục đích kinh doanh hợp pháp.", sections: [
       { title: "Thông tin trên website", body: "Thông tin danh mục được cung cấp để tham khảo trong hoạt động kinh doanh. Khả năng cung ứng và tài liệu sẽ được xem xét theo từng yêu cầu." },
       { title: "Không phải chào bán", body: "Nội dung trên website không cấu thành cam kết chào bán bất kỳ nguyên liệu nào." },
       { title: "Liên hệ", body: "Vui lòng liên hệ MRT Materials để trao đổi về nhu cầu nguyên liệu cụ thể." },

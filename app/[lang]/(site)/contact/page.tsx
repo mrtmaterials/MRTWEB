@@ -1,4 +1,4 @@
-import { ExternalLink, Mail, MapPin } from "lucide-react";
+import { ExternalLink, Mail, MapPin, Phone } from "lucide-react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
@@ -33,6 +33,7 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
         <Container className="grid gap-12 lg:grid-cols-[0.72fr_1.28fr]">
           <Reveal className="grid content-start gap-4">
             <div className="rounded-[var(--radius-card)] bg-white p-6"><Mail className="text-[var(--green-600)]" aria-hidden="true" size={21} /><p className="mt-5 font-mono text-xs uppercase tracking-[0.15em] text-[var(--muted)]">{copy.sales}</p><EmailLink className="mt-2 block font-semibold text-[var(--ink)] hover:text-[var(--green-600)]" domain={company.emails.sales[1]} local={company.emails.sales[0]} /></div>
+            <div className="rounded-[var(--radius-card)] bg-white p-6"><Phone className="text-[var(--green-600)]" aria-hidden="true" size={21} /><p className="mt-5 font-mono text-xs uppercase tracking-[0.15em] text-[var(--muted)]">{copy.phone}</p><a className="mt-2 block font-semibold text-[var(--ink)] hover:text-[var(--green-600)]" href={`tel:${company.phone.e164}`}>{company.phone.display}</a></div>
             <div className="rounded-[var(--radius-card)] bg-white p-6"><Mail className="text-[var(--green-600)]" aria-hidden="true" size={21} /><p className="mt-5 font-mono text-xs uppercase tracking-[0.15em] text-[var(--muted)]">{copy.accounts}</p><EmailLink className="mt-2 block font-semibold text-[var(--ink)] hover:text-[var(--green-600)]" domain={company.emails.accounts[1]} local={company.emails.accounts[0]} /></div>
             <div className="rounded-[var(--radius-card)] bg-white p-6"><MapPin className="text-[var(--green-600)]" aria-hidden="true" size={21} /><p className="mt-5 font-mono text-xs uppercase tracking-[0.15em] text-[var(--muted)]">{copy.address}</p><p className="mt-2 leading-7 text-[var(--ink)]">{company.address}</p><a className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-[var(--green-600)]" href={mapUrl} rel="noreferrer" target="_blank">{copy.map}<ExternalLink aria-hidden="true" size={15} /></a></div>
           </Reveal>

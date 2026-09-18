@@ -5,6 +5,7 @@ import { company } from "@/data/company";
 import { locales } from "@/lib/i18n";
 
 export const dynamic = "force-static";
+const lastContentUpdate = new Date("2026-09-18T00:00:00+07:00");
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPaths = ["", "/products", "/industries", "/about", "/quality", "/contact", "/privacy", "/terms"];
@@ -16,12 +17,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [...staticPaths, ...catalogPaths].flatMap((path) =>
     locales.map((locale) => ({
       url: `${company.url}/${locale}${path}`,
+      lastModified: lastContentUpdate,
       changeFrequency: path.includes("/products") ? "weekly" as const : "monthly" as const,
       priority: path === "" ? 1 : path === "/products" ? 0.9 : 0.7,
       alternates: {
         languages: {
           en: `${company.url}/en${path}`,
           vi: `${company.url}/vi${path}`,
+          "x-default": `${company.url}/en${path}`,
         },
       },
     })),

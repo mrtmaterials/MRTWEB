@@ -65,12 +65,12 @@ export const en = {
     form: { company: "Company name", contactPerson: "Contact person", email: "Email", phone: "Phone", country: "Country", product: "Product / material", grade: "Grade / specification", quantity: "Quantity & unit", deliveryDate: "Target delivery date", message: "Message", submit: "Send request", required: "Required", honeypot: "Leave this field empty", fileNote: "For files or detailed specifications, please email sales@mrtmaterials.com.", success: "Your email draft is ready to send.", error: "Please complete the required fields and provide a valid email address." },
   },
   legal: {
-    privacy: { title: "Privacy", updated: "Last updated: TODO(owner)", intro: "This notice explains how MRT Materials handles information submitted through this website.", sections: [
+    privacy: { title: "Privacy", updated: "Last updated: 18 September 2026", intro: "This notice explains how MRT Materials handles information submitted through this website.", sections: [
       { title: "Information you provide", body: "We may receive the contact and request details you choose to send through the contact form or by email." },
       { title: "How information is used", body: "Information is used to review and respond to business enquiries, including requests for quotations." },
       { title: "Contact", body: "For privacy-related enquiries, contact sales@mrtmaterials.com." },
     ] },
-    terms: { title: "Terms of Use", updated: "Last updated: TODO(owner)", intro: "By using this website, you agree to use its information for lawful business purposes.", sections: [
+    terms: { title: "Terms of Use", updated: "Last updated: 18 September 2026", intro: "By using this website, you agree to use its information for lawful business purposes.", sections: [
       { title: "Information on this website", body: "Catalogue information is provided for general business reference. Availability and documentation are subject to review for each request." },
       { title: "No offer", body: "Website content does not constitute a binding offer to supply any material." },
       { title: "Contact", body: "Contact MRT Materials to discuss a specific material requirement." },
