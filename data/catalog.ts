@@ -36,7 +36,7 @@ export const categories: Category[] = [
       en: "Ingredients and functional materials for food, dietary supplement and related manufacturing applications.",
       vi: "Nguyên liệu và vật liệu chức năng phục vụ sản xuất thực phẩm, thực phẩm bảo vệ sức khỏe và các ứng dụng liên quan.",
     },
-    image: "/images/ingredients-powder.svg",
+    image: "/images/editorial/lab-quality.webp",
   },
   {
     slug: "industrial-packaging-materials",
@@ -49,7 +49,7 @@ export const categories: Category[] = [
       en: "Selected materials for plastic packaging, processing and industrial production.",
       vi: "Các vật liệu được lựa chọn cho bao bì nhựa, gia công và sản xuất công nghiệp.",
     },
-    image: "/images/resin-pellets.svg",
+    image: "/images/editorial/warehouse.webp",
   },
   {
     slug: "chemicals",
@@ -59,7 +59,7 @@ export const categories: Category[] = [
       en: "Specialty and commodity chemical sourcing for manufacturing requirements.",
       vi: "Tìm nguồn hóa chất chuyên dụng và hóa chất thông dụng theo yêu cầu sản xuất.",
     },
-    image: "/images/chemistry-molecule.svg",
+    image: "/images/editorial/chemical-plant.webp",
   },
 ];
 
@@ -77,7 +77,7 @@ export const products: Product[] = [
       vi: ["Sản xuất thực phẩm và đồ uống", "Sản xuất thực phẩm bảo vệ sức khỏe", "Hỗ trợ công thức"],
     },
     featured: true,
-    image: "/images/ingredients-powder.svg",
+    image: "/images/editorial/lab-quality.webp",
   },
   {
     slug: "magnesium-salts",
@@ -92,7 +92,7 @@ export const products: Product[] = [
       vi: ["Sản xuất thực phẩm bảo vệ sức khỏe", "Sản xuất thực phẩm", "Hỗ trợ công thức"],
     },
     featured: true,
-    image: "/images/ingredients-powder.svg",
+    image: "/images/editorial/lab-hero.webp",
   },
   {
     slug: "thickeners-stabilisers",
@@ -106,7 +106,7 @@ export const products: Product[] = [
       en: ["Food and beverage manufacturing", "Cosmetics and personal care", "Formulation support"],
       vi: ["Sản xuất thực phẩm và đồ uống", "Mỹ phẩm và chăm sóc cá nhân", "Hỗ trợ công thức"],
     },
-    image: "/images/ingredients-powder.svg",
+    image: "/images/editorial/lab-quality.webp",
   },
   {
     slug: "excipients",
@@ -120,7 +120,7 @@ export const products: Product[] = [
       en: ["Dietary supplement manufacturing", "Formulation support", "Manufacturing trials"],
       vi: ["Sản xuất thực phẩm bảo vệ sức khỏe", "Hỗ trợ công thức", "Thử nghiệm sản xuất"],
     },
-    image: "/images/ingredients-powder.svg",
+    image: "/images/editorial/lab-hero.webp",
   },
   {
     slug: "pet-resin-bottle-grade",
@@ -135,7 +135,7 @@ export const products: Product[] = [
       vi: ["Sản xuất chai", "Bao bì nhựa", "Sản xuất công nghiệp"],
     },
     featured: true,
-    image: "/images/resin-pellets.svg",
+    image: "/images/editorial/container-port.webp",
   },
   {
     slug: "hdpe-resin-blow-moulding",
@@ -149,7 +149,7 @@ export const products: Product[] = [
       en: ["Blow moulding", "Plastic packaging", "General manufacturing"],
       vi: ["Thổi khuôn", "Bao bì nhựa", "Sản xuất công nghiệp"],
     },
-    image: "/images/resin-pellets.svg",
+    image: "/images/editorial/warehouse-forklift.webp",
   },
   {
     slug: "paraffin-wax",
@@ -164,7 +164,7 @@ export const products: Product[] = [
       vi: ["Mỹ phẩm và chăm sóc cá nhân", "Gia công công nghiệp", "Sản xuất công nghiệp"],
     },
     featured: true,
-    image: "/images/resin-pellets.svg",
+    image: "/images/editorial/warehouse.webp",
   },
   {
     slug: "specialty-chemicals-on-request",
@@ -178,7 +178,7 @@ export const products: Product[] = [
       en: ["Manufacturing requirements", "Industrial processing", "Project-based sourcing"],
       vi: ["Nhu cầu sản xuất", "Gia công công nghiệp", "Tìm nguồn theo dự án"],
     },
-    image: "/images/chemistry-molecule.svg",
+    image: "/images/editorial/chemical-plant.webp",
   },
 ];
 

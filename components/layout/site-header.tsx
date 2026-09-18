@@ -35,13 +35,13 @@ export function SiteHeader({ catalog, labels, locale }: SiteHeaderProps) {
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/70 bg-[color:rgba(244,246,247,0.78)] backdrop-blur-xl">
-      <div className="mx-auto flex min-h-20 max-w-[1440px] items-center gap-4 px-5 sm:px-8 lg:px-12">
+      <div className="mx-auto flex min-h-24 max-w-[1440px] items-center gap-4 px-5 sm:px-8 lg:px-12">
         <Link
           aria-label="MRT Materials"
           className="relative z-10 shrink-0 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--green-600)]"
           href={path()}
         >
-          <BrandLogo className="h-[68px] w-[92px] object-contain sm:h-[72px] sm:w-[96px]" priority sizes="96px" />
+          <BrandLogo className="h-[82px] w-[102px] object-contain sm:h-[88px] sm:w-[112px]" priority sizes="112px" />
         </Link>
 
         <nav className="ml-auto hidden items-center gap-1 lg:flex">
