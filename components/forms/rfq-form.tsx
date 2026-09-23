@@ -77,7 +77,10 @@ export function RfqForm({ defaultProduct = "", labels, locale }: RfqFormProps) {
         body: data,
         headers: { Accept: "application/json" },
       });
-      if (!response.ok) throw new Error("Form endpoint rejected the request");
+      const result = await response.json().catch(() => null) as { success?: boolean | string } | null;
+      if (!response.ok || (result?.success !== true && result?.success !== "true")) {
+        throw new Error("Form endpoint rejected the request");
+      }
       form.reset();
       setStatus("success");
     } catch {
