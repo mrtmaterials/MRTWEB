@@ -98,7 +98,7 @@ export function RfqForm({ defaultProduct = "", labels, locale }: RfqFormProps) {
   ];
 
   return (
-    <form action={endpoint} className="grid gap-5 sm:grid-cols-2" encType="multipart/form-data" method="POST" onSubmit={handleSubmit} noValidate>
+    <form action={endpoint} className="grid min-w-0 gap-5 sm:grid-cols-2" encType="multipart/form-data" method="POST" onSubmit={handleSubmit} noValidate>
       <div className="absolute -left-[9999px]" aria-hidden="true">
         <label htmlFor="_honey">{labels.honeypot}</label>
         <input id="_honey" name="_honey" tabIndex={-1} autoComplete="off" />
@@ -111,7 +111,7 @@ export function RfqForm({ defaultProduct = "", labels, locale }: RfqFormProps) {
           </span>
           <input
             autoComplete={field.autoComplete}
-            className="min-h-13 rounded-2xl bg-white px-4 text-base font-normal text-[var(--ink)] ring-1 ring-inset ring-[var(--line)] transition focus:ring-2 focus:ring-[var(--green-600)] focus:outline-none"
+            className="min-h-13 w-full min-w-0 rounded-2xl bg-white px-4 text-base font-normal text-[var(--ink)] ring-1 ring-inset ring-[var(--line)] transition focus:ring-2 focus:ring-[var(--green-600)] focus:outline-none"
             defaultValue={field.defaultValue}
             name={field.name}
             required={field.required}
@@ -121,11 +121,11 @@ export function RfqForm({ defaultProduct = "", labels, locale }: RfqFormProps) {
       ))}
       <label className="grid gap-2 text-sm font-semibold text-[var(--ink)] sm:col-span-2">
         <span>{labels.message}</span>
-        <textarea className="min-h-36 resize-y rounded-2xl bg-white p-4 text-base font-normal text-[var(--ink)] ring-1 ring-inset ring-[var(--line)] transition focus:ring-2 focus:ring-[var(--green-600)] focus:outline-none" defaultValue={initialMessage} name="message" />
+        <textarea className="min-h-36 w-full min-w-0 resize-y rounded-2xl bg-white p-4 text-base font-normal text-[var(--ink)] ring-1 ring-inset ring-[var(--line)] transition focus:ring-2 focus:ring-[var(--green-600)] focus:outline-none" defaultValue={initialMessage} name="message" />
       </label>
       <label className="grid gap-2 text-sm font-semibold text-[var(--ink)] sm:col-span-2">
         <span>{labels.attachment}</span>
-        <input accept={acceptedFiles} className="min-h-13 rounded-2xl bg-white px-4 py-3 text-sm font-normal text-[var(--muted)] ring-1 ring-inset ring-[var(--line)] file:mr-4 file:rounded-full file:border-0 file:bg-[var(--green-50)] file:px-4 file:py-2 file:font-semibold file:text-[var(--green-600)]" multiple name="attachments" type="file" />
+        <input accept={acceptedFiles} className="min-h-13 w-full min-w-0 max-w-full rounded-2xl bg-white px-4 py-3 text-sm font-normal text-[var(--muted)] ring-1 ring-inset ring-[var(--line)] file:mr-4 file:rounded-full file:border-0 file:bg-[var(--green-50)] file:px-4 file:py-2 file:font-semibold file:text-[var(--green-600)]" multiple name="attachments" type="file" />
       </label>
       <p className="text-sm leading-6 text-[var(--muted)] sm:col-span-2">{labels.fileNote}</p>
       <div className="flex flex-wrap items-center gap-4 sm:col-span-2">
