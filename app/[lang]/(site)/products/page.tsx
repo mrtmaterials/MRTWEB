@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
 
 import { ProductsExplorer } from "@/components/catalog/products-explorer";
 import { Container } from "@/components/ui/container";
@@ -87,6 +89,13 @@ export default async function ProductsPage({ params }: PageProps) {
               </article>
             ))}
           </div>
+          <Link
+            className="group mt-8 inline-flex items-center gap-2 border-b border-[var(--accent-mint)] pb-1 font-mono text-xs font-semibold uppercase tracking-[0.12em] text-[var(--accent-mint)]"
+            href={`/${lang}/insights/preparing-a-material-rfq`}
+          >
+            {lang === "vi" ? "Đọc checklist RFQ đầy đủ" : "Read the complete RFQ checklist"}
+            <ArrowUpRight aria-hidden="true" className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" size={15} />
+          </Link>
         </section>
       </Container>
     </div>

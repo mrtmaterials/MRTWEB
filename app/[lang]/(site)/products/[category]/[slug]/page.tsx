@@ -8,6 +8,7 @@ import { ButtonLink } from "@/components/ui/button-link";
 import { Container } from "@/components/ui/container";
 import { getCategory, getProduct, getProductsByCategory, products } from "@/data/catalog";
 import { company } from "@/data/company";
+import { getInsightContent, getRelatedInsights } from "@/data/insights";
 import { getProductKnowledge } from "@/data/knowledge";
 import { getDictionary, isLocale, locales, localize, withLocale } from "@/lib/i18n";
 import { pageMetadata } from "@/lib/seo";
@@ -46,6 +47,7 @@ export default async function ProductPage({ params }: PageProps) {
   const knowledge = getProductKnowledge(slug, lang);
   const quoteHref = `${withLocale(lang, "contact")}?product=${encodeURIComponent(name)}`;
   const related = getProductsByCategory(categorySlug).filter((item) => item.slug !== slug).slice(0, 3);
+  const relatedInsights = getRelatedInsights(categorySlug, 2);
   const productUrl = `${company.url}/${lang}/products/${categorySlug}/${slug}`;
   const productJsonLd = {
     "@context": "https://schema.org",
@@ -161,6 +163,15 @@ export default async function ProductPage({ params }: PageProps) {
             <p className="mt-4 text-sm leading-6 text-[var(--muted)]">{copy.common.documentationOnRequest}</p>
           </div>
         </section>
+
+        {relatedInsights.length ? (
+          <section className="mt-20 border-y border-[var(--line)] py-12">
+            <p className="font-mono text-xs font-semibold uppercase text-[var(--green-600)]">{lang === "vi" ? "Kiến thức liên quan" : "Related insights"}</p>
+            <div className="mt-7 grid gap-7 lg:grid-cols-2">
+              {relatedInsights.map((insight, index) => { const article = getInsightContent(insight, lang); return <Link className="group grid grid-cols-[3rem_1fr_auto] gap-3 border-t border-[var(--ink)] pt-5" href={withLocale(lang, `insights/${insight.slug}`)} key={insight.slug}><span className="font-mono text-xs text-[var(--green-600)]">0{index + 1}</span><div><h3 className="font-display text-xl font-semibold tracking-[-0.025em]">{article.title}</h3><p className="mt-2 line-clamp-2 text-sm leading-6 text-[var(--muted)]">{article.description}</p></div><span aria-hidden="true" className="text-[var(--green-600)]">↗</span></Link>; })}
+            </div>
+          </section>
+        ) : null}
 
         {related.length ? (
           <section className="mt-20">

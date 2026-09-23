@@ -13,7 +13,10 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const { lang } = await params;
   if (!isLocale(lang)) return {};
   const dictionary = getDictionary(lang);
-  return pageMetadata(lang, dictionary.seo.siteName, dictionary.seo.defaultDescription);
+  const title = lang === "vi"
+    ? "Nguyên liệu và vật liệu công nghiệp tại Việt Nam"
+    : "Raw Materials & Industrial Ingredients in Vietnam";
+  return pageMetadata(lang, title, dictionary.seo.defaultDescription);
 }
 
 export default async function Home({ params }: { params: Promise<{ lang: string }> }) {

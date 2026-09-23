@@ -11,6 +11,7 @@ type HeaderLabels = {
   closeMenu: string;
   contact: string;
   industries: string;
+  insights: string;
   openMenu: string;
   products: string;
   quality: string;
@@ -28,6 +29,7 @@ export function SiteHeader({ catalog, labels, locale }: SiteHeaderProps) {
   const navItems = [
     { href: path("/products"), label: labels.products },
     { href: path("/industries"), label: labels.industries },
+    { href: path("/insights"), label: labels.insights },
     { href: path("/about"), label: labels.about },
     { href: path("/quality"), label: labels.quality },
     { href: path("/contact"), label: labels.contact },
@@ -75,7 +77,7 @@ export function SiteHeader({ catalog, labels, locale }: SiteHeaderProps) {
 
         <div className="hidden items-center gap-2 lg:flex">
           <LocaleSwitch locale={locale} />
-          <Link className="inline-flex min-h-11 items-center rounded-full bg-[var(--green-700)] px-4 text-sm font-semibold text-white transition-colors hover:bg-[var(--ink)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--green-600)] focus-visible:ring-offset-2" href={path("/contact")}>
+          <Link className="magnetic-target inline-flex min-h-11 items-center rounded-full bg-[var(--green-700)] px-4 text-sm font-semibold text-white transition-[color,background-color,transform] hover:bg-[var(--ink)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--green-600)] focus-visible:ring-offset-2" href={path("/contact")}>
             {labels.requestQuote}
           </Link>
         </div>

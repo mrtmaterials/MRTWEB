@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
@@ -8,6 +9,7 @@ import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { categories, getCategory, getProductsByCategory } from "@/data/catalog";
 import { company } from "@/data/company";
+import { getInsightContent, getRelatedInsights } from "@/data/insights";
 import { getCategoryKnowledge } from "@/data/knowledge";
 import { getDictionary, isLocale, locales, localize, withLocale } from "@/lib/i18n";
 import { pageMetadata } from "@/lib/seo";
@@ -41,6 +43,7 @@ export default async function CategoryPage({ params }: PageProps) {
   const copy = getDictionary(lang);
   const knowledge = getCategoryKnowledge(slug, lang);
   const categoryProducts = getProductsByCategory(slug);
+  const relatedInsights = getRelatedInsights(slug, 3);
   const categoryName = localize(category.name, lang);
   const categoryUrl = `${company.url}/${lang}/products/${slug}`;
   const structuredData = {
@@ -133,6 +136,18 @@ export default async function CategoryPage({ params }: PageProps) {
                   <p className="mt-4 leading-7 text-[var(--muted)]">{item.answer}</p>
                 </details>
               ))}
+            </div>
+          </section>
+        ) : null}
+
+        {relatedInsights.length ? (
+          <section className="mt-20 border-t border-[var(--ink)] pt-10">
+            <div className="flex flex-wrap items-end justify-between gap-5">
+              <div><p className="font-mono text-xs font-semibold uppercase text-[var(--green-600)]">{lang === "vi" ? "Hướng dẫn liên quan" : "Related guides"}</p><h2 className="mt-4 font-display text-3xl font-semibold tracking-[-0.035em]">{lang === "vi" ? "Đọc sâu hơn trước khi gửi yêu cầu." : "Go deeper before sending an enquiry."}</h2></div>
+              <Link className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--green-600)]" href={withLocale(lang, "insights")}>{lang === "vi" ? "Xem toàn bộ kiến thức" : "View all insights"}<ArrowUpRight aria-hidden="true" size={16} /></Link>
+            </div>
+            <div className="mt-8 grid gap-7 md:grid-cols-3">
+              {relatedInsights.map((insight, index) => { const article = getInsightContent(insight, lang); return <Link className="group border-t border-[var(--line)] pt-5" href={withLocale(lang, `insights/${insight.slug}`)} key={insight.slug}><p className="font-mono text-[10px] text-[var(--green-600)]">0{index + 1} / {article.topic}</p><h3 className="mt-3 font-display text-xl font-semibold leading-tight tracking-[-0.025em]">{article.title}</h3><span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-[var(--green-600)]">{copy.common.learnMore}<ArrowUpRight aria-hidden="true" className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" size={15} /></span></Link>; })}
             </div>
           </section>
         ) : null}

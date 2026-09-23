@@ -7,6 +7,7 @@ import type { Locale } from "@/lib/i18n";
 type FooterLabels = {
   accounts: string;
   address: string;
+  insights: string;
   privacy: string;
   sales: string;
   terms: string;
@@ -43,6 +44,7 @@ export function SiteFooter({ address, labels, locale, phone }: SiteFooterProps) 
         </address>
       </div>
       <div className="mx-auto mt-16 flex max-w-[1440px] flex-wrap items-center gap-x-5 gap-y-2 px-5 text-sm text-white/62 sm:px-8 lg:px-12">
+        <Link className="transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--green-400)]" href={path("/insights")}>{labels.insights}</Link>
         <Link className="transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--green-400)]" href={path("/privacy")}>{labels.privacy}</Link>
         <Link className="transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--green-400)]" href={path("/terms")}>{labels.terms}</Link>
       </div>

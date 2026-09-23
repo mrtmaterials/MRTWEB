@@ -1,10 +1,10 @@
 export const en = {
   locale: "en",
   nav: {
-    products: "Products", industries: "Industries", about: "About", quality: "Quality", contact: "Contact",
+    products: "Products", industries: "Industries", insights: "Insights", about: "About", quality: "Quality", contact: "Contact",
     requestQuote: "Request a Quote", openMenu: "Open products menu", closeMenu: "Close menu", skipToContent: "Skip to content",
   },
-  footer: { privacy: "Privacy", terms: "Terms of Use" },
+  footer: { insights: "Insights", privacy: "Privacy", terms: "Terms of Use" },
   common: {
     exploreProducts: "Explore Products", learnMore: "Learn more", viewAll: "View all products", requestQuote: "Request a Quote",
     relatedProducts: "Related products", applications: "Typical applications", availableGrades: "Available grades",

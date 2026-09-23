@@ -1,10 +1,10 @@
 export const vi = {
   locale: "vi",
   nav: {
-    products: "Sản phẩm", industries: "Ngành hàng", about: "Giới thiệu", quality: "Chất lượng", contact: "Liên hệ",
+    products: "Sản phẩm", industries: "Ngành hàng", insights: "Kiến thức", about: "Giới thiệu", quality: "Chất lượng", contact: "Liên hệ",
     requestQuote: "Yêu cầu báo giá", openMenu: "Mở menu sản phẩm", closeMenu: "Đóng menu", skipToContent: "Chuyển đến nội dung",
   },
-  footer: { privacy: "Chính sách bảo mật", terms: "Điều khoản sử dụng" },
+  footer: { insights: "Kiến thức", privacy: "Chính sách bảo mật", terms: "Điều khoản sử dụng" },
   common: {
     exploreProducts: "Khám phá sản phẩm", learnMore: "Tìm hiểu thêm", viewAll: "Xem tất cả sản phẩm", requestQuote: "Yêu cầu báo giá",
     relatedProducts: "Sản phẩm liên quan", applications: "Ứng dụng tiêu biểu", availableGrades: "Phân hạng hiện có",

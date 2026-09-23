@@ -6,6 +6,7 @@ import { SiteHeader } from "@/components/layout/site-header";
 import { CursorDot } from "@/components/motion/cursor-dot";
 import { LocaleDocument } from "@/components/motion/locale-document";
 import { PageTransition } from "@/components/motion/page-transition";
+import { ScrollProgress } from "@/components/motion/scroll-progress";
 import { SmoothScroll } from "@/components/motion/smooth-scroll";
 import { categories } from "@/data/catalog";
 import { company } from "@/data/company";
@@ -68,6 +69,7 @@ export default async function SiteLayout({ children, params }: { children: React
       <LocaleDocument locale={lang} />
       <SmoothScroll />
       <CursorDot />
+      <ScrollProgress />
       <PageTransition />
       <a className="skip-link" href="#main-content">{dictionary.nav.skipToContent}</a>
       <SiteHeader catalog={categories} labels={dictionary.nav} locale={lang} />
@@ -78,6 +80,7 @@ export default async function SiteLayout({ children, params }: { children: React
           sales: dictionary.contact.sales,
           accounts: dictionary.contact.accounts,
           address: dictionary.contact.address,
+          insights: dictionary.footer.insights,
           privacy: dictionary.footer.privacy,
           terms: dictionary.footer.terms,
         }}

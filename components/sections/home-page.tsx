@@ -4,12 +4,14 @@ import Link from "next/link";
 
 import { Reveal } from "@/components/motion/reveal";
 import { HomeScrollEffects } from "@/components/motion/home-scroll-effects";
+import { MolecularField } from "@/components/motion/molecular-field";
+import { IndustryShowcase } from "@/components/sections/industry-showcase";
 import { ButtonLink } from "@/components/ui/button-link";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { categories, products } from "@/data/catalog";
 import { company, salesEmail } from "@/data/company";
-import { getCategoryKnowledge } from "@/data/knowledge";
+import { getInsightContent, insights } from "@/data/insights";
 import type { Dictionary, Locale } from "@/lib/i18n";
 
 type HomePageProps = {
@@ -95,6 +97,7 @@ export function HomePage({ dictionary, locale }: HomePageProps) {
   const supportingCategories = categories.slice(1);
   const leadProduct = featured[0];
   const supportingProducts = featured.slice(1);
+  const featuredInsights = insights.slice(0, 3);
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -109,7 +112,7 @@ export function HomePage({ dictionary, locale }: HomePageProps) {
     <>
       <script dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd).replace(/</g, "\\u003c") }} type="application/ld+json" />
       <HomeScrollEffects />
-      <section className="relative isolate min-h-[calc(100svh-5.25rem)] overflow-hidden bg-[var(--ink)] text-white">
+      <section className="hero-stage relative isolate min-h-[calc(100svh-5.25rem)] overflow-hidden bg-[var(--ink)] text-white">
         <Image
           alt="Quality-control specialist working in a controlled laboratory environment"
           className="hero-media absolute inset-0 h-full w-full object-cover object-[62%_center]"
@@ -119,6 +122,7 @@ export function HomePage({ dictionary, locale }: HomePageProps) {
           src="/images/editorial/lab-hero.webp"
         />
         <div aria-hidden="true" className="absolute inset-0 bg-[linear-gradient(90deg,rgba(6,20,16,0.98)_0%,rgba(6,20,16,0.92)_42%,rgba(6,20,16,0.42)_72%,rgba(6,20,16,0.12)_100%)] max-lg:bg-[linear-gradient(180deg,rgba(6,20,16,0.78)_0%,rgba(6,20,16,0.92)_64%,rgba(6,20,16,0.98)_100%)]" />
+        <div aria-hidden="true" className="hero-aperture absolute inset-0 hidden mix-blend-screen lg:block" />
         <div aria-hidden="true" className="film-grain absolute inset-0 opacity-[0.08] mix-blend-soft-light" />
         <Container className="relative flex min-h-[calc(100svh-5.25rem)] items-end py-14 sm:py-20 lg:items-center lg:py-24">
           <div className="relative z-10 max-w-[58rem]">
@@ -127,10 +131,10 @@ export function HomePage({ dictionary, locale }: HomePageProps) {
                 {home.eyebrow}
               </p>
             </Reveal>
-            <h1 className="mt-7 max-w-5xl font-display text-[clamp(3.1rem,6.7vw,6.8rem)] font-semibold leading-[0.94] tracking-[-0.06em] text-white">
+            <h1 className="hero-title mt-7 max-w-5xl font-display text-[clamp(3.1rem,6.7vw,6.8rem)] font-semibold leading-[0.94] tracking-[-0.06em] text-white">
               {home.title.split(" ").map((word, index) => (
                 <span className="hero-word mr-[0.2em] inline-block overflow-hidden align-top" key={`${word}-${index}`}>
-                  <span className="inline-block">{word}</span>
+                  <span className="inline-block">{word}</span>{" "}
                 </span>
               ))}
             </h1>
@@ -209,27 +213,13 @@ export function HomePage({ dictionary, locale }: HomePageProps) {
         </Container>
       </section>
 
-      <section className="relative isolate min-h-[46rem] overflow-hidden bg-[var(--ink)] py-24 text-white sm:py-32">
-        <Image alt="Organised industrial warehouse supporting material supply" className="section-photo absolute inset-0 -z-20 h-full w-full object-cover" fill sizes="100vw" src="/images/editorial/warehouse.webp" />
-        <div aria-hidden="true" className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(5,18,14,0.98)_0%,rgba(5,18,14,0.91)_48%,rgba(5,18,14,0.38)_100%)] max-lg:bg-[linear-gradient(180deg,rgba(5,18,14,0.95)_0%,rgba(5,18,14,0.76)_100%)]" />
-        <Container className="grid gap-16 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
-          <Reveal>
-            <SectionHeading className="[&_h2]:!text-white [&_p]:!text-white/65" eyebrow={home.industries.eyebrow} title={home.industries.title} />
-            <p className="mt-8 max-w-md border-l border-[var(--green-400)] pl-5 text-sm leading-7 text-white/62">{locale === "vi" ? "Từ nguyên liệu công thức đến nhựa bao bì và hóa chất theo yêu cầu, mỗi trao đổi bắt đầu từ bối cảnh sản xuất thực tế." : "From formulation inputs to packaging resins and requested chemicals, each conversation starts with the real manufacturing context."}</p>
-          </Reveal>
-          <div className="border-t border-white/25">
-            {home.industries.items.map((item, index) => (
-              <Reveal delay={index * 0.05} key={item}>
-                <Link className="group grid grid-cols-[3rem_1fr_auto] items-center gap-4 border-b border-white/20 py-5 transition-colors hover:border-[var(--green-400)]" href={path("/industries")}>
-                  <span className="font-mono text-xs text-[var(--accent-mint)]">0{index + 1}</span>
-                  <span className="font-display text-xl font-semibold tracking-[-0.02em] sm:text-2xl">{item}</span>
-                  <ArrowUpRight aria-hidden="true" className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" size={19} />
-                </Link>
-              </Reveal>
-            ))}
-          </div>
-        </Container>
-      </section>
+      <IndustryShowcase
+        body={locale === "vi" ? "Từ nguyên liệu công thức đến nhựa bao bì và hóa chất theo yêu cầu, mỗi trao đổi bắt đầu từ bối cảnh sản xuất thực tế." : "From formulation inputs to packaging resins and requested chemicals, each conversation starts with the real manufacturing context."}
+        eyebrow={home.industries.eyebrow}
+        items={home.industries.items}
+        locale={locale}
+        title={home.industries.title}
+      />
 
       <section className="process-section overflow-hidden py-24 sm:py-32">
         <Container className="grid gap-14 lg:grid-cols-[0.72fr_1.28fr]">
@@ -238,11 +228,15 @@ export function HomePage({ dictionary, locale }: HomePageProps) {
             <div className="mt-8 h-1 overflow-hidden rounded-full bg-[var(--line)]"><div className="process-progress h-full w-full origin-left bg-[var(--green-600)]" /></div>
             <p className="mt-7 max-w-sm text-sm leading-7 text-[var(--muted)]">{locale === "vi" ? "Một luồng trao đổi liên tục giúp thông tin kỹ thuật, tài liệu và điều kiện giao hàng không bị tách rời." : "One continuous review keeps technical information, documents and delivery conditions connected."}</p>
           </div>
-          <ol className="border-t border-[var(--ink)]">
+          <ol className="relative border-t border-[var(--ink)]">
+            <svg aria-hidden="true" className="absolute top-0 left-[2.35rem] hidden h-full w-3 overflow-visible lg:block" preserveAspectRatio="none" viewBox="0 0 12 1000">
+              <path d="M6 0 V1000" fill="none" stroke="rgba(15,26,23,0.12)" strokeWidth="1" />
+              <path className="route-path" d="M6 0 V1000" fill="none" pathLength="1" stroke="var(--green-600)" strokeLinecap="round" strokeWidth="2" />
+            </svg>
             {home.process.steps.map((step, index) => (
               <Reveal delay={index * 0.06} key={step.title}>
-                <li className="grid gap-5 border-b border-[var(--line)] py-8 sm:grid-cols-[5.5rem_0.75fr_1fr] sm:items-start sm:gap-7 sm:py-10">
-                  <p className="font-display text-5xl font-semibold tracking-[-0.06em] text-[var(--green-600)]">0{index + 1}</p>
+                <li className="process-step grid gap-5 border-b border-[var(--line)] py-8 sm:grid-cols-[5.5rem_0.75fr_1fr] sm:items-start sm:gap-7 sm:py-10">
+                  <p className="process-number relative z-10 font-display text-5xl font-semibold tracking-[-0.06em] text-[var(--green-600)]">0{index + 1}</p>
                   <h3 className="font-display text-2xl font-semibold tracking-[-0.035em] sm:text-3xl">{step.title}</h3>
                   <p className="max-w-xl leading-7 text-[var(--muted)]">{step.body}</p>
                 </li>
@@ -252,10 +246,11 @@ export function HomePage({ dictionary, locale }: HomePageProps) {
         </Container>
       </section>
 
-      <section className="relative isolate overflow-hidden bg-[var(--green-700)] py-24 text-white sm:py-32">
-        <Image alt="Container port supporting regional material logistics" className="absolute inset-0 -z-20 h-full w-full object-cover" fill sizes="100vw" src="/images/editorial/container-port.webp" />
+      <section className="editorial-wipe relative isolate overflow-hidden bg-[var(--green-700)] py-24 text-white sm:py-32">
+        <Image alt="Container port supporting regional material logistics" className="editorial-media absolute inset-0 -z-20 h-full w-full object-cover" fill sizes="100vw" src="/images/editorial/container-port.webp" />
         <div aria-hidden="true" className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(5,25,20,0.97)_0%,rgba(5,25,20,0.88)_55%,rgba(5,25,20,0.45)_100%)]" />
-        <Container className="grid gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
+        <MolecularField className="pointer-events-none absolute inset-0 z-0 hidden h-full w-full opacity-75 lg:block" />
+        <Container className="relative z-10 grid gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
           <Reveal>
             <p className="font-mono text-xs font-semibold uppercase text-[var(--accent-mint)]">{editorial.corridor.eyebrow}</p>
             <h2 className="mt-5 max-w-2xl font-display text-4xl font-semibold leading-[1.02] tracking-[-0.045em] sm:text-6xl">{editorial.corridor.title}</h2>
@@ -310,16 +305,15 @@ export function HomePage({ dictionary, locale }: HomePageProps) {
             />
           </Reveal>
           <div className="mt-12 grid gap-10 border-t border-[var(--ink)] pt-9 lg:grid-cols-3 lg:gap-0">
-            {categories.map((category, index) => {
-              const knowledge = getCategoryKnowledge(category.slug, locale);
-              if (!knowledge) return null;
+            {featuredInsights.map((insight, index) => {
+              const knowledge = getInsightContent(insight, locale);
               return (
-                <Reveal delay={index * 0.06} key={category.slug}>
+                <Reveal delay={index * 0.06} key={insight.slug}>
                   <article className="flex h-full flex-col lg:border-r lg:border-[var(--line)] lg:px-8 lg:first:pl-0 lg:last:border-0 lg:last:pr-0">
                     <p className="font-mono text-xs font-semibold text-[var(--green-600)]">0{index + 1}</p>
                     <h3 className="mt-7 font-display text-2xl font-semibold leading-tight tracking-[-0.025em]">{knowledge.title}</h3>
-                    <p className="mt-4 line-clamp-4 leading-7 text-[var(--muted)]">{knowledge.introduction}</p>
-                    <Link className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-[var(--green-600)]" href={path(`/products/${category.slug}`)}>
+                    <p className="mt-4 line-clamp-4 leading-7 text-[var(--muted)]">{knowledge.description}</p>
+                    <Link className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-[var(--green-600)]" href={path(`/insights/${insight.slug}`)}>
                       {common.learnMore}<ArrowUpRight aria-hidden="true" size={16} />
                     </Link>
                   </article>
@@ -327,6 +321,7 @@ export function HomePage({ dictionary, locale }: HomePageProps) {
               );
             })}
           </div>
+          <ButtonLink className="mt-10" href={path("/insights")} variant="secondary">{locale === "vi" ? "Xem toàn bộ kiến thức" : "View all insights"}<ArrowRight aria-hidden="true" size={17} /></ButtonLink>
         </Container>
       </section>
 

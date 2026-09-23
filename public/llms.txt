@@ -12,6 +12,17 @@ and chemicals.
 - Product catalogue: https://mrtmaterials.com/en/products
 - Industries served: https://mrtmaterials.com/en/industries
 - Quality and documentation approach: https://mrtmaterials.com/en/quality
+- Material sourcing insights: https://mrtmaterials.com/en/insights
+
+## Practical guides
+
+- Preparing a material RFQ: https://mrtmaterials.com/en/insights/preparing-a-material-rfq
+- COA, TDS and SDS in material review: https://mrtmaterials.com/en/insights/coa-tds-sds-in-material-review
+- Datasheet comparison and production trials: https://mrtmaterials.com/en/insights/datasheet-comparison-to-production-trial
+- Ingredient and excipient sourcing briefs: https://mrtmaterials.com/en/insights/ingredient-excipient-sourcing-brief
+- Packaging resin sourcing: https://mrtmaterials.com/en/insights/packaging-resin-machine-mould-container
+- Chemical sourcing requirements: https://mrtmaterials.com/en/insights/chemical-sourcing-identity-grade-handling
+- Defining a paraffin-wax grade: https://mrtmaterials.com/en/insights/defining-a-paraffin-wax-grade
 
 ## Product categories
 
