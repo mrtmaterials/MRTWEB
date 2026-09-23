@@ -29,7 +29,7 @@ export type ProductKnowledge = {
 const categoryKnowledgeData: Record<string, Localized<CategoryKnowledge>> = {
   "nutraceutical-food-ingredients": {
     en: {
-      title: "Sourcing food and nutraceutical ingredients with a usable specification",
+      title: "Information needed for a food or nutraceutical ingredient enquiry",
       introduction: "A material name alone is rarely enough for a reliable quotation. The intended application, grade, target standard and documentation needs help define which source is suitable for review.",
       sections: [
         { title: "Define the application first", body: "State whether the material is intended for food, beverage, dietary supplement or another process. The end use influences the grade, documentation and performance information that should be reviewed." },
@@ -42,7 +42,7 @@ const categoryKnowledgeData: Record<string, Localized<CategoryKnowledge>> = {
       ],
     },
     vi: {
-      title: "Tìm nguồn nguyên liệu thực phẩm và dinh dưỡng dựa trên yêu cầu rõ ràng",
+      title: "Thông tin cần có khi yêu cầu nguyên liệu thực phẩm và dinh dưỡng",
       introduction: "Chỉ tên nguyên liệu thường chưa đủ để lập báo giá phù hợp. Ứng dụng, cấp chất lượng, tiêu chuẩn mục tiêu và bộ tài liệu cần thiết giúp xác định nguồn hàng phù hợp để xem xét.",
       sections: [
         { title: "Xác định ứng dụng trước", body: "Nêu rõ nguyên liệu dùng cho thực phẩm, đồ uống, thực phẩm bảo vệ sức khỏe hay quy trình khác. Mục đích sử dụng ảnh hưởng đến cấp chất lượng, tài liệu và dữ liệu hiệu năng cần xem xét." },
@@ -57,12 +57,12 @@ const categoryKnowledgeData: Record<string, Localized<CategoryKnowledge>> = {
   },
   "industrial-packaging-materials": {
     en: {
-      title: "Specify industrial and packaging materials around the production process",
+      title: "Information needed for an industrial or packaging material enquiry",
       introduction: "Resin and industrial material selection should connect the required grade to the conversion process, finished article and operating conditions—not only to a generic polymer or material name.",
       sections: [
         { title: "Describe the conversion process", body: "Identify bottle production, blow moulding, extrusion, coating or another process and share the equipment or processing window that materially affects grade selection." },
         { title: "Describe the finished article", body: "Useful details include intended use, colour, clarity, wall or part requirements, contact conditions and any customer-specific performance criteria." },
-        { title: "Confirm supply assumptions", body: "Include trial quantity, routine volume, packaging preference, delivery destination and target schedule so technical and commercial options can be reviewed together." },
+        { title: "State quantity and delivery needs", body: "Include trial quantity, routine volume, packaging preference, delivery destination and target schedule so technical and commercial options can be reviewed together." },
       ],
       faq: [
         { question: "Can MRT Materials help compare a requested resin grade?", answer: "Share the current grade, datasheet or key processing and performance targets. Potential alternatives remain subject to your technical validation and production trial." },
@@ -70,12 +70,12 @@ const categoryKnowledgeData: Record<string, Localized<CategoryKnowledge>> = {
       ],
     },
     vi: {
-      title: "Xác định vật liệu công nghiệp và bao bì theo quy trình sản xuất",
+      title: "Thông tin cần có khi yêu cầu vật liệu công nghiệp và bao bì",
       introduction: "Việc chọn nhựa và vật liệu công nghiệp cần gắn cấp vật liệu với công nghệ gia công, sản phẩm hoàn thiện và điều kiện vận hành, thay vì chỉ dựa vào tên polymer hoặc tên vật liệu chung.",
       sections: [
         { title: "Mô tả công nghệ gia công", body: "Nêu rõ sản xuất chai, thổi khuôn, đùn, phủ hay quy trình khác, cùng thiết bị hoặc cửa sổ gia công có ảnh hưởng đáng kể đến việc chọn grade." },
         { title: "Mô tả sản phẩm hoàn thiện", body: "Thông tin hữu ích gồm mục đích sử dụng, màu sắc, độ trong, yêu cầu thành hoặc chi tiết, điều kiện tiếp xúc và tiêu chí hiệu năng riêng của khách hàng." },
-        { title: "Xác nhận giả định cung ứng", body: "Cung cấp lượng thử nghiệm, nhu cầu định kỳ, quy cách đóng gói, điểm giao và tiến độ mục tiêu để xem xét đồng thời phương án kỹ thuật và thương mại." },
+        { title: "Nêu số lượng và nhu cầu giao hàng", body: "Cung cấp lượng thử nghiệm, nhu cầu định kỳ, quy cách đóng gói, điểm giao và tiến độ mục tiêu để xem xét đồng thời phương án kỹ thuật và thương mại." },
       ],
       faq: [
         { question: "MRT Materials có thể hỗ trợ so sánh grade nhựa không?", answer: "Hãy gửi grade đang dùng, datasheet hoặc các mục tiêu gia công và hiệu năng chính. Mọi phương án thay thế vẫn cần đội ngũ của bạn đánh giá kỹ thuật và thử nghiệm sản xuất." },
@@ -85,7 +85,7 @@ const categoryKnowledgeData: Record<string, Localized<CategoryKnowledge>> = {
   },
   chemicals: {
     en: {
-      title: "Build a chemical sourcing request around identity, grade and safe use",
+      title: "Information needed for a chemical sourcing enquiry",
       introduction: "Chemical enquiries are assessed more effectively when the exact identity, purity or grade, application, annual or trial volume and documentation expectations are provided together.",
       sections: [
         { title: "Confirm chemical identity", body: "Provide the full chemical name and CAS number where available. For blends, include the commercial grade or a reference datasheet to avoid ambiguity." },
@@ -98,7 +98,7 @@ const categoryKnowledgeData: Record<string, Localized<CategoryKnowledge>> = {
       ],
     },
     vi: {
-      title: "Xây dựng yêu cầu tìm nguồn hóa chất theo danh tính, cấp chất lượng và sử dụng an toàn",
+      title: "Thông tin cần có khi yêu cầu tìm nguồn hóa chất",
       introduction: "Yêu cầu hóa chất được xem xét hiệu quả hơn khi cung cấp đồng thời danh tính chính xác, độ tinh khiết hoặc grade, ứng dụng, nhu cầu thử nghiệm hoặc hằng năm và bộ tài liệu mong muốn.",
       sections: [
         { title: "Xác nhận danh tính hóa chất", body: "Cung cấp tên hóa học đầy đủ và số CAS nếu có. Với hỗn hợp, hãy gửi grade thương mại hoặc datasheet tham chiếu để tránh nhầm lẫn." },
@@ -116,13 +116,13 @@ const categoryKnowledgeData: Record<string, Localized<CategoryKnowledge>> = {
 const productKnowledgeData: Record<string, Localized<ProductKnowledge>> = {
   "sodium-salts": {
     en: {
-      title: "How to define a sodium salt requirement",
+      title: "Sodium salts: information to include in an RFQ",
       introduction: "Different sodium salts perform different chemical and functional roles. A useful enquiry identifies the exact salt and connects its quality requirement to the intended formulation or manufacturing process.",
       checklistTitle: "Include in the RFQ",
       checklist: ["Full chemical name and CAS number where available", "Intended application and target grade or standard", "Assay, physical form and any critical impurity limits", "Trial or routine quantity, packaging and delivery location"],
       sections: [
-        { title: "Selection context", body: "State whether the material is being assessed for formulation, processing or another defined function. Solubility, particle characteristics and process compatibility may need review depending on the salt." },
-        { title: "Documentation context", body: "List the COA parameters and supporting documents your quality team needs. Availability and document format depend on the selected material and source." },
+        { title: "Intended use and process", body: "State whether the material is being assessed for formulation, processing or another defined function. Solubility, particle characteristics and process compatibility may need review depending on the salt." },
+        { title: "Documents to request", body: "List the COA parameters and supporting documents your quality team needs. Availability and document format depend on the selected material and source." },
       ],
       faq: [
         { question: "Is one sodium salt interchangeable with another?", answer: "No assumption of interchangeability should be made. Chemical form, composition and functional behaviour differ, so your technical team should approve the exact material." },
@@ -130,13 +130,13 @@ const productKnowledgeData: Record<string, Localized<ProductKnowledge>> = {
       ],
     },
     vi: {
-      title: "Cách xác định yêu cầu đối với muối natri",
+      title: "Muối natri: thông tin cần có trong RFQ",
       introduction: "Các loại muối natri có vai trò hóa học và chức năng khác nhau. Một yêu cầu hữu ích cần nêu đúng loại muối và liên kết yêu cầu chất lượng với công thức hoặc quy trình sản xuất dự kiến.",
       checklistTitle: "Thông tin nên có trong RFQ",
       checklist: ["Tên hóa học đầy đủ và số CAS nếu có", "Ứng dụng dự kiến và grade hoặc tiêu chuẩn mục tiêu", "Hàm lượng, dạng vật lý và giới hạn tạp chất quan trọng", "Số lượng thử nghiệm hoặc định kỳ, đóng gói và điểm giao"],
       sections: [
-        { title: "Bối cảnh lựa chọn", body: "Nêu rõ nguyên liệu được đánh giá cho công thức, gia công hay chức năng xác định khác. Độ tan, đặc tính hạt và khả năng tương thích quy trình có thể cần xem xét tùy loại muối." },
-        { title: "Bối cảnh tài liệu", body: "Liệt kê các chỉ tiêu COA và tài liệu hỗ trợ mà bộ phận chất lượng cần. Khả năng cung cấp và định dạng tài liệu phụ thuộc vật liệu và nguồn hàng được chọn." },
+        { title: "Ứng dụng và quy trình", body: "Nêu rõ nguyên liệu được đánh giá cho công thức, gia công hay chức năng xác định khác. Độ tan, đặc tính hạt và khả năng tương thích quy trình có thể cần xem xét tùy loại muối." },
+        { title: "Tài liệu cần yêu cầu", body: "Liệt kê các chỉ tiêu COA và tài liệu hỗ trợ mà bộ phận chất lượng cần. Khả năng cung cấp và định dạng tài liệu phụ thuộc vật liệu và nguồn hàng được chọn." },
       ],
       faq: [
         { question: "Có thể thay thế một muối natri bằng loại khác không?", answer: "Không nên mặc định có thể thay thế. Dạng hóa học, thành phần và đặc tính chức năng khác nhau, vì vậy đội ngũ kỹ thuật cần phê duyệt đúng vật liệu." },
@@ -146,7 +146,7 @@ const productKnowledgeData: Record<string, Localized<ProductKnowledge>> = {
   },
   "magnesium-salts": {
     en: {
-      title: "How to define a magnesium salt requirement",
+      title: "Magnesium salts: information to include in an RFQ",
       introduction: "The magnesium compound, elemental magnesium contribution and intended use are separate specification questions. Identifying all three helps avoid comparing materials that only share a broad category name.",
       checklistTitle: "Include in the RFQ",
       checklist: ["Exact magnesium compound and reference standard", "Target application and required grade", "Assay, elemental magnesium target and relevant limits", "Quantity, packaging preference and documentation list"],
@@ -160,7 +160,7 @@ const productKnowledgeData: Record<string, Localized<ProductKnowledge>> = {
       ],
     },
     vi: {
-      title: "Cách xác định yêu cầu đối với muối magiê",
+      title: "Muối magiê: thông tin cần có trong RFQ",
       introduction: "Hợp chất magiê, hàm lượng magiê nguyên tố và mục đích sử dụng là ba câu hỏi kỹ thuật riêng. Xác định đủ ba yếu tố giúp tránh so sánh các vật liệu chỉ giống nhau ở tên nhóm chung.",
       checklistTitle: "Thông tin nên có trong RFQ",
       checklist: ["Hợp chất magiê chính xác và tiêu chuẩn tham chiếu", "Ứng dụng mục tiêu và grade cần thiết", "Hàm lượng, mục tiêu magiê nguyên tố và các giới hạn liên quan", "Số lượng, đóng gói ưu tiên và danh sách tài liệu"],
@@ -176,7 +176,7 @@ const productKnowledgeData: Record<string, Localized<ProductKnowledge>> = {
   },
   "thickeners-stabilisers": {
     en: {
-      title: "How to brief a thickener or stabiliser requirement",
+      title: "Thickeners and stabilisers: application and process details",
       introduction: "A thickener or stabiliser should be selected against the target texture, process and product environment. Naming the desired function is more useful than requesting a generic product family alone.",
       checklistTitle: "Include in the RFQ",
       checklist: ["Product type and desired texture or stability outcome", "Process temperature, shear, hydration and addition sequence", "Expected pH, salts, sugars, proteins or other key components", "Target grade, quantity, packaging and required documents"],
@@ -190,7 +190,7 @@ const productKnowledgeData: Record<string, Localized<ProductKnowledge>> = {
       ],
     },
     vi: {
-      title: "Cách mô tả yêu cầu chất làm đặc hoặc ổn định",
+      title: "Chất làm đặc và ổn định: ứng dụng và điều kiện quy trình",
       introduction: "Chất làm đặc hoặc ổn định cần được chọn theo cấu trúc mục tiêu, quy trình và môi trường sản phẩm. Nêu chức năng mong muốn hữu ích hơn việc chỉ yêu cầu một nhóm sản phẩm chung.",
       checklistTitle: "Thông tin nên có trong RFQ",
       checklist: ["Loại sản phẩm và mục tiêu cấu trúc hoặc độ ổn định", "Nhiệt độ, lực cắt, cách hydrat hóa và thứ tự bổ sung", "pH dự kiến, muối, đường, protein hoặc thành phần chính khác", "Grade mục tiêu, số lượng, đóng gói và tài liệu cần thiết"],
@@ -206,7 +206,7 @@ const productKnowledgeData: Record<string, Localized<ProductKnowledge>> = {
   },
   excipients: {
     en: {
-      title: "How to define an excipient sourcing requirement",
+      title: "Excipient sourcing: function, grade and documents",
       introduction: "Excipient selection starts with the intended functional role and dosage-form process. The same broad excipient name can cover grades with different physical and processing characteristics.",
       checklistTitle: "Include in the RFQ",
       checklist: ["Functional role and dosage or product form", "Target grade, reference standard and current comparison grade", "Critical physical properties or process constraints", "Quantity, packaging and quality-document requirements"],
@@ -220,7 +220,7 @@ const productKnowledgeData: Record<string, Localized<ProductKnowledge>> = {
       ],
     },
     vi: {
-      title: "Cách xác định yêu cầu tìm nguồn tá dược",
+      title: "Tìm nguồn tá dược: chức năng, grade và tài liệu",
       introduction: "Việc chọn tá dược bắt đầu từ vai trò chức năng và quy trình của dạng sản phẩm. Cùng một tên tá dược chung có thể bao gồm nhiều grade với đặc tính vật lý và gia công khác nhau.",
       checklistTitle: "Thông tin nên có trong RFQ",
       checklist: ["Vai trò chức năng và dạng liều hoặc dạng sản phẩm", "Grade mục tiêu, tiêu chuẩn tham chiếu và grade đang dùng để so sánh", "Đặc tính vật lý quan trọng hoặc giới hạn quy trình", "Số lượng, đóng gói và yêu cầu tài liệu chất lượng"],
@@ -236,13 +236,13 @@ const productKnowledgeData: Record<string, Localized<ProductKnowledge>> = {
   },
   "pet-resin-bottle-grade": {
     en: {
-      title: "How to define a bottle-grade PET resin requirement",
+      title: "Bottle-grade PET: equipment, preform and container requirements",
       introduction: "Bottle-grade PET enquiries should connect resin grade to the preform, bottle and process. The current grade, equipment conditions and finished-container expectations provide a useful comparison baseline.",
       checklistTitle: "Include in the RFQ",
       checklist: ["Current or target PET grade and datasheet", "Preform and bottle application, size and appearance targets", "Critical processing or performance parameters", "Trial and routine volume, pack format and delivery schedule"],
       sections: [
         { title: "Processing baseline", body: "Share the current grade and any drying, injection or stretch-blow constraints that affect evaluation. Alternative grades require line trials under representative conditions." },
-        { title: "Finished article review", body: "Clarity, colour, mechanical performance and application-specific requirements should be assessed on the finished preform and bottle by your technical team." },
+        { title: "Check the finished product", body: "Clarity, colour, mechanical performance and application-specific requirements should be assessed on the finished preform and bottle by your technical team." },
       ],
       faq: [
         { question: "Can a PET grade be approved from its datasheet alone?", answer: "A datasheet supports screening but does not replace production validation. Trial the selected grade on the intended equipment and finished article." },
@@ -250,13 +250,13 @@ const productKnowledgeData: Record<string, Localized<ProductKnowledge>> = {
       ],
     },
     vi: {
-      title: "Cách xác định yêu cầu nhựa PET dùng cho chai",
+      title: "PET chai: thiết bị, phôi và yêu cầu bao bì",
       introduction: "Yêu cầu PET chai cần liên kết grade nhựa với phôi, chai và quy trình. Grade hiện tại, điều kiện thiết bị và kỳ vọng đối với bao bì hoàn thiện là cơ sở so sánh hữu ích.",
       checklistTitle: "Thông tin nên có trong RFQ",
       checklist: ["Grade PET hiện tại hoặc mục tiêu và datasheet", "Ứng dụng phôi, chai, kích thước và mục tiêu ngoại quan", "Thông số gia công hoặc hiệu năng quan trọng", "Lượng thử, nhu cầu định kỳ, quy cách đóng gói và lịch giao"],
       sections: [
         { title: "Cơ sở gia công", body: "Chia sẻ grade hiện tại cùng các giới hạn sấy, ép phun hoặc kéo thổi có ảnh hưởng đến đánh giá. Grade thay thế cần được thử trên dây chuyền trong điều kiện đại diện." },
-        { title: "Đánh giá sản phẩm hoàn thiện", body: "Độ trong, màu sắc, cơ tính và yêu cầu riêng của ứng dụng cần được đội ngũ kỹ thuật đánh giá trên phôi và chai hoàn thiện." },
+        { title: "Kiểm tra thành phẩm", body: "Độ trong, màu sắc, cơ tính và yêu cầu riêng của ứng dụng cần được đội ngũ kỹ thuật đánh giá trên phôi và chai hoàn thiện." },
       ],
       faq: [
         { question: "Có thể duyệt grade PET chỉ từ datasheet không?", answer: "Datasheet hỗ trợ sàng lọc nhưng không thay thế xác nhận sản xuất. Cần thử grade được chọn trên thiết bị và sản phẩm hoàn thiện dự kiến." },
@@ -266,7 +266,7 @@ const productKnowledgeData: Record<string, Localized<ProductKnowledge>> = {
   },
   "hdpe-resin-blow-moulding": {
     en: {
-      title: "How to define an HDPE blow-moulding resin requirement",
+      title: "HDPE blow moulding: machine, mould and finished-part requirements",
       introduction: "HDPE blow-moulding grades should be screened against the machine, mould, container design and required finished-part performance. A current grade reference helps establish the comparison point.",
       checklistTitle: "Include in the RFQ",
       checklist: ["Current or target HDPE grade and datasheet", "Machine type, moulding process and container description", "Key flow, density, colour or performance requirements", "Trial quantity, routine volume, packaging and destination"],
@@ -280,7 +280,7 @@ const productKnowledgeData: Record<string, Localized<ProductKnowledge>> = {
       ],
     },
     vi: {
-      title: "Cách xác định yêu cầu nhựa HDPE thổi khuôn",
+      title: "HDPE thổi khuôn: máy, khuôn và yêu cầu thành phẩm",
       introduction: "Grade HDPE thổi khuôn cần được sàng lọc theo máy, khuôn, thiết kế bao bì và hiệu năng chi tiết hoàn thiện. Tham chiếu grade hiện tại giúp thiết lập điểm so sánh.",
       checklistTitle: "Thông tin nên có trong RFQ",
       checklist: ["Grade HDPE hiện tại hoặc mục tiêu và datasheet", "Loại máy, quy trình thổi và mô tả bao bì", "Yêu cầu chính về dòng chảy, tỷ trọng, màu hoặc hiệu năng", "Lượng thử, nhu cầu định kỳ, đóng gói và điểm giao"],
@@ -296,7 +296,7 @@ const productKnowledgeData: Record<string, Localized<ProductKnowledge>> = {
   },
   "paraffin-wax": {
     en: {
-      title: "How to define a paraffin wax requirement",
+      title: "Paraffin wax: properties, form and handling",
       introduction: "Paraffin wax grades vary by refining level, melting range, oil content, physical form and intended use. These details should be aligned before commercial comparison.",
       checklistTitle: "Include in the RFQ",
       checklist: ["Intended application and current comparison grade", "Target melting range and oil-content requirement", "Colour, odour, physical form or other critical attributes", "Quantity, pack format, delivery point and required documents"],
@@ -310,7 +310,7 @@ const productKnowledgeData: Record<string, Localized<ProductKnowledge>> = {
       ],
     },
     vi: {
-      title: "Cách xác định yêu cầu sáp paraffin",
+      title: "Sáp paraffin: tính chất, dạng vật lý và xử lý",
       introduction: "Các grade sáp paraffin khác nhau về mức tinh chế, khoảng nóng chảy, hàm lượng dầu, dạng vật lý và mục đích sử dụng. Cần thống nhất các yếu tố này trước khi so sánh thương mại.",
       checklistTitle: "Thông tin nên có trong RFQ",
       checklist: ["Ứng dụng dự kiến và grade hiện tại để so sánh", "Khoảng nóng chảy mục tiêu và yêu cầu hàm lượng dầu", "Màu, mùi, dạng vật lý hoặc thuộc tính quan trọng khác", "Số lượng, quy cách đóng gói, điểm giao và tài liệu cần thiết"],
@@ -326,13 +326,13 @@ const productKnowledgeData: Record<string, Localized<ProductKnowledge>> = {
   },
   "specialty-chemicals-on-request": {
     en: {
-      title: "How to brief a specialty chemical sourcing request",
+      title: "Specialty chemicals: identity, grade and document requirements",
       introduction: "A specialty chemical request should remove ambiguity before supplier outreach. Exact identity, grade, application and handling constraints form the core of a useful sourcing brief.",
       checklistTitle: "Include in the RFQ",
       checklist: ["Chemical name, CAS number and reference product if available", "Target purity, grade, standard and critical limits", "Application, process conditions and expected function", "Trial or annual quantity, packaging, destination and documents"],
       sections: [
         { title: "Start from an exact identity", body: "Trade names and broad families can refer to different compositions. A CAS number, composition statement or reference datasheet helps establish the intended scope." },
-        { title: "Technical and EHS review", body: "Identify required technical documents and handling constraints early. Your own regulatory, technical and EHS approval remains necessary before use." },
+        { title: "Documents and internal approval", body: "Identify required technical documents and handling constraints early. Your own regulatory, technical and EHS approval remains necessary before use." },
       ],
       faq: [
         { question: "What if the chemical is not listed on the website?", answer: "Send the complete sourcing brief to the sales team. MRT Materials will review whether an appropriate source can be identified." },
@@ -340,13 +340,13 @@ const productKnowledgeData: Record<string, Localized<ProductKnowledge>> = {
       ],
     },
     vi: {
-      title: "Cách mô tả yêu cầu tìm nguồn hóa chất chuyên dụng",
+      title: "Hóa chất chuyên dụng: định danh, grade và tài liệu",
       introduction: "Yêu cầu hóa chất chuyên dụng cần loại bỏ sự mơ hồ trước khi làm việc với nhà cung cấp. Danh tính chính xác, grade, ứng dụng và giới hạn xử lý là nội dung cốt lõi của brief tìm nguồn.",
       checklistTitle: "Thông tin nên có trong RFQ",
       checklist: ["Tên hóa chất, số CAS và sản phẩm tham chiếu nếu có", "Độ tinh khiết, grade, tiêu chuẩn và giới hạn quan trọng", "Ứng dụng, điều kiện quy trình và chức năng dự kiến", "Lượng thử hoặc nhu cầu năm, đóng gói, điểm giao và tài liệu"],
       sections: [
         { title: "Bắt đầu từ danh tính chính xác", body: "Tên thương mại và nhóm hóa chất rộng có thể chỉ nhiều thành phần khác nhau. Số CAS, thông tin thành phần hoặc datasheet tham chiếu giúp xác định đúng phạm vi." },
-        { title: "Đánh giá kỹ thuật và EHS", body: "Xác định sớm tài liệu kỹ thuật và giới hạn xử lý cần thiết. Việc phê duyệt pháp lý, kỹ thuật và EHS nội bộ vẫn cần hoàn tất trước khi sử dụng." },
+        { title: "Tài liệu và phê duyệt nội bộ", body: "Xác định sớm tài liệu kỹ thuật và giới hạn xử lý cần thiết. Việc phê duyệt pháp lý, kỹ thuật và EHS nội bộ vẫn cần hoàn tất trước khi sử dụng." },
       ],
       faq: [
         { question: "Nếu hóa chất chưa có trên website thì sao?", answer: "Hãy gửi brief tìm nguồn đầy đủ cho đội ngũ sales. MRT Materials sẽ xem xét khả năng xác định nguồn hàng phù hợp." },

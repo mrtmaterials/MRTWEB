@@ -41,7 +41,7 @@ export function MobileNav({ closeLabel, items, openLabel, quoteHref, quoteLabel 
   }, [isOpen]);
 
   return (
-    <div className="lg:hidden">
+    <div className="xl:hidden">
       <button
         aria-controls={panelId}
         aria-expanded={isOpen}

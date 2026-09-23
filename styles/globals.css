@@ -231,6 +231,22 @@ textarea { font: inherit; }
   .category-card:hover { transform: none; }
 }
 
+@media (max-height: 700px) and (min-width: 640px) {
+  .hero-container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .hero-title {
+    margin-top: 1rem;
+    font-size: clamp(2.5rem, 8.5vh, 4.5rem);
+    line-height: 0.98;
+  }
+
+  .hero-summary { margin-top: 1.25rem; }
+  .hero-actions { margin-top: 1.5rem; }
+}
+
 @media (max-width: 639px) {
   .hero-word {
     overflow: visible;

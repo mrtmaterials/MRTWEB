@@ -24,26 +24,26 @@ const editorialCopy = {
     scopeLabel: "Current sourcing scope",
     scope: [
       { value: "03", label: "Material portfolios", note: "Ingredients, industrial materials and chemicals" },
-      { value: "08", label: "Focused material lines", note: "Each with a dedicated requirement guide" },
-      { value: "EN / VI", label: "Bilingual support", note: "Clear sourcing conversations in English or Vietnamese" },
-      { value: "04", label: "Review stages", note: "Source, verify, quote and coordinate delivery" },
+      { value: "08", label: "Current material lines", note: "Each has a material-specific enquiry guide" },
+      { value: "EN / VI", label: "Bilingual enquiries", note: "Enquiries accepted in English or Vietnamese" },
+      { value: "04", label: "Enquiry stages", note: "Requirement, documents, quotation and delivery" },
     ],
     corridor: {
       eyebrow: "[ SOURCING BRIEF ]",
-      title: "A product name is only the starting point.",
-      body: "A useful request tells us what the material is, how you will use it, which documents your team needs and where it must be delivered. Keeping those details together makes the review faster and more accurate.",
+      title: "Information to include in a material enquiry",
+      body: "Provide the material identity, intended application, required documents, quantity, packaging and delivery location. These details define the technical and commercial scope for review.",
       items: [
         { title: "Material identity", body: "Name, CAS number or comparison grade where available." },
-        { title: "Application fit", body: "Intended use, process conditions and critical parameters." },
-        { title: "Document set", body: "Available COA, TDS and SDS requirements for review." },
-        { title: "Delivery context", body: "Quantity, packaging, destination and requested timing." },
+        { title: "Application and process", body: "Intended use, process conditions and critical parameters." },
+        { title: "Required documents", body: "COA, TDS, SDS and other documents required by your team." },
+        { title: "Quantity and delivery", body: "Quantity, packaging, destination and requested timing." },
       ],
       action: "Prepare an RFQ",
     },
     faq: {
       eyebrow: "[ BUYER QUESTIONS ]",
-      title: "A few things worth knowing before you contact us.",
-      body: "Send what your technical and purchasing teams already know. We can clarify the missing details together.",
+      title: "Frequently asked questions",
+      body: "The answers below explain what to include in an enquiry and which details remain subject to confirmation.",
       items: [
         { question: "Can MRT Materials review an unlisted material?", answer: "Yes. Share the material identity, application and available specification so the sourcing requirement can be assessed." },
         { question: "Which documents can be requested?", answer: "Available COA, TDS and SDS documents can be coordinated for the selected material and source. State the required set in your enquiry." },
@@ -57,26 +57,26 @@ const editorialCopy = {
     scopeLabel: "Phạm vi tìm nguồn hiện tại",
     scope: [
       { value: "03", label: "Nhóm nguyên liệu", note: "Nguyên liệu, vật liệu công nghiệp và hóa chất" },
-      { value: "08", label: "Dòng vật liệu trọng tâm", note: "Mỗi dòng có hướng dẫn chuẩn bị yêu cầu riêng" },
-      { value: "EN / VI", label: "Hỗ trợ song ngữ", note: "Trao đổi tìm nguồn rõ ràng bằng tiếng Anh hoặc tiếng Việt" },
-      { value: "04", label: "Giai đoạn xem xét", note: "Tìm nguồn, xác minh, báo giá và phối hợp giao hàng" },
+      { value: "08", label: "Dòng vật liệu hiện có", note: "Mỗi dòng có hướng dẫn chuẩn bị yêu cầu riêng" },
+      { value: "EN / VI", label: "Yêu cầu song ngữ", note: "Tiếp nhận yêu cầu bằng tiếng Anh hoặc tiếng Việt" },
+      { value: "04", label: "Giai đoạn xử lý", note: "Yêu cầu, tài liệu, báo giá và giao nhận" },
     ],
     corridor: {
       eyebrow: "[ HỒ SƠ TÌM NGUỒN ]",
-      title: "Tên nguyên liệu chỉ là điểm bắt đầu.",
-      body: "Một yêu cầu dễ xử lý cần cho biết nguyên liệu là gì, dùng vào đâu, đội ngũ của bạn cần tài liệu nào và giao đến đâu. Khi các thông tin này đi cùng nhau, hai bên sẽ rà soát nhanh và chính xác hơn.",
+      title: "Thông tin cần có trong yêu cầu nguyên liệu",
+      body: "Cung cấp tên nguyên liệu, ứng dụng, tài liệu cần thiết, số lượng, quy cách bao bì và địa điểm giao hàng. Đây là cơ sở để hai bên rà soát phạm vi kỹ thuật và thương mại.",
       items: [
         { title: "Định danh nguyên liệu", body: "Tên, số CAS hoặc phân hạng tham chiếu nếu có." },
-        { title: "Mức độ phù hợp", body: "Mục đích sử dụng, điều kiện quy trình và thông số quan trọng." },
-        { title: "Bộ tài liệu", body: "Yêu cầu COA, TDS và SDS hiện có để xem xét." },
-        { title: "Bối cảnh giao hàng", body: "Số lượng, bao bì, điểm đến và thời gian yêu cầu." },
+        { title: "Ứng dụng và quy trình", body: "Mục đích sử dụng, điều kiện quy trình và thông số quan trọng." },
+        { title: "Bộ tài liệu cần thiết", body: "COA, TDS, SDS và các tài liệu khác mà đội ngũ của Quý khách yêu cầu." },
+        { title: "Số lượng và giao hàng", body: "Số lượng, bao bì, điểm đến và thời gian yêu cầu." },
       ],
       action: "Chuẩn bị RFQ",
     },
     faq: {
       eyebrow: "[ CÂU HỎI MUA HÀNG ]",
-      title: "Một vài điều nên biết trước khi liên hệ.",
-      body: "Hãy gửi những thông tin mà bộ phận kỹ thuật và mua hàng đã có. Các phần còn thiếu, hai bên có thể cùng làm rõ sau.",
+      title: "Câu hỏi thường gặp",
+      body: "Các nội dung dưới đây nêu rõ thông tin cần có trong yêu cầu và những điểm phải xác nhận theo từng nguồn hàng.",
       items: [
         { question: "MRT Materials có xem xét nguyên liệu chưa có trong danh mục không?", answer: "Có. Vui lòng chia sẻ định danh nguyên liệu, ứng dụng và thông số hiện có để chúng tôi xem xét nhu cầu tìm nguồn." },
         { question: "Có thể yêu cầu những tài liệu nào?", answer: "COA, TDS và SDS hiện có có thể được phối hợp cho nguyên liệu và nguồn cung được lựa chọn. Hãy nêu rõ bộ tài liệu cần thiết trong yêu cầu." },
@@ -124,14 +124,14 @@ export function HomePage({ dictionary, locale }: HomePageProps) {
         <div aria-hidden="true" className="absolute inset-0 bg-[linear-gradient(90deg,rgba(6,20,16,0.98)_0%,rgba(6,20,16,0.92)_42%,rgba(6,20,16,0.42)_72%,rgba(6,20,16,0.12)_100%)] max-lg:bg-[linear-gradient(180deg,rgba(6,20,16,0.78)_0%,rgba(6,20,16,0.92)_64%,rgba(6,20,16,0.98)_100%)]" />
         <div aria-hidden="true" className="hero-aperture absolute inset-0 hidden mix-blend-screen lg:block" />
         <div aria-hidden="true" className="film-grain absolute inset-0 opacity-[0.08] mix-blend-soft-light" />
-        <Container className="relative flex min-h-[calc(100svh-5.25rem)] items-end py-14 sm:py-20 lg:items-center lg:py-24">
-          <div className="relative z-10 max-w-[58rem]">
+        <Container className="hero-container relative flex min-h-[calc(100svh-5.25rem)] items-end py-14 sm:py-20 lg:items-center lg:py-24">
+          <div className="relative z-10 max-w-[72rem]">
             <Reveal>
               <p className="font-mono text-xs font-semibold uppercase tracking-[0.22em] text-[var(--accent-mint)]">
                 {home.eyebrow}
               </p>
             </Reveal>
-            <h1 className="hero-title mt-7 max-w-5xl font-display text-[clamp(3.1rem,6.7vw,6.8rem)] font-semibold leading-[0.94] tracking-[-0.06em] text-white">
+            <h1 className="hero-title mt-7 max-w-[72rem] font-display text-[clamp(2.6rem,min(5vw,9vh),4.75rem)] font-semibold leading-[0.98] tracking-[-0.04em] text-white">
               {home.title.split(" ").map((word, index) => (
                 <span className="hero-word mr-[0.2em] inline-block overflow-hidden align-top" key={`${word}-${index}`}>
                   <span className="inline-block">{word}</span>{" "}
@@ -139,8 +139,8 @@ export function HomePage({ dictionary, locale }: HomePageProps) {
               ))}
             </h1>
             <Reveal delay={0.22}>
-              <p className="mt-8 max-w-2xl text-lg leading-8 text-white/72 sm:text-xl">{home.summary}</p>
-              <div className="mt-9 flex flex-wrap gap-3">
+              <p className="hero-summary mt-8 max-w-2xl text-lg leading-8 text-white/72 sm:text-xl">{home.summary}</p>
+              <div className="hero-actions mt-9 flex flex-wrap gap-3">
                 <ButtonLink className="!bg-white !text-[var(--ink)] hover:!bg-[var(--accent-mint)] max-sm:w-full" href={path("/contact")}>
                   {common.requestQuote}<ArrowUpRight aria-hidden="true" size={17} />
                 </ButtonLink>
@@ -214,31 +214,31 @@ export function HomePage({ dictionary, locale }: HomePageProps) {
       </section>
 
       <IndustryShowcase
-        body={locale === "vi" ? "Cùng một tên nguyên liệu có thể phù hợp với quy trình này nhưng không phù hợp với quy trình khác. Vì vậy, chúng tôi bắt đầu từ ứng dụng sản xuất thực tế." : "The same material name can work in one process and fail in another. That is why we start with the real manufacturing application."}
+        body={locale === "vi" ? "Các vật liệu có cùng tên nhóm vẫn có thể khác về grade, tính chất vật lý và hành vi gia công. Vì vậy, yêu cầu cần nêu rõ ứng dụng và điều kiện sản xuất dự kiến." : "Materials with the same general name may differ in grade, physical properties and process behaviour. State the intended application and production conditions in the enquiry."}
         eyebrow={home.industries.eyebrow}
         items={home.industries.items}
         locale={locale}
         title={home.industries.title}
       />
 
-      <section className="process-section overflow-hidden py-24 sm:py-32">
-        <Container className="grid gap-14 lg:grid-cols-[0.72fr_1.28fr]">
-          <div className="lg:sticky lg:top-32 lg:self-start">
+      <section className="process-section overflow-x-clip py-24 sm:py-32">
+        <Container className="grid gap-14 xl:grid-cols-[0.72fr_1.28fr]">
+          <div className="xl:sticky xl:top-28 xl:self-start">
             <Reveal><SectionHeading eyebrow={home.process.eyebrow} title={home.process.title} /></Reveal>
             <div className="mt-8 h-1 overflow-hidden rounded-full bg-[var(--line)]"><div className="process-progress h-full w-full origin-left bg-[var(--green-600)]" /></div>
-            <p className="mt-7 max-w-sm text-sm leading-7 text-[var(--muted)]">{locale === "vi" ? "Mỗi bước làm rõ một phần của yêu cầu, để thông tin kỹ thuật, tài liệu và điều kiện giao hàng không bị rời rạc." : "Each step answers a different part of the request, so technical details, documents and delivery terms do not get separated."}</p>
+            <p className="mt-7 max-w-sm text-sm leading-7 text-[var(--muted)]">{locale === "vi" ? "Bốn bước dùng để xác nhận định danh nguyên liệu, yêu cầu kỹ thuật, điều kiện báo giá và thông tin giao nhận." : "The four stages confirm material identity, technical requirements, quotation details and delivery information."}</p>
           </div>
           <ol className="relative border-t border-[var(--ink)]">
-            <svg aria-hidden="true" className="absolute top-0 left-[2.35rem] hidden h-full w-3 overflow-visible lg:block" preserveAspectRatio="none" viewBox="0 0 12 1000">
+            <svg aria-hidden="true" className="absolute top-0 left-[2.35rem] hidden h-full w-3 overflow-visible xl:block" preserveAspectRatio="none" viewBox="0 0 12 1000">
               <path d="M6 0 V1000" fill="none" stroke="rgba(15,26,23,0.12)" strokeWidth="1" />
               <path className="route-path" d="M6 0 V1000" fill="none" pathLength="1" stroke="var(--green-600)" strokeLinecap="round" strokeWidth="2" />
             </svg>
             {home.process.steps.map((step, index) => (
               <Reveal delay={index * 0.06} key={step.title}>
-                <li className="process-step grid gap-5 border-b border-[var(--line)] py-8 sm:grid-cols-[5.5rem_0.75fr_1fr] sm:items-start sm:gap-7 sm:py-10">
+                <li className="process-step grid scroll-mt-28 gap-5 border-b border-[var(--line)] py-8 md:grid-cols-[4rem_minmax(10rem,0.75fr)_minmax(0,1fr)] md:items-start md:gap-7 md:py-10 xl:grid-cols-[5.5rem_minmax(10rem,0.75fr)_minmax(0,1fr)]">
                   <p className="process-number relative z-10 font-display text-5xl font-semibold tracking-[-0.06em] text-[var(--green-600)]">0{index + 1}</p>
-                  <h3 className="font-display text-2xl font-semibold tracking-[-0.035em] sm:text-3xl">{step.title}</h3>
-                  <p className="max-w-xl leading-7 text-[var(--muted)]">{step.body}</p>
+                  <h3 className="min-w-0 font-display text-2xl font-semibold tracking-[-0.035em] sm:text-3xl">{step.title}</h3>
+                  <p className="min-w-0 max-w-xl leading-7 text-[var(--muted)]">{step.body}</p>
                 </li>
               </Reveal>
             ))}
@@ -276,7 +276,7 @@ export function HomePage({ dictionary, locale }: HomePageProps) {
             <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/15 to-transparent" />
             <div className="absolute right-7 bottom-7 left-7">
               <p className="font-mono text-xs text-[var(--accent-mint)]">[ SOURCE / REVIEW / COORDINATE ]</p>
-              <p className="mt-4 max-w-md text-lg leading-7 text-white/82">{locale === "vi" ? "Bạn không cần kể lại yêu cầu từ đầu ở mỗi bước. Chúng tôi giữ các thông tin đã thống nhất xuyên suốt quá trình." : "You should not have to explain the same requirement again at every step. We keep the agreed details connected throughout the process."}</p>
+              <p className="mt-4 max-w-md text-lg leading-7 text-white/82">{locale === "vi" ? "Thông tin kỹ thuật và thương mại đã xác nhận được dùng xuyên suốt khi chuẩn bị báo giá, đơn hàng và giao nhận." : "Confirmed technical and commercial details are carried through quotation, order and delivery preparation."}</p>
             </div>
           </Reveal>
           <div>
@@ -299,9 +299,9 @@ export function HomePage({ dictionary, locale }: HomePageProps) {
         <Container>
           <Reveal>
             <SectionHeading
-              description={locale === "vi" ? "Hướng dẫn xác định nguyên liệu, tài liệu, thử nghiệm và thông tin giao hàng trước khi yêu cầu báo giá." : "Guides for defining materials, documents, trials and delivery details before requesting a quote."}
+              description={locale === "vi" ? "Thông số, COA, TDS, SDS, thử nghiệm sản xuất và các thông tin cần có trong yêu cầu nguyên liệu." : "Specifications, COA, TDS, SDS, production trials and the information required in a material enquiry."}
               eyebrow={locale === "vi" ? "[ KIẾN THỨC VẬT LIỆU ]" : "[ MATERIAL KNOWLEDGE ]"}
-              title={locale === "vi" ? "Cần kiểm tra gì trước khi gửi yêu cầu báo giá?" : "What should you check before requesting a quote?"}
+              title={locale === "vi" ? "Hướng dẫn tìm nguồn và đánh giá nguyên liệu" : "Material sourcing and technical review guides"}
             />
           </Reveal>
           <div className="mt-12 grid gap-10 border-t border-[var(--ink)] pt-9 lg:grid-cols-3 lg:gap-0">

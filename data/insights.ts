@@ -140,7 +140,7 @@ export const insights: Insight[] = [
           { heading: "Design a trial that can answer a decision", paragraphs: ["If a trial is required, define the question it must answer, the comparison baseline, operating conditions, acceptance criteria and recording method before material is introduced into production."], points: ["Trial objective and baseline", "Controlled quantity and batch traceability", "Process settings to record", "Acceptance criteria and decision owner"] },
         ],
         takeawaysTitle: "A disciplined comparison",
-        takeaways: ["Similar names do not prove equivalence.", "Focus on properties connected to actual use.", "Route changes through the relevant internal owners.", "Use a defined trial when documents alone cannot answer suitability."],
+        takeaways: ["Similar names do not prove equivalence.", "Focus on properties connected to actual use.", "Follow your company’s approval process for any material change.", "Use a defined trial when documents alone cannot answer suitability."],
         faqTitle: "Grade-comparison questions",
         faq: [
           { question: "Can matching datasheet values prove two grades are interchangeable?", answer: "No. Datasheets support screening, but equivalence depends on the complete requirement, documentation and validation in the intended process." },
@@ -158,7 +158,7 @@ export const insights: Insight[] = [
           { heading: "Thiết kế thử nghiệm để trả lời một quyết định", paragraphs: ["Nếu cần thử nghiệm, hãy xác định trước câu hỏi cần trả lời, mẫu so sánh, điều kiện vận hành, tiêu chí chấp nhận và cách ghi nhận trước khi đưa nguyên liệu vào sản xuất."], points: ["Mục tiêu thử nghiệm và mẫu chuẩn", "Số lượng kiểm soát và truy xuất lô", "Thông số vận hành cần ghi nhận", "Tiêu chí chấp nhận và người quyết định"] },
         ],
         takeawaysTitle: "So sánh có kỷ luật",
-        takeaways: ["Tên gọi giống nhau không chứng minh tương đương.", "Tập trung vào tính chất gắn với ứng dụng thực tế.", "Chuyển thay đổi qua đúng chủ sở hữu nội bộ.", "Dùng thử nghiệm xác định khi tài liệu chưa đủ để kết luận độ phù hợp."],
+        takeaways: ["Tên gọi giống nhau không chứng minh tương đương.", "Tập trung vào tính chất gắn với ứng dụng thực tế.", "Thực hiện mọi thay đổi nguyên liệu theo quy trình phê duyệt nội bộ.", "Dùng thử nghiệm xác định khi tài liệu chưa đủ để kết luận độ phù hợp."],
         faqTitle: "Câu hỏi về so sánh grade",
         faq: [
           { question: "Datasheet tương đồng có chứng minh hai grade thay thế được không?", answer: "Không. Datasheet hỗ trợ sàng lọc, nhưng tính tương đương phụ thuộc yêu cầu đầy đủ, tài liệu và thẩm định trong quy trình dự kiến." },
@@ -227,7 +227,7 @@ export const insights: Insight[] = [
         topic: "Packaging materials",
         introduction: "A PET or HDPE enquiry should identify the grade or current comparison product, processing equipment, mould or preform, finished-container requirements and expected volume. “Bottle grade” or “blow-moulding grade” alone is not a complete specification.",
         sections: [
-          { heading: "Describe the equipment and conversion route", paragraphs: ["State the process, equipment type and current resin or comparison grade. For packaging applications, the same polymer family can include grades designed around different processing windows and container requirements."], points: ["Injection, stretch-blow or extrusion-blow route", "Machine and relevant process constraints", "Current resin or comparison grade", "Colour and additive context where relevant"] },
+          { heading: "Describe the processing method and equipment", paragraphs: ["State the process, equipment type and current resin or comparison grade. For packaging applications, the same polymer family can include grades designed around different processing windows and container requirements."], points: ["Injection, stretch-blow or extrusion-blow process", "Machine and relevant process constraints", "Current resin or comparison grade", "Colour and additive context where relevant"] },
           { heading: "Connect the mould to the finished package", paragraphs: ["Share the mould or preform context and the performance expected from the final bottle or container. The buyer should define which dimensions, tests and use conditions determine acceptance."], points: ["Preform or mould reference", "Container size, wall and geometry considerations", "Contents and intended use", "Finished-package test and appearance criteria"] },
           { heading: "Plan approval and routine supply information", paragraphs: ["Confirm which technical documents, samples and production trials are needed before routine supply. Packaging and lot requirements should be stated with volume and destination."], points: ["TDS, SDS and available quality documents", "Sample or trial quantity", "Packaging and lot preferences", "Routine volume and delivery location"] },
         ],
@@ -245,12 +245,12 @@ export const insights: Insight[] = [
         topic: "Vật liệu bao bì",
         introduction: "Yêu cầu PET hoặc HDPE nên nêu grade hoặc sản phẩm đang dùng để so sánh, thiết bị gia công, khuôn hoặc phôi, yêu cầu đối với bao bì thành phẩm và sản lượng dự kiến. Chỉ ghi “bottle grade” hoặc “blow-moulding grade” chưa đủ để xác định vật liệu.",
         sections: [
-          { heading: "Mô tả thiết bị và tuyến gia công", paragraphs: ["Nêu quy trình, loại thiết bị và loại nhựa hiện dùng hoặc grade so sánh. Trong ứng dụng bao bì, cùng một họ polymer có thể có nhiều grade được thiết kế cho cửa sổ gia công và yêu cầu bao bì khác nhau."], points: ["Ép phun, kéo-thổi hoặc đùn-thổi", "Máy và giới hạn quy trình liên quan", "Nhựa hiện dùng hoặc grade so sánh", "Bối cảnh màu và phụ gia khi liên quan"] },
+          { heading: "Mô tả phương pháp gia công và thiết bị", paragraphs: ["Nêu quy trình, loại thiết bị và loại nhựa hiện dùng hoặc grade so sánh. Trong ứng dụng bao bì, cùng một họ polymer có thể có nhiều grade được thiết kế cho cửa sổ gia công và yêu cầu bao bì khác nhau."], points: ["Ép phun, kéo-thổi hoặc đùn-thổi", "Máy và giới hạn quy trình liên quan", "Nhựa hiện dùng hoặc grade so sánh", "Bối cảnh màu và phụ gia khi liên quan"] },
           { heading: "Kết nối khuôn với bao bì thành phẩm", paragraphs: ["Chia sẻ bối cảnh khuôn hoặc phôi và hiệu năng mong đợi của chai hoặc bao bì cuối cùng. Bên mua nên xác định kích thước, phép thử và điều kiện sử dụng quyết định việc chấp nhận."], points: ["Tham chiếu phôi hoặc khuôn", "Kích thước, thành và hình học bao bì", "Sản phẩm chứa và mục đích sử dụng", "Tiêu chí thử nghiệm và ngoại quan thành phẩm"] },
           { heading: "Lập kế hoạch phê duyệt và cung ứng định kỳ", paragraphs: ["Xác nhận tài liệu kỹ thuật, mẫu và thử nghiệm sản xuất cần thiết trước khi cung ứng định kỳ. Yêu cầu bao bì và lô nên đi cùng sản lượng và điểm đến."], points: ["TDS, SDS và tài liệu chất lượng hiện có", "Số lượng mẫu hoặc thử", "Ưu tiên bao bì và lô", "Sản lượng định kỳ và điểm giao"] },
         ],
         takeawaysTitle: "Yêu cầu nhựa cần bối cảnh quy trình",
-        takeaways: ["Nêu tuyến gia công và thiết bị.", "Cung cấp grade hiện dùng nếu có.", "Xác định tiêu chí chấp nhận bao bì thành phẩm.", "Tách nhu cầu thử nghiệm khỏi sản lượng định kỳ."],
+        takeaways: ["Nêu phương pháp gia công và thiết bị.", "Cung cấp grade hiện dùng nếu có.", "Xác định tiêu chí chấp nhận bao bì thành phẩm.", "Tách nhu cầu thử nghiệm khỏi sản lượng định kỳ."],
         faqTitle: "Câu hỏi về nhựa bao bì",
         faq: [
           { question: "Mọi PET bottle grade có phù hợp cùng một loại chai không?", answer: "Không. Độ phù hợp phụ thuộc grade, quy trình, phôi hoặc khuôn, thiết kế bao bì và tiêu chí chấp nhận nên cần đánh giá kỹ thuật và thẩm định." },
@@ -269,7 +269,7 @@ export const insights: Insight[] = [
     content: {
       en: {
         title: "Chemical sourcing: identity, grade and handling requirements",
-        description: "A structured way to describe a chemical requirement without relying on a broad trade name or incomplete purity statement.",
+        description: "What to include when specifying a chemical by identity, grade, purity, physical form and handling requirements.",
         topic: "Chemical sourcing",
         introduction: "A chemical enquiry should include the full chemical name, CAS number where available, grade or purity, physical form, application and handling requirements. A trade name alone may refer to more than one composition or commercial grade.",
         sections: [
@@ -287,7 +287,7 @@ export const insights: Insight[] = [
       },
       vi: {
         title: "Tìm nguồn hóa chất theo danh tính, grade và yêu cầu xử lý",
-        description: "Những thông tin cần có để xác định rõ một yêu cầu hóa chất.",
+        description: "Những thông tin cần có để xác định một yêu cầu hóa chất theo định danh, grade, độ tinh khiết, dạng vật lý và yêu cầu xử lý.",
         topic: "Tìm nguồn hóa chất",
         introduction: "Yêu cầu hóa chất nên gồm tên hóa học đầy đủ, số CAS nếu có, grade hoặc độ tinh khiết, dạng vật lý, ứng dụng và yêu cầu xử lý. Chỉ dùng tên thương mại có thể chưa đủ để phân biệt thành phần hoặc grade thương mại.",
         sections: [
@@ -319,7 +319,7 @@ export const insights: Insight[] = [
         topic: "Industrial materials",
         introduction: "Paraffin-wax grades can differ in melting range, oil content, colour, physical form and documentation. A sourcing request should state which of these properties matter to the intended application, together with packaging, quantity and handling needs.",
         sections: [
-          { heading: "Begin with application and functional need", paragraphs: ["Describe how the wax is used and which behaviour matters in the process or finished product. A general request for paraffin wax does not show whether appearance, melting behaviour, oil content or another property is decision-driving."], points: ["Application and process", "Desired function", "Current comparison grade", "Finished-product requirements"] },
+          { heading: "Begin with application and functional need", paragraphs: ["Describe how the wax is used and which behaviour matters in the process or finished product. A general request for paraffin wax does not show whether appearance, melting behaviour, oil content or another property is most important when selecting the grade."], points: ["Application and process", "Desired function", "Current comparison grade", "Finished-product requirements"] },
           { heading: "State the grade-defining properties", paragraphs: ["Provide the target melting range, oil-content requirement and any critical appearance, colour or physical criteria used by the buyer. Confirm the applicable test method and units where comparison depends on them."], points: ["Melting range", "Oil content", "Colour or appearance", "Physical form and test method"] },
           { heading: "Include supply and handling context", paragraphs: ["State the preferred slab, pellet or other form, packaging, quantity and destination. Review SDS, storage and handling requirements as part of the source evaluation."], points: ["Preferred physical form", "Packaging and lot expectations", "Trial and routine volume", "SDS, storage and destination"] },
         ],

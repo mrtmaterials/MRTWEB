@@ -46,7 +46,7 @@ export function SiteHeader({ catalog, labels, locale }: SiteHeaderProps) {
           <BrandLogo className="h-[72px] w-[88px] object-contain sm:h-[78px] sm:w-[96px]" priority sizes="96px" />
         </Link>
 
-        <nav className="ml-auto hidden items-center gap-1 lg:flex">
+        <nav className="ml-auto hidden items-center gap-1 xl:flex">
           <details className="group relative">
             <summary className="flex min-h-11 cursor-pointer list-none items-center gap-1 rounded-full px-3 text-sm font-medium text-[var(--ink)] transition-colors hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--green-600)] [&::-webkit-details-marker]:hidden">
               {labels.products}
@@ -75,14 +75,14 @@ export function SiteHeader({ catalog, labels, locale }: SiteHeaderProps) {
           ))}
         </nav>
 
-        <div className="hidden items-center gap-2 lg:flex">
+        <div className="hidden items-center gap-2 xl:flex">
           <LocaleSwitch locale={locale} />
           <Link className="magnetic-target inline-flex min-h-11 items-center rounded-full bg-[var(--green-700)] px-4 text-sm font-semibold text-white transition-[color,background-color,transform] hover:bg-[var(--ink)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--green-600)] focus-visible:ring-offset-2" href={path("/contact")}>
             {labels.requestQuote}
           </Link>
         </div>
 
-        <div className="ml-auto lg:hidden">
+        <div className="ml-auto xl:hidden">
           <LocaleSwitch locale={locale} />
         </div>
 

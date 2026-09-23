@@ -33,8 +33,8 @@ export const categories: Category[] = [
       vi: "Nguyên liệu thực phẩm & dinh dưỡng",
     },
     description: {
-      en: "Ingredients and functional materials for food, dietary supplement and related manufacturing applications.",
-      vi: "Nguyên liệu và vật liệu chức năng phục vụ sản xuất thực phẩm, thực phẩm bảo vệ sức khỏe và các ứng dụng liên quan.",
+      en: "Ingredients for food, beverage and dietary-supplement production, including salts, thickeners, stabilisers and excipients.",
+      vi: "Nguyên liệu cho sản xuất thực phẩm, đồ uống và thực phẩm bảo vệ sức khỏe, gồm các dòng muối, chất làm đặc, chất ổn định và tá dược.",
     },
     image: "/images/editorial/lab-quality.webp",
   },
@@ -46,8 +46,8 @@ export const categories: Category[] = [
       vi: "Vật liệu công nghiệp & bao bì",
     },
     description: {
-      en: "Selected materials for plastic packaging, processing and industrial production.",
-      vi: "Các vật liệu được lựa chọn cho bao bì nhựa, gia công và sản xuất công nghiệp.",
+      en: "PET and HDPE resins for packaging applications, together with paraffin wax for selected manufacturing uses.",
+      vi: "Nhựa PET, HDPE cho ứng dụng bao bì và sáp paraffin cho một số nhu cầu sản xuất.",
     },
     image: "/images/editorial/warehouse.webp",
   },
@@ -56,8 +56,8 @@ export const categories: Category[] = [
     order: 3,
     name: { en: "Chemicals", vi: "Hóa chất" },
     description: {
-      en: "Specialty and commodity chemical sourcing for manufacturing requirements.",
-      vi: "Tìm nguồn hóa chất chuyên dụng và hóa chất thông dụng theo yêu cầu sản xuất.",
+      en: "Specialty and commodity chemical enquiries defined by chemical identity, grade, application, quantity and required documents.",
+      vi: "Yêu cầu hóa chất chuyên dụng và thông dụng được xác định theo tên hóa học, grade, ứng dụng, số lượng và bộ tài liệu cần thiết.",
     },
     image: "/images/editorial/chemical-plant.webp",
   },
@@ -69,8 +69,8 @@ export const products: Product[] = [
     category: "nutraceutical-food-ingredients",
     name: { en: "Sodium Salts", vi: "Muối natri" },
     summary: {
-      en: "Sodium salt materials sourced to support ingredient and manufacturing requirements.",
-      vi: "Các dòng muối natri được tìm nguồn theo yêu cầu nguyên liệu và sản xuất.",
+      en: "Sodium-salt enquiries defined by the exact compound, target grade, application and document requirements.",
+      vi: "Yêu cầu muối natri được xác định theo đúng hợp chất, grade mục tiêu, ứng dụng và bộ tài liệu cần thiết.",
     },
     applications: {
       en: ["Food and beverage manufacturing", "Dietary supplement manufacturing", "Formulation support"],
@@ -84,8 +84,8 @@ export const products: Product[] = [
     category: "nutraceutical-food-ingredients",
     name: { en: "Magnesium Salts", vi: "Muối magiê" },
     summary: {
-      en: "Magnesium salt materials for ingredient sourcing discussions and manufacturing use.",
-      vi: "Các dòng muối magiê phục vụ trao đổi nhu cầu tìm nguồn nguyên liệu và sản xuất.",
+      en: "Magnesium-salt enquiries defined by the exact compound, elemental-magnesium target, application and required grade.",
+      vi: "Yêu cầu muối magiê được xác định theo đúng hợp chất, mục tiêu magiê nguyên tố, ứng dụng và grade cần thiết.",
     },
     applications: {
       en: ["Dietary supplement manufacturing", "Food manufacturing", "Formulation support"],
@@ -99,8 +99,8 @@ export const products: Product[] = [
     category: "nutraceutical-food-ingredients",
     name: { en: "Thickeners & Stabilisers", vi: "Chất làm đặc & ổn định" },
     summary: {
-      en: "Texture and stability-supporting ingredients for relevant production applications.",
-      vi: "Nguyên liệu hỗ trợ cấu trúc và độ ổn định cho các ứng dụng sản xuất phù hợp.",
+      en: "Thickeners and stabilisers considered against the target texture, formulation and processing conditions.",
+      vi: "Chất làm đặc và ổn định được xem xét theo cấu trúc mục tiêu, công thức và điều kiện gia công.",
     },
     applications: {
       en: ["Food and beverage manufacturing", "Cosmetics and personal care", "Formulation support"],
@@ -113,8 +113,8 @@ export const products: Product[] = [
     category: "nutraceutical-food-ingredients",
     name: { en: "Excipients", vi: "Tá dược" },
     summary: {
-      en: "Supporting materials for dietary supplement and related formulation requirements.",
-      vi: "Nguyên liệu hỗ trợ cho yêu cầu công thức thực phẩm bảo vệ sức khỏe và các ứng dụng liên quan.",
+      en: "Excipient enquiries defined by functional role, dosage or product form, target grade and document requirements.",
+      vi: "Yêu cầu tá dược được xác định theo vai trò chức năng, dạng sản phẩm, grade mục tiêu và bộ tài liệu.",
     },
     applications: {
       en: ["Dietary supplement manufacturing", "Formulation support", "Manufacturing trials"],
@@ -127,8 +127,8 @@ export const products: Product[] = [
     category: "industrial-packaging-materials",
     name: { en: "PET Resin (Bottle Grade)", vi: "Nhựa PET (dùng cho chai)" },
     summary: {
-      en: "PET resin sourcing for bottle and packaging production requirements.",
-      vi: "Nhựa PET được tìm nguồn cho nhu cầu sản xuất chai và bao bì.",
+      en: "Bottle-grade PET enquiries reviewed against the current grade, preform or bottle, equipment and expected volume.",
+      vi: "Yêu cầu PET chai được rà soát theo grade hiện dùng, phôi hoặc chai, thiết bị và sản lượng dự kiến.",
     },
     applications: {
       en: ["Bottle production", "Plastic packaging", "General manufacturing"],
@@ -142,8 +142,8 @@ export const products: Product[] = [
     category: "industrial-packaging-materials",
     name: { en: "HDPE Resin (Blow Moulding)", vi: "Nhựa HDPE (thổi khuôn)" },
     summary: {
-      en: "HDPE resin sourcing for blow moulding and packaging manufacturing requirements.",
-      vi: "Nhựa HDPE được tìm nguồn cho nhu cầu thổi khuôn và sản xuất bao bì.",
+      en: "HDPE blow-moulding enquiries reviewed against the current grade, machine, mould, container and expected volume.",
+      vi: "Yêu cầu HDPE thổi khuôn được rà soát theo grade hiện dùng, máy, khuôn, bao bì và sản lượng dự kiến.",
     },
     applications: {
       en: ["Blow moulding", "Plastic packaging", "General manufacturing"],
@@ -156,8 +156,8 @@ export const products: Product[] = [
     category: "industrial-packaging-materials",
     name: { en: "Paraffin Wax", vi: "Sáp paraffin" },
     summary: {
-      en: "Paraffin wax sourcing for manufacturing and processing requirements.",
-      vi: "Sáp paraffin được tìm nguồn theo yêu cầu sản xuất và gia công.",
+      en: "Paraffin-wax enquiries defined by application, melting range, oil content, physical form and packaging.",
+      vi: "Yêu cầu sáp paraffin được xác định theo ứng dụng, khoảng nóng chảy, hàm lượng dầu, dạng vật lý và bao bì.",
     },
     applications: {
       en: ["Cosmetics and personal care", "Industrial processing", "General manufacturing"],
@@ -171,8 +171,8 @@ export const products: Product[] = [
     category: "chemicals",
     name: { en: "Specialty Chemicals — On Request", vi: "Hóa chất chuyên dụng — theo yêu cầu" },
     summary: {
-      en: "Sourcing support for specialty chemical requirements not listed in the current catalogue.",
-      vi: "Hỗ trợ tìm nguồn các hóa chất chuyên dụng chưa được liệt kê trong danh mục hiện tại.",
+      en: "Specialty-chemical requests identified by chemical name or CAS number, grade, application, quantity and required documents.",
+      vi: "Yêu cầu hóa chất chuyên dụng theo tên hóa học hoặc số CAS, grade, ứng dụng, số lượng và bộ tài liệu cần thiết.",
     },
     applications: {
       en: ["Manufacturing requirements", "Industrial processing", "Project-based sourcing"],
