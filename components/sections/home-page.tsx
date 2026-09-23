@@ -30,8 +30,8 @@ const editorialCopy = {
     ],
     corridor: {
       eyebrow: "[ SOURCING BRIEF ]",
-      title: "The useful details travel with the material.",
-      body: "A stronger enquiry connects the exact material identity with the application, document needs and delivery context. MRT Materials keeps those details together for review.",
+      title: "A product name is only the starting point.",
+      body: "A useful request tells us what the material is, how you will use it, which documents your team needs and where it must be delivered. Keeping those details together makes the review faster and more accurate.",
       items: [
         { title: "Material identity", body: "Name, CAS number or comparison grade where available." },
         { title: "Application fit", body: "Intended use, process conditions and critical parameters." },
@@ -42,8 +42,8 @@ const editorialCopy = {
     },
     faq: {
       eyebrow: "[ BUYER QUESTIONS ]",
-      title: "Useful answers before the first enquiry.",
-      body: "Start with what your technical and purchasing teams already know. Missing details can be clarified during review.",
+      title: "A few things worth knowing before you contact us.",
+      body: "Send what your technical and purchasing teams already know. We can clarify the missing details together.",
       items: [
         { question: "Can MRT Materials review an unlisted material?", answer: "Yes. Share the material identity, application and available specification so the sourcing requirement can be assessed." },
         { question: "Which documents can be requested?", answer: "Available COA, TDS and SDS documents can be coordinated for the selected material and source. State the required set in your enquiry." },
@@ -63,8 +63,8 @@ const editorialCopy = {
     ],
     corridor: {
       eyebrow: "[ HỒ SƠ TÌM NGUỒN ]",
-      title: "Thông tin cần thiết đi cùng từng yêu cầu nguyên liệu.",
-      body: "Một yêu cầu tốt kết nối đúng định danh nguyên liệu với ứng dụng, tài liệu cần thiết và bối cảnh giao hàng. MRT Materials tập hợp các thông tin đó để xem xét.",
+      title: "Tên nguyên liệu chỉ là điểm bắt đầu.",
+      body: "Một yêu cầu dễ xử lý cần cho biết nguyên liệu là gì, dùng vào đâu, đội ngũ của bạn cần tài liệu nào và giao đến đâu. Khi các thông tin này đi cùng nhau, hai bên sẽ rà soát nhanh và chính xác hơn.",
       items: [
         { title: "Định danh nguyên liệu", body: "Tên, số CAS hoặc phân hạng tham chiếu nếu có." },
         { title: "Mức độ phù hợp", body: "Mục đích sử dụng, điều kiện quy trình và thông số quan trọng." },
@@ -75,8 +75,8 @@ const editorialCopy = {
     },
     faq: {
       eyebrow: "[ CÂU HỎI MUA HÀNG ]",
-      title: "Thông tin hữu ích trước lần trao đổi đầu tiên.",
-      body: "Hãy bắt đầu từ những gì bộ phận kỹ thuật và mua hàng đã có. Các chi tiết còn thiếu có thể được làm rõ trong quá trình xem xét.",
+      title: "Một vài điều nên biết trước khi liên hệ.",
+      body: "Hãy gửi những thông tin mà bộ phận kỹ thuật và mua hàng đã có. Các phần còn thiếu, hai bên có thể cùng làm rõ sau.",
       items: [
         { question: "MRT Materials có xem xét nguyên liệu chưa có trong danh mục không?", answer: "Có. Vui lòng chia sẻ định danh nguyên liệu, ứng dụng và thông số hiện có để chúng tôi xem xét nhu cầu tìm nguồn." },
         { question: "Có thể yêu cầu những tài liệu nào?", answer: "COA, TDS và SDS hiện có có thể được phối hợp cho nguyên liệu và nguồn cung được lựa chọn. Hãy nêu rõ bộ tài liệu cần thiết trong yêu cầu." },
@@ -151,8 +151,8 @@ export function HomePage({ dictionary, locale }: HomePageProps) {
             </Reveal>
           </div>
           <Reveal className="absolute right-10 bottom-10 hidden max-w-[18rem] border-l border-[var(--accent-mint)] pl-5 lg:block" delay={0.35}>
-            <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-[var(--accent-mint)]">01 / SOURCE &nbsp; 02 / VERIFY &nbsp; 03 / DELIVER</p>
-            <p className="mt-3 text-sm leading-6 text-white/75">{home.why.items[1]?.body}</p>
+            <p className="font-mono text-[11px] uppercase tracking-[0.16em] text-[var(--accent-mint)]">01 / SOURCE &nbsp; 02 / VERIFY &nbsp; 03 / DELIVER</p>
+            <p className="mt-3 text-sm leading-6 text-white/85">{home.why.items[1]?.body}</p>
           </Reveal>
         </Container>
       </section>
@@ -188,7 +188,7 @@ export function HomePage({ dictionary, locale }: HomePageProps) {
                 <span className="relative font-mono text-xs font-semibold uppercase text-[var(--accent-mint)]">[ {String(leadCategory.order).padStart(2, "0")} / {locale === "vi" ? "DANH MỤC CHÍNH" : "LEAD PORTFOLIO"} ]</span>
                 <div className="relative mt-auto max-w-2xl pt-32">
                   <h3 className="font-display text-4xl font-semibold leading-[0.98] tracking-[-0.045em] text-white sm:text-5xl">{leadCategory.name[locale]}</h3>
-                  <p className="mt-5 max-w-xl leading-7 text-white/72">{leadCategory.description[locale]}</p>
+                  <p className="mt-5 max-w-xl leading-7 text-white/82">{leadCategory.description[locale]}</p>
                 </div>
                 <span className="absolute top-6 right-6 grid size-11 place-items-center rounded-full border border-white/25 bg-black/20 text-white backdrop-blur-md transition duration-300 group-hover:rotate-45 group-hover:bg-white group-hover:text-[var(--ink)] motion-reduce:transition-none"><ArrowUpRight aria-hidden="true" size={19} /></span>
               </Link>
@@ -202,7 +202,7 @@ export function HomePage({ dictionary, locale }: HomePageProps) {
                     <span className="relative font-mono text-xs font-semibold text-[var(--accent-mint)]">0{category.order}</span>
                     <div className="relative mt-auto max-w-md">
                       <h3 className="font-display text-3xl font-semibold leading-none tracking-[-0.04em] text-white">{category.name[locale]}</h3>
-                      <p className="mt-3 line-clamp-2 text-sm leading-6 text-white/68">{category.description[locale]}</p>
+                      <p className="mt-3 line-clamp-2 text-sm leading-6 text-white/82">{category.description[locale]}</p>
                     </div>
                     <ArrowUpRight aria-hidden="true" className="absolute top-7 right-7 text-white" size={20} />
                   </Link>
@@ -214,7 +214,7 @@ export function HomePage({ dictionary, locale }: HomePageProps) {
       </section>
 
       <IndustryShowcase
-        body={locale === "vi" ? "Từ nguyên liệu công thức đến nhựa bao bì và hóa chất theo yêu cầu, mỗi trao đổi bắt đầu từ bối cảnh sản xuất thực tế." : "From formulation inputs to packaging resins and requested chemicals, each conversation starts with the real manufacturing context."}
+        body={locale === "vi" ? "Cùng một tên nguyên liệu có thể phù hợp với quy trình này nhưng không phù hợp với quy trình khác. Vì vậy, chúng tôi bắt đầu từ ứng dụng sản xuất thực tế." : "The same material name can work in one process and fail in another. That is why we start with the real manufacturing application."}
         eyebrow={home.industries.eyebrow}
         items={home.industries.items}
         locale={locale}
@@ -226,7 +226,7 @@ export function HomePage({ dictionary, locale }: HomePageProps) {
           <div className="lg:sticky lg:top-32 lg:self-start">
             <Reveal><SectionHeading eyebrow={home.process.eyebrow} title={home.process.title} /></Reveal>
             <div className="mt-8 h-1 overflow-hidden rounded-full bg-[var(--line)]"><div className="process-progress h-full w-full origin-left bg-[var(--green-600)]" /></div>
-            <p className="mt-7 max-w-sm text-sm leading-7 text-[var(--muted)]">{locale === "vi" ? "Một luồng trao đổi liên tục giúp thông tin kỹ thuật, tài liệu và điều kiện giao hàng không bị tách rời." : "One continuous review keeps technical information, documents and delivery conditions connected."}</p>
+            <p className="mt-7 max-w-sm text-sm leading-7 text-[var(--muted)]">{locale === "vi" ? "Mỗi bước làm rõ một phần của yêu cầu, để thông tin kỹ thuật, tài liệu và điều kiện giao hàng không bị rời rạc." : "Each step answers a different part of the request, so technical details, documents and delivery terms do not get separated."}</p>
           </div>
           <ol className="relative border-t border-[var(--ink)]">
             <svg aria-hidden="true" className="absolute top-0 left-[2.35rem] hidden h-full w-3 overflow-visible lg:block" preserveAspectRatio="none" viewBox="0 0 12 1000">
@@ -276,7 +276,7 @@ export function HomePage({ dictionary, locale }: HomePageProps) {
             <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/15 to-transparent" />
             <div className="absolute right-7 bottom-7 left-7">
               <p className="font-mono text-xs text-[var(--accent-mint)]">[ SOURCE / REVIEW / COORDINATE ]</p>
-              <p className="mt-4 max-w-md text-lg leading-7 text-white/82">{locale === "vi" ? "Một đầu mối trao đổi xuyên suốt từ yêu cầu ban đầu đến các bước giao nhận đã thống nhất." : "One sourcing conversation carried from the initial requirement through the agreed delivery steps."}</p>
+              <p className="mt-4 max-w-md text-lg leading-7 text-white/82">{locale === "vi" ? "Bạn không cần kể lại yêu cầu từ đầu ở mỗi bước. Chúng tôi giữ các thông tin đã thống nhất xuyên suốt quá trình." : "You should not have to explain the same requirement again at every step. We keep the agreed details connected throughout the process."}</p>
             </div>
           </Reveal>
           <div>
@@ -299,9 +299,9 @@ export function HomePage({ dictionary, locale }: HomePageProps) {
         <Container>
           <Reveal>
             <SectionHeading
-              description={locale === "vi" ? "Kiến thức thực tế giúp đội ngũ mua hàng và kỹ thuật chuẩn bị yêu cầu rõ ràng trước khi đánh giá nguồn cung." : "Practical guidance for procurement and technical teams preparing a clear material sourcing brief."}
+              description={locale === "vi" ? "Hướng dẫn xác định nguyên liệu, tài liệu, thử nghiệm và thông tin giao hàng trước khi yêu cầu báo giá." : "Guides for defining materials, documents, trials and delivery details before requesting a quote."}
               eyebrow={locale === "vi" ? "[ KIẾN THỨC VẬT LIỆU ]" : "[ MATERIAL KNOWLEDGE ]"}
-              title={locale === "vi" ? "Chuẩn bị yêu cầu tốt hơn trước khi báo giá." : "Prepare a better brief before requesting a quote."}
+              title={locale === "vi" ? "Cần kiểm tra gì trước khi gửi yêu cầu báo giá?" : "What should you check before requesting a quote?"}
             />
           </Reveal>
           <div className="mt-12 grid gap-10 border-t border-[var(--ink)] pt-9 lg:grid-cols-3 lg:gap-0">
@@ -388,7 +388,7 @@ export function HomePage({ dictionary, locale }: HomePageProps) {
             <div className="relative min-h-[22rem] lg:min-h-full">
               <Image alt="Laboratory quality review for material sourcing" className="absolute inset-0 h-full w-full object-cover" fill sizes="(max-width: 1024px) 100vw, 42vw" src="/images/editorial/lab-quality.webp" />
               <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-r from-[var(--green-700)]/45 to-transparent" />
-              <p className="absolute right-7 bottom-7 left-7 font-mono text-[10px] text-white/80">[ REQUIREMENT / DOCUMENTS / REVIEW ]</p>
+              <p className="absolute right-7 bottom-7 left-7 font-mono text-[11px] text-white/85">[ REQUIREMENT / DOCUMENTS / REVIEW ]</p>
             </div>
           </Reveal>
         </Container>

@@ -31,9 +31,9 @@ export default async function InsightsPage({ params }: PageProps) {
   const { lang } = await params;
   if (!isLocale(lang)) notFound();
   const copy = {
-    eyebrow: lang === "vi" ? "Insights / Kiến thức" : "Insights / Knowledge",
-    title: lang === "vi" ? "Kiến thức thực tế cho quyết định nguyên liệu tốt hơn." : "Practical knowledge for better material decisions.",
-    description: lang === "vi" ? "Các hướng dẫn song ngữ giúp đội ngũ mua hàng, kỹ thuật và chất lượng chuẩn bị yêu cầu, so sánh tài liệu và lập kế hoạch đánh giá." : "Bilingual guides to help purchasing, technical and quality teams prepare requirements, compare documents and plan evaluations.",
+    eyebrow: lang === "vi" ? "Hướng dẫn cho đội ngũ mua hàng" : "Guides for material buyers",
+    title: lang === "vi" ? "Cần kiểm tra gì trước khi yêu cầu báo giá nguyên liệu?" : "What should you check before requesting a material quote?",
+    description: lang === "vi" ? "Các hướng dẫn song ngữ, dễ dùng về thông số, COA, TDS, SDS, thử nghiệm sản xuất và những thông tin nhà cung cấp cần để xem xét yêu cầu." : "Straightforward bilingual guides on specifications, COA, TDS, SDS, production trials and the details suppliers need to review an enquiry.",
     read: lang === "vi" ? "Đọc hướng dẫn" : "Read guide",
   };
   const list = insights.map((insight) => ({ insight, content: getInsightContent(insight, lang) }));

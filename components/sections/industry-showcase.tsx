@@ -45,9 +45,9 @@ export function IndustryShowcase({ body, eyebrow, items, locale, title }: Indust
       <div aria-hidden="true" className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(5,18,14,0.98)_0%,rgba(5,18,14,0.91)_48%,rgba(5,18,14,0.38)_100%)] transition-opacity duration-700 max-lg:bg-[linear-gradient(180deg,rgba(5,18,14,0.95)_0%,rgba(5,18,14,0.76)_100%)]" />
       <Container className="grid gap-16 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
         <Reveal>
-          <SectionHeading className="[&_h2]:!text-white [&_p]:!text-white/65" eyebrow={eyebrow} title={title} />
-          <p className="mt-8 max-w-md border-l border-[var(--green-400)] pl-5 text-sm leading-7 text-white/62">{body}</p>
-          <p className="mt-12 hidden font-mono text-[10px] uppercase text-white/45 lg:block">
+          <SectionHeading className="[&_h2]:!text-white [&_p]:!text-white/80" eyebrow={eyebrow} title={title} />
+          <p className="mt-8 max-w-md border-l border-[var(--green-400)] pl-5 text-sm leading-7 text-white/80">{body}</p>
+          <p className="mt-12 hidden font-mono text-[11px] uppercase text-white/60 lg:block">
             {locale === "vi" ? "[ DI CHUỘT / FOCUS ĐỂ KHÁM PHÁ ]" : "[ HOVER / FOCUS TO EXPLORE ]"}
           </p>
         </Reveal>

@@ -23,11 +23,21 @@ export function MobileNav({ closeLabel, items, openLabel, quoteHref, quoteLabel 
   useEffect(() => {
     if (!isOpen) return;
 
+    const bodyOverflow = document.body.style.overflow;
+    const htmlOverflow = document.documentElement.style.overflow;
     const closeOnEscape = (event: KeyboardEvent) => {
       if (event.key === "Escape") setIsOpen(false);
     };
+    document.body.style.overflow = "hidden";
+    document.documentElement.style.overflow = "hidden";
+    window.dispatchEvent(new CustomEvent("mrt:menu-toggle", { detail: { open: true } }));
     window.addEventListener("keydown", closeOnEscape);
-    return () => window.removeEventListener("keydown", closeOnEscape);
+    return () => {
+      document.body.style.overflow = bodyOverflow;
+      document.documentElement.style.overflow = htmlOverflow;
+      window.dispatchEvent(new CustomEvent("mrt:menu-toggle", { detail: { open: false } }));
+      window.removeEventListener("keydown", closeOnEscape);
+    };
   }, [isOpen]);
 
   return (
@@ -47,7 +57,8 @@ export function MobileNav({ closeLabel, items, openLabel, quoteHref, quoteLabel 
       </button>
       {isOpen ? (
         <div
-          className="absolute inset-x-0 top-full border-t border-[var(--line)] bg-[color:rgba(244,246,247,0.98)] px-5 py-7 shadow-xl backdrop-blur-xl"
+          className="absolute inset-x-0 top-full h-[calc(100dvh-5.25rem)] overflow-y-auto border-t border-[var(--line)] bg-[var(--bg)] px-5 py-7 shadow-xl"
+          data-lenis-prevent
           id={panelId}
         >
           <nav className="mx-auto flex max-w-[1440px] flex-col gap-1" aria-label={openLabel}>
