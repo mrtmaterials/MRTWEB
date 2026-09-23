@@ -38,6 +38,10 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
             <div className="rounded-[var(--radius-card)] bg-white p-6"><MapPin className="text-[var(--green-600)]" aria-hidden="true" size={21} /><p className="mt-5 font-mono text-xs uppercase tracking-[0.15em] text-[var(--muted)]">{copy.address}</p><p className="mt-2 leading-7 text-[var(--ink)]">{company.address}</p><a className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-[var(--green-600)]" href={mapUrl} rel="noreferrer" target="_blank">{copy.map}<ExternalLink aria-hidden="true" size={15} /></a></div>
           </Reveal>
           <Reveal className="rounded-[2rem] bg-white p-6 shadow-[0_16px_55px_rgba(15,26,23,0.06)] sm:p-9" delay={0.08}>
+            <div className="mb-8 border-b border-[var(--line)] pb-7">
+              <p className="font-mono text-xs uppercase tracking-[0.15em] text-[var(--green-600)]">{lang === "vi" ? "Gửi trực tiếp đến bộ phận kinh doanh" : "Sent directly to sales"}</p>
+              <p className="mt-3 leading-7 text-[var(--muted)]">{lang === "vi" ? "Mục tiêu phản hồi ban đầu trong vòng một ngày làm việc. Thời gian xác nhận báo giá, mẫu và tài liệu phụ thuộc vào nguyên liệu và nguồn được đề xuất." : "Initial response target: within one business day. Quotation, sample and document timing depends on the material and proposed source."}</p>
+            </div>
             <Suspense fallback={<div className="min-h-[36rem] animate-pulse rounded-[var(--radius-card)] bg-[var(--bg)]" />}>
               <RfqForm labels={copy.form} locale={lang} />
             </Suspense>

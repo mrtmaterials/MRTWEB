@@ -6,6 +6,7 @@ type SectionHeadingProps = {
   description?: ReactNode;
   align?: "left" | "center";
   className?: string;
+  level?: "h1" | "h2";
 };
 
 export function SectionHeading({
@@ -14,8 +15,10 @@ export function SectionHeading({
   description,
   align = "left",
   className,
+  level = "h2",
 }: SectionHeadingProps) {
   const alignment = align === "center" ? "items-center text-center" : "items-start text-left";
+  const Heading = level;
 
   return (
     <header className={`flex max-w-3xl flex-col gap-4 ${alignment} ${className ?? ""}`}>
@@ -24,9 +27,9 @@ export function SectionHeading({
           {eyebrow}
         </p>
       ) : null}
-      <h2 className="font-display text-3xl font-semibold tracking-[-0.045em] text-[var(--ink)] sm:text-4xl lg:text-5xl">
+      <Heading className="font-display text-3xl font-semibold tracking-[-0.045em] text-[var(--ink)] sm:text-4xl lg:text-5xl">
         {title}
-      </h2>
+      </Heading>
       {description ? (
         <p className="max-w-2xl text-base leading-7 text-[var(--muted)] sm:text-lg">{description}</p>
       ) : null}

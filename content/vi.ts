@@ -2,7 +2,7 @@ export const vi = {
   locale: "vi",
   nav: {
     products: "Sản phẩm", industries: "Ứng dụng", insights: "Kiến thức", about: "Giới thiệu", quality: "Tài liệu", contact: "Liên hệ",
-    requestQuote: "Yêu cầu báo giá", openMenu: "Mở menu sản phẩm", closeMenu: "Đóng menu", skipToContent: "Chuyển đến nội dung",
+    requestQuote: "Yêu cầu báo giá", openMenu: "Mở menu điều hướng", closeMenu: "Đóng menu", skipToContent: "Chuyển đến nội dung",
   },
   footer: { insights: "Kiến thức", privacy: "Chính sách bảo mật", terms: "Điều khoản sử dụng" },
   common: {
@@ -52,7 +52,7 @@ export const vi = {
       { title: "Sản xuất công nghiệp", body: "Yêu cầu sáp paraffin và hóa chất được rà soát theo ứng dụng cụ thể của từng dự án.", categories: ["Vật liệu công nghiệp & bao bì", "Hóa chất"] },
     ],
   },
-  about: { eyebrow: "Về MRT Materials", title: "Tiếp nhận yêu cầu tìm nguồn nguyên liệu cho doanh nghiệp sản xuất tại Việt Nam", body: "MRT Materials rà soát yêu cầu về nguyên liệu thực phẩm, vật liệu bao bì và hóa chất theo grade, bộ tài liệu, số lượng và điểm giao.", valuesTitle: "Thông tin dùng để rà soát", values: ["Rà soát theo yêu cầu cụ thể", "Nêu bộ tài liệu từ đầu", "Xác nhận thông tin thương mại trước báo giá", "Xác nhận khả năng cung ứng theo từng nguồn"] },
+  about: { eyebrow: "Về MRT Materials", title: "Hồ sơ năng lực tìm nguồn và cung ứng nguyên liệu", body: "MRT Materials là doanh nghiệp mới tại Việt Nam, được xây dựng bởi đội ngũ có nhiều năm kinh nghiệm làm việc trong lĩnh vực nguyên liệu và chuỗi cung ứng.", valuesTitle: "Thông tin dùng để rà soát", values: ["Rà soát theo yêu cầu cụ thể", "Nêu bộ tài liệu từ đầu", "Xác nhận thông tin thương mại trước báo giá", "Xác nhận khả năng cung ứng theo từng nguồn"] },
   quality: { eyebrow: "Tài liệu & rà soát nguyên liệu", title: "Tài liệu và nội dung cần kiểm tra cho từng yêu cầu nguyên liệu", intro: "Mỗi yêu cầu được rà soát theo nguyên liệu, ứng dụng, bộ tài liệu cần thiết và mục đích sử dụng.", items: [
     { title: "Đối chiếu yêu cầu", body: "Định danh, grade, ứng dụng và giới hạn quan trọng được đối chiếu với thông tin hiện có của nguồn được đề xuất." },
     { title: "Tài liệu hiện có", body: "Hãy xác nhận COA, TDS và SDS nào hiện có cho nguyên liệu và nguồn được đề xuất." },
@@ -62,12 +62,13 @@ export const vi = {
   contact: {
     eyebrow: "Liên hệ / RFQ", title: "Gửi yêu cầu tìm nguồn nguyên liệu", intro: "Gửi tên nguyên liệu, ứng dụng, grade hoặc thông số, số lượng, bộ tài liệu cần thiết và điểm giao.",
     sales: "Kinh doanh", accounts: "Kế toán", address: "Địa chỉ", map: "Mở vị trí trên OpenStreetMap", phone: "Điện thoại",
-    form: { company: "Tên công ty", contactPerson: "Người liên hệ", email: "Email", phone: "Điện thoại", country: "Quốc gia", product: "Sản phẩm / nguyên liệu", grade: "Phân hạng / thông số", quantity: "Số lượng & đơn vị", deliveryDate: "Ngày giao hàng dự kiến", message: "Nội dung", submit: "Gửi yêu cầu", required: "Bắt buộc", honeypot: "Không điền vào trường này", fileNote: "Đối với tệp đính kèm hoặc thông số chi tiết, vui lòng gửi về sales@mrtmaterials.com.", success: "Bản nháp email của Quý khách đã sẵn sàng để gửi.", error: "Vui lòng hoàn tất các trường bắt buộc và cung cấp email hợp lệ." },
+    form: { company: "Tên công ty", contactPerson: "Người liên hệ", email: "Email", phone: "Điện thoại", country: "Quốc gia", product: "Sản phẩm / nguyên liệu", grade: "Grade / thông số", quantity: "Số lượng & đơn vị", deliveryDate: "Ngày giao hàng dự kiến", message: "Nội dung", attachment: "Specification, COA mẫu hoặc datasheet", submit: "Gửi yêu cầu", required: "Bắt buộc", honeypot: "Không điền vào trường này", fileNote: "Tối đa 5 tệp PDF, Word, Excel hoặc hình ảnh; tổng dung lượng không quá 10 MB.", success: "Yêu cầu đã được gửi đến bộ phận kinh doanh MRT Materials.", error: "Kiểm tra các trường bắt buộc và tệp đính kèm, sau đó thử lại hoặc email sales@mrtmaterials.com." },
   },
   legal: {
     privacy: { title: "Chính sách bảo mật", updated: "Cập nhật lần cuối: 18/09/2026", intro: "Thông báo này giải thích cách MRT Materials xử lý thông tin được gửi qua website.", sections: [
       { title: "Thông tin Quý khách cung cấp", body: "Chúng tôi có thể tiếp nhận thông tin liên hệ và nội dung yêu cầu do Quý khách tự nguyện gửi qua biểu mẫu hoặc email." },
       { title: "Mục đích sử dụng thông tin", body: "Thông tin được sử dụng để xem xét và phản hồi các yêu cầu kinh doanh, bao gồm yêu cầu báo giá." },
+      { title: "Xử lý biểu mẫu và tệp đính kèm", body: "Nội dung biểu mẫu và tệp đính kèm được truyền qua FormSubmit để gửi đến bộ phận kinh doanh MRT Materials. Không tải lên mật khẩu, thông tin thanh toán hoặc dữ liệu cá nhân nhạy cảm không liên quan." },
       { title: "Liên hệ", body: "Vui lòng liên hệ sales@mrtmaterials.com đối với các vấn đề liên quan đến bảo mật." },
     ] },
     terms: { title: "Điều khoản sử dụng", updated: "Cập nhật lần cuối: 18/09/2026", intro: "Khi sử dụng website này, Quý khách đồng ý sử dụng thông tin cho mục đích kinh doanh hợp pháp.", sections: [

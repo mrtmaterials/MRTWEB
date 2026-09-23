@@ -28,6 +28,7 @@ export function SiteFooter({ address, labels, locale, phone }: SiteFooterProps) 
       <div className="mx-auto grid max-w-[1440px] gap-12 px-5 sm:px-8 md:grid-cols-[1.2fr_repeat(3,1fr)] lg:px-12">
         <div>
           <BrandLogo className="h-auto w-44" sizes="176px" />
+          <p className="mt-5 max-w-xs text-sm leading-6 text-white/68">{locale === "vi" ? "Tiếp nhận yêu cầu tìm nguồn nguyên liệu thực phẩm, vật liệu bao bì và hóa chất cho doanh nghiệp sản xuất tại Việt Nam." : "Material sourcing enquiries for food ingredients, packaging materials and chemicals for manufacturers in Vietnam."}</p>
         </div>
         <address className="not-italic">
           <p className="mb-3 font-mono text-xs uppercase tracking-[0.15em] text-[var(--accent-mint)]">{labels.sales}</p>
@@ -44,7 +45,11 @@ export function SiteFooter({ address, labels, locale, phone }: SiteFooterProps) 
         </address>
       </div>
       <div className="mx-auto mt-16 flex max-w-[1440px] flex-wrap items-center gap-x-5 gap-y-2 px-5 text-sm text-white/62 sm:px-8 lg:px-12">
+        <Link className="transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--green-400)]" href={path("/products")}>{locale === "vi" ? "Sản phẩm" : "Products"}</Link>
+        <Link className="transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--green-400)]" href={path("/industries")}>{locale === "vi" ? "Ứng dụng" : "Applications"}</Link>
         <Link className="transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--green-400)]" href={path("/insights")}>{labels.insights}</Link>
+        <Link className="transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--green-400)]" href={path("/about")}>{locale === "vi" ? "Giới thiệu" : "About"}</Link>
+        <Link className="transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--green-400)]" href={path("/contact")}>{locale === "vi" ? "Liên hệ" : "Contact"}</Link>
         <Link className="transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--green-400)]" href={path("/privacy")}>{labels.privacy}</Link>
         <Link className="transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--green-400)]" href={path("/terms")}>{labels.terms}</Link>
       </div>

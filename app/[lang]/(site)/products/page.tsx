@@ -61,7 +61,7 @@ export default async function ProductsPage({ params }: PageProps) {
     <div className="pb-20 pt-20 sm:pt-28">
       <script dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionJsonLd).replace(/</g, "\\u003c") }} type="application/ld+json" />
       <Container>
-        <SectionHeading className="mb-12" description={copy.catalog.intro} eyebrow={copy.catalog.eyebrow} title={copy.catalog.title} />
+        <SectionHeading className="mb-12" description={copy.catalog.intro} eyebrow={copy.catalog.eyebrow} level="h1" title={copy.catalog.title} />
         <ProductsExplorer
           categories={categories}
           copy={{

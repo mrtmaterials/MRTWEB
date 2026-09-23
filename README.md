@@ -29,7 +29,9 @@ npm run build
 
 ## RFQ delivery
 
-Without configuration, the RFQ form opens a prefilled email draft to `sales@mrtmaterials.com`. To send through a compatible Web3Forms/Formspree endpoint, set:
+By default, the RFQ form posts directly to `sales@mrtmaterials.com` through FormSubmit and supports attachments up to 10 MB in total. The mailbox owner must approve FormSubmit's one-time activation email before customer submissions are forwarded.
+
+To replace FormSubmit with another compatible multipart endpoint, set:
 
 ```bash
 NEXT_PUBLIC_FORM_ENDPOINT=https://your-form-endpoint.example
@@ -38,9 +40,13 @@ NEXT_PUBLIC_FORM_ENDPOINT=https://your-form-endpoint.example
 ## Deploy to Vercel
 
 1. Import the `mrtmaterials/MRTWEB` GitHub repository in Vercel.
-2. Add `NEXT_PUBLIC_FORM_ENDPOINT` only if using a hosted form endpoint.
+2. Add `NEXT_PUBLIC_FORM_ENDPOINT` only when replacing the default FormSubmit endpoint.
 3. Deploy; Vercel will run `npm run build` and serve the static export.
 4. Add `mrtmaterials.com` in **Project → Settings → Domains**.
 5. At the domain registrar, add only the A/CNAME records Vercel shows.
 
 Do not delete or modify existing Google Workspace MX records when adding website DNS records; those records control company email delivery.
+
+## Monthly production audit
+
+`.github/workflows/monthly-site-audit.yml` runs on the first day of every month at 09:00 Vietnam time and can also be started manually. It checks every sitemap URL, H1 structure, horizontal overflow, console errors and responsive screenshots. Reports are retained as GitHub Actions artifacts for 90 days.

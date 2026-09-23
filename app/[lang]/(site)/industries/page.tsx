@@ -7,6 +7,7 @@ import { Reveal } from "@/components/motion/reveal";
 import { PageHero } from "@/components/ui/page-hero";
 import { Container } from "@/components/ui/container";
 import { categories } from "@/data/catalog";
+import { industryAnchors } from "@/data/industries";
 import { getDictionary, isLocale, locales } from "@/lib/i18n";
 import { pageMetadata } from "@/lib/seo";
 
@@ -31,7 +32,7 @@ export default async function IndustriesPage({ params }: { params: Promise<{ lan
         <Container className="grid gap-5 lg:grid-cols-2">
           {copy.items.map((item, index) => (
             <Reveal className={index === copy.items.length - 1 ? "lg:col-span-2" : ""} delay={index * 0.05} key={item.title}>
-              <article className="h-full rounded-[var(--radius-card)] bg-white p-7 shadow-[0_12px_40px_rgba(15,26,23,0.05)] sm:p-9">
+              <article className="h-full scroll-mt-28 rounded-[var(--radius-card)] bg-white p-7 shadow-[0_12px_40px_rgba(15,26,23,0.05)] sm:p-9" id={industryAnchors[index]}>
                 <p className="font-mono text-xs tracking-[0.16em] text-[var(--green-600)]">[ {String(index + 1).padStart(2, "0")} ]</p>
                 <h2 className="mt-8 font-display text-3xl font-semibold tracking-[-0.04em]">{item.title}</h2>
                 <p className="mt-4 max-w-2xl leading-7 text-[var(--muted)]">{item.body}</p>
@@ -50,4 +51,3 @@ export default async function IndustriesPage({ params }: { params: Promise<{ lan
     </>
   );
 }
-

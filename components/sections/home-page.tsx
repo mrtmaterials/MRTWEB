@@ -132,11 +132,7 @@ export function HomePage({ dictionary, locale }: HomePageProps) {
               </p>
             </Reveal>
             <h1 className="hero-title mt-7 max-w-[72rem] font-display text-[clamp(2.6rem,min(5vw,9vh),4.75rem)] font-semibold leading-[0.98] tracking-[-0.04em] text-white">
-              {home.title.split(" ").map((word, index) => (
-                <span className="hero-word mr-[0.2em] inline-block overflow-hidden align-top" key={`${word}-${index}`}>
-                  <span className="inline-block">{word}</span>{" "}
-                </span>
-              ))}
+              {home.title}
             </h1>
             <Reveal delay={0.22}>
               <p className="hero-summary mt-8 max-w-2xl text-lg leading-8 text-white/72 sm:text-xl">{home.summary}</p>
@@ -165,7 +161,7 @@ export function HomePage({ dictionary, locale }: HomePageProps) {
               <div className="grid grid-cols-[auto_1fr] gap-4 py-6 sm:px-6 sm:first:pl-0 xl:px-8 xl:first:pl-0 xl:last:pr-0" key={item.label}>
                 <Icon aria-hidden="true" className="mt-1 text-[var(--green-400)]" size={20} strokeWidth={1.6} />
                 <div>
-                  <p className="font-display text-3xl font-semibold tracking-[-0.04em]">{item.value}</p>
+                  <p className="font-display text-3xl font-semibold tracking-[-0.04em]">{index === 1 ? String(products.length).padStart(2, "0") : item.value}</p>
                   <p className="mt-1 text-sm font-semibold">{item.label}</p>
                   <p className="mt-1 text-xs leading-5 text-white/55">{item.note}</p>
                 </div>

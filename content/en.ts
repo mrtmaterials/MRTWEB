@@ -2,7 +2,7 @@ export const en = {
   locale: "en",
   nav: {
     products: "Products", industries: "Industries", insights: "Insights", about: "About", quality: "Quality", contact: "Contact",
-    requestQuote: "Request a Quote", openMenu: "Open products menu", closeMenu: "Close menu", skipToContent: "Skip to content",
+    requestQuote: "Request a Quote", openMenu: "Open navigation menu", closeMenu: "Close menu", skipToContent: "Skip to content",
   },
   footer: { insights: "Insights", privacy: "Privacy", terms: "Terms of Use" },
   common: {
@@ -52,7 +52,7 @@ export const en = {
       { title: "General manufacturing", body: "Paraffin wax and chemical enquiries reviewed for project-specific applications.", categories: ["Industrial & Packaging Materials", "Chemicals"] },
     ],
   },
-  about: { eyebrow: "About MRT Materials", title: "Material sourcing enquiries for manufacturers in Vietnam", body: "MRT Materials reviews requests for ingredients, packaging materials and chemicals, including the required grade, documents, quantity and delivery location.", valuesTitle: "Information used for review", values: ["Requirement-led review", "Document requirements stated early", "Commercial details confirmed before quotation", "Availability confirmed per source"] },
+  about: { eyebrow: "About MRT Materials", title: "Material sourcing and supply capability", body: "MRT Materials is a newly established business in Vietnam, built by a team with years of working experience in materials and supply-chain coordination.", valuesTitle: "Information used for review", values: ["Requirement-led review", "Document requirements stated early", "Commercial details confirmed before quotation", "Availability confirmed per source"] },
   quality: { eyebrow: "Documents & material review", title: "Documents and checks for each material enquiry", intro: "Each enquiry is reviewed against the material, application, required documents and intended use.", items: [
     { title: "Requirement matching", body: "The material identity, grade, application and critical limits are compared with the information available from a proposed source." },
     { title: "Available documents", body: "Ask which COA, TDS and SDS documents are available for the proposed material and source." },
@@ -62,12 +62,13 @@ export const en = {
   contact: {
     eyebrow: "Contact / RFQ", title: "Send a material sourcing request", intro: "Send the material name, application, grade or specification, quantity, required documents and delivery location.",
     sales: "Sales", accounts: "Accounts", address: "Address", map: "Open location in OpenStreetMap", phone: "Phone",
-    form: { company: "Company name", contactPerson: "Contact person", email: "Email", phone: "Phone", country: "Country", product: "Product / material", grade: "Grade / specification", quantity: "Quantity & unit", deliveryDate: "Target delivery date", message: "Message", submit: "Send request", required: "Required", honeypot: "Leave this field empty", fileNote: "For files or detailed specifications, please email sales@mrtmaterials.com.", success: "Your email draft is ready to send.", error: "Please complete the required fields and provide a valid email address." },
+    form: { company: "Company name", contactPerson: "Contact person", email: "Email", phone: "Phone", country: "Country", product: "Product / material", grade: "Grade / specification", quantity: "Quantity & unit", deliveryDate: "Target delivery date", message: "Message", attachment: "Specification, sample COA or datasheet", submit: "Send request", required: "Required", honeypot: "Leave this field empty", fileNote: "Up to 5 PDF, Word, Excel or image files; maximum 10 MB in total.", success: "Your request has been sent to MRT Materials sales.", error: "Check the required fields and attachments, then try again or email sales@mrtmaterials.com." },
   },
   legal: {
     privacy: { title: "Privacy", updated: "Last updated: 18 September 2026", intro: "This notice explains how MRT Materials handles information submitted through this website.", sections: [
       { title: "Information you provide", body: "We may receive the contact and request details you choose to send through the contact form or by email." },
       { title: "How information is used", body: "Information is used to review and respond to business enquiries, including requests for quotations." },
+      { title: "Form processing and attachments", body: "Contact-form submissions and attachments are transmitted through FormSubmit for delivery to MRT Materials sales. Do not upload passwords, payment credentials or unrelated sensitive personal information." },
       { title: "Contact", body: "For privacy-related enquiries, contact sales@mrtmaterials.com." },
     ] },
     terms: { title: "Terms of Use", updated: "Last updated: 18 September 2026", intro: "By using this website, you agree to use its information for lawful business purposes.", sections: [

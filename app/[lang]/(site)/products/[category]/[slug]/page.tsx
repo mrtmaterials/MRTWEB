@@ -44,14 +44,16 @@ export default async function ProductPage({ params }: PageProps) {
 
   const copy = getDictionary(lang);
   const name = localize(product.name, lang);
-  const knowledge = getProductKnowledge(slug, lang);
+  const knowledge = getProductKnowledge(slug, lang) ?? (product.parentSlug ? getProductKnowledge(product.parentSlug, lang) : undefined);
   const quoteHref = `${withLocale(lang, "contact")}?product=${encodeURIComponent(name)}`;
+  const documentHref = `${quoteHref}&request=documents`;
+  const sampleHref = `${quoteHref}&request=sample`;
   const related = getProductsByCategory(categorySlug).filter((item) => item.slug !== slug).slice(0, 3);
   const relatedInsights = getRelatedInsights(categorySlug, 2);
   const productUrl = `${company.url}/${lang}/products/${categorySlug}/${slug}`;
   const productJsonLd = {
     "@context": "https://schema.org",
-    "@type": "Product",
+    "@type": product.entryType === "material" ? "Product" : "CollectionPage",
     "@id": `${productUrl}#product`,
     name,
     description: localize(product.summary, lang),
@@ -106,6 +108,9 @@ export default async function ProductPage({ params }: PageProps) {
               <ButtonLink href={quoteHref}>{copy.common.requestQuote}</ButtonLink>
               <a className="inline-flex min-h-12 items-center rounded-full bg-white px-5 text-sm font-semibold text-[var(--ink)] ring-1 ring-inset ring-[var(--line)] hover:bg-[var(--green-50)]" href={`tel:${company.phone.e164}`}>{company.phone.display}</a>
             </div>
+            <p className="mt-5 max-w-xl text-sm leading-6 text-[var(--muted)]">
+              {lang === "vi" ? "Sản phẩm xuất hiện trong danh mục không đồng nghĩa đang có tồn kho. Grade, thông số, tài liệu, số lượng và điều kiện giao hàng được xác nhận theo từng nguồn và báo giá." : "A catalogue listing does not confirm stock. Grade, specification, documents, quantity and delivery terms are confirmed for each source and quotation."}
+            </p>
           </div>
           <div className="relative aspect-[4/3] overflow-hidden rounded-[var(--radius-card)] bg-white">
             <Image alt={`${name} — ${localize(category.name, lang)}`} className="object-cover" fill priority sizes="(min-width: 1024px) 50vw, 100vw" src={product.image} />
@@ -145,12 +150,22 @@ export default async function ProductPage({ params }: PageProps) {
 
         <section className="mt-20 grid gap-12 lg:grid-cols-2">
           <div>
+            {(product.chemicalName || product.casNumber) ? (
+              <div className="mb-10 rounded-[var(--radius-card)] bg-white p-7">
+                <p className="font-mono text-xs font-semibold uppercase text-[var(--green-600)]">{lang === "vi" ? "Định danh nguyên liệu" : "Material identity"}</p>
+                <dl className="mt-5 grid gap-5 sm:grid-cols-2">
+                  {product.chemicalName ? <div><dt className="text-sm font-semibold">{lang === "vi" ? "Tên hóa học" : "Chemical name"}</dt><dd className="mt-2 leading-6 text-[var(--muted)]">{localize(product.chemicalName, lang)}</dd></div> : null}
+                  {product.casNumber ? <div><dt className="text-sm font-semibold">CAS Number</dt><dd className="mt-2 font-mono text-sm text-[var(--muted)]">{product.casNumber}</dd></div> : null}
+                </dl>
+              </div>
+            ) : null}
             <h2 className="font-display text-3xl font-semibold tracking-[-0.04em] text-[var(--ink)]">{copy.common.applications}</h2>
             <ul className="mt-5 space-y-3 text-[var(--muted)]">
               {localize(product.applications, lang).map((application) => <li className="flex gap-3" key={application}><span aria-hidden="true" className="mt-2 size-2 rounded-full bg-[var(--green-400)]" />{application}</li>)}
             </ul>
             {product.grades?.length ? <><h3 className="mt-9 font-semibold">{copy.common.availableGrades}</h3><p className="mt-2 text-[var(--muted)]">{product.grades.join(", ")}</p></> : null}
             {product.packaging?.length ? <><h3 className="mt-7 font-semibold">{copy.common.packaging}</h3><p className="mt-2 text-[var(--muted)]">{product.packaging.join(", ")}</p></> : null}
+            {product.enquiryFields ? <><h3 className="mt-9 font-semibold">{lang === "vi" ? "Thông tin cần gửi khi yêu cầu" : "Information to include in the enquiry"}</h3><ul className="mt-4 grid gap-3">{localize(product.enquiryFields, lang).map((item) => <li className="flex gap-3 leading-6 text-[var(--muted)]" key={item}><span aria-hidden="true" className="mt-2 size-2 shrink-0 rounded-full bg-[var(--green-400)]" />{item}</li>)}</ul></> : null}
           </div>
           <div className="rounded-[var(--radius-card)] bg-white p-7">
             <h2 className="font-display text-2xl font-semibold tracking-[-0.04em] text-[var(--ink)]">{copy.common.specifications}</h2>
@@ -161,6 +176,10 @@ export default async function ProductPage({ params }: PageProps) {
               </dl>
             ) : <p className="mt-4 leading-7 text-[var(--muted)]">{copy.common.specificationsOnRequest}</p>}
             <p className="mt-4 text-sm leading-6 text-[var(--muted)]">{copy.common.documentationOnRequest}</p>
+            <div className="mt-7 flex flex-wrap gap-3">
+              <ButtonLink href={documentHref} variant="secondary">{lang === "vi" ? "Yêu cầu COA / TDS / SDS" : "Request COA / TDS / SDS"}</ButtonLink>
+              <ButtonLink href={sampleHref} variant="secondary">{lang === "vi" ? "Yêu cầu mẫu" : "Request a sample"}</ButtonLink>
+            </div>
           </div>
         </section>
 

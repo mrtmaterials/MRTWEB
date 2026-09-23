@@ -13,9 +13,15 @@ export type Category = {
 export type Product = {
   slug: string;
   category: string;
+  entryType?: "family" | "material";
+  commercialStatus?: "enquiry-only";
+  parentSlug?: string;
   name: Localized<string>;
+  chemicalName?: Localized<string>;
+  casNumber?: string;
   summary: Localized<string>;
   applications: Localized<string[]>;
+  enquiryFields?: Localized<string[]>;
   grades?: string[];
   packaging?: string[];
   /** Only populate with owner-verified information. */
@@ -95,6 +101,97 @@ export const products: Product[] = [
     image: "/images/editorial/lab-hero.webp",
   },
   {
+    slug: "sodium-bicarbonate",
+    category: "nutraceutical-food-ingredients",
+    entryType: "material",
+    commercialStatus: "enquiry-only",
+    parentSlug: "sodium-salts",
+    name: { en: "Sodium Bicarbonate", vi: "Natri bicarbonat" },
+    chemicalName: { en: "Sodium hydrogen carbonate", vi: "Natri hydro carbonat" },
+    casNumber: "144-55-8",
+    summary: {
+      en: "Sodium bicarbonate enquiries defined by application, target grade, assay and required documents.",
+      vi: "Yêu cầu natri bicarbonat được xác định theo ứng dụng, grade mục tiêu, hàm lượng và bộ tài liệu cần thiết.",
+    },
+    applications: {
+      en: ["Food and beverage formulations", "Nutraceutical formulations", "General manufacturing"],
+      vi: ["Công thức thực phẩm và đồ uống", "Công thức thực phẩm bảo vệ sức khỏe", "Sản xuất công nghiệp"],
+    },
+    enquiryFields: {
+      en: ["Target grade or standard", "Assay and critical limits", "Application and process", "Quantity, packaging and documents"],
+      vi: ["Grade hoặc tiêu chuẩn mục tiêu", "Hàm lượng và giới hạn quan trọng", "Ứng dụng và quy trình", "Số lượng, bao bì và tài liệu"],
+    },
+    image: "/images/ingredients-powder.svg",
+  },
+  {
+    slug: "trisodium-citrate-dihydrate",
+    category: "nutraceutical-food-ingredients",
+    entryType: "material",
+    commercialStatus: "enquiry-only",
+    parentSlug: "sodium-salts",
+    name: { en: "Trisodium Citrate Dihydrate", vi: "Trinatri citrat dihydrat" },
+    chemicalName: { en: "Trisodium citrate dihydrate", vi: "Trinatri citrat dihydrat" },
+    casNumber: "6132-04-3",
+    summary: {
+      en: "Trisodium citrate dihydrate enquiries defined by application, target grade, assay and particle requirements.",
+      vi: "Yêu cầu trinatri citrat dihydrat được xác định theo ứng dụng, grade, hàm lượng và yêu cầu kích thước hạt.",
+    },
+    applications: {
+      en: ["Food and beverage formulations", "Buffering applications", "Nutraceutical formulations"],
+      vi: ["Công thức thực phẩm và đồ uống", "Ứng dụng điều chỉnh hệ đệm", "Công thức thực phẩm bảo vệ sức khỏe"],
+    },
+    enquiryFields: {
+      en: ["Chemical form and target grade", "Assay and critical limits", "Particle or physical-form needs", "Quantity and document set"],
+      vi: ["Dạng hóa học và grade mục tiêu", "Hàm lượng và giới hạn quan trọng", "Yêu cầu kích thước hạt hoặc dạng vật lý", "Số lượng và bộ tài liệu"],
+    },
+    image: "/images/ingredients-powder.svg",
+  },
+  {
+    slug: "magnesium-oxide",
+    category: "nutraceutical-food-ingredients",
+    entryType: "material",
+    commercialStatus: "enquiry-only",
+    parentSlug: "magnesium-salts",
+    name: { en: "Magnesium Oxide", vi: "Magiê oxit" },
+    chemicalName: { en: "Magnesium oxide", vi: "Magiê oxit" },
+    casNumber: "1309-48-4",
+    summary: {
+      en: "Magnesium oxide enquiries defined by target grade, assay, elemental-magnesium requirement and application.",
+      vi: "Yêu cầu magiê oxit được xác định theo grade, hàm lượng, mục tiêu magiê nguyên tố và ứng dụng.",
+    },
+    applications: {
+      en: ["Nutraceutical formulations", "Food manufacturing under buyer assessment", "General manufacturing"],
+      vi: ["Công thức thực phẩm bảo vệ sức khỏe", "Sản xuất thực phẩm theo đánh giá của bên mua", "Sản xuất công nghiệp"],
+    },
+    enquiryFields: {
+      en: ["Target grade or compendial reference", "Assay and elemental-magnesium target", "Physical-form requirements", "Quantity and required documents"],
+      vi: ["Grade hoặc tham chiếu dược điển", "Hàm lượng và mục tiêu magiê nguyên tố", "Yêu cầu dạng vật lý", "Số lượng và tài liệu cần thiết"],
+    },
+    image: "/images/ingredients-powder.svg",
+  },
+  {
+    slug: "magnesium-citrate",
+    category: "nutraceutical-food-ingredients",
+    entryType: "material",
+    commercialStatus: "enquiry-only",
+    parentSlug: "magnesium-salts",
+    name: { en: "Magnesium Citrate", vi: "Magiê citrat" },
+    chemicalName: { en: "Magnesium citrate — exact chemical form to be confirmed", vi: "Magiê citrat — cần xác nhận dạng hóa học cụ thể" },
+    summary: {
+      en: "Magnesium citrate enquiries require the exact chemical form, target grade, elemental-magnesium contribution and document set.",
+      vi: "Yêu cầu magiê citrat cần nêu dạng hóa học cụ thể, grade, hàm lượng magiê nguyên tố và bộ tài liệu.",
+    },
+    applications: {
+      en: ["Nutraceutical formulations", "Formulation assessment", "Manufacturing trials"],
+      vi: ["Công thức thực phẩm bảo vệ sức khỏe", "Đánh giá công thức", "Thử nghiệm sản xuất"],
+    },
+    enquiryFields: {
+      en: ["Exact chemical form", "Target grade and standard", "Elemental-magnesium target", "Quantity and required documents"],
+      vi: ["Dạng hóa học cụ thể", "Grade và tiêu chuẩn mục tiêu", "Mục tiêu magiê nguyên tố", "Số lượng và tài liệu cần thiết"],
+    },
+    image: "/images/ingredients-powder.svg",
+  },
+  {
     slug: "thickeners-stabilisers",
     category: "nutraceutical-food-ingredients",
     name: { en: "Thickeners & Stabilisers", vi: "Chất làm đặc & ổn định" },
@@ -107,6 +204,75 @@ export const products: Product[] = [
       vi: ["Sản xuất thực phẩm và đồ uống", "Mỹ phẩm và chăm sóc cá nhân", "Hỗ trợ công thức"],
     },
     image: "/images/editorial/lab-quality.webp",
+  },
+  {
+    slug: "xanthan-gum",
+    category: "nutraceutical-food-ingredients",
+    entryType: "material",
+    commercialStatus: "enquiry-only",
+    parentSlug: "thickeners-stabilisers",
+    name: { en: "Xanthan Gum", vi: "Gôm xanthan" },
+    chemicalName: { en: "Xanthan gum", vi: "Gôm xanthan" },
+    casNumber: "11138-66-2",
+    summary: {
+      en: "Xanthan gum enquiries defined by application, viscosity target, hydration process and required grade.",
+      vi: "Yêu cầu gôm xanthan được xác định theo ứng dụng, độ nhớt mục tiêu, quy trình hydrat hóa và grade cần thiết.",
+    },
+    applications: {
+      en: ["Food and beverage texture systems", "Suspension and stability systems", "Formulation trials"],
+      vi: ["Hệ cấu trúc thực phẩm và đồ uống", "Hệ huyền phù và ổn định", "Thử nghiệm công thức"],
+    },
+    enquiryFields: {
+      en: ["Target grade or reference product", "Viscosity method and target", "Formulation and process conditions", "Quantity and document requirements"],
+      vi: ["Grade hoặc sản phẩm tham chiếu", "Phương pháp và mục tiêu độ nhớt", "Công thức và điều kiện quy trình", "Số lượng và yêu cầu tài liệu"],
+    },
+    image: "/images/ingredients-powder.svg",
+  },
+  {
+    slug: "carboxymethyl-cellulose-cmc",
+    category: "nutraceutical-food-ingredients",
+    entryType: "material",
+    commercialStatus: "enquiry-only",
+    parentSlug: "thickeners-stabilisers",
+    name: { en: "Sodium Carboxymethyl Cellulose (CMC)", vi: "Natri carboxymethyl cellulose (CMC)" },
+    chemicalName: { en: "Sodium carboxymethyl cellulose", vi: "Natri carboxymethyl cellulose" },
+    casNumber: "9004-32-4",
+    summary: {
+      en: "CMC enquiries defined by application, viscosity grade, substitution information and process conditions.",
+      vi: "Yêu cầu CMC được xác định theo ứng dụng, cấp độ nhớt, thông tin mức độ thế và điều kiện quy trình.",
+    },
+    applications: {
+      en: ["Food and beverage texture systems", "Formulation stability", "Selected industrial formulations"],
+      vi: ["Hệ cấu trúc thực phẩm và đồ uống", "Ổn định công thức", "Một số công thức công nghiệp"],
+    },
+    enquiryFields: {
+      en: ["Target grade or comparison product", "Viscosity method and range", "Application and process", "Quantity and required documents"],
+      vi: ["Grade hoặc sản phẩm so sánh", "Phương pháp và khoảng độ nhớt", "Ứng dụng và quy trình", "Số lượng và tài liệu cần thiết"],
+    },
+    image: "/images/ingredients-powder.svg",
+  },
+  {
+    slug: "hypromellose-hpmc",
+    category: "nutraceutical-food-ingredients",
+    entryType: "material",
+    commercialStatus: "enquiry-only",
+    parentSlug: "excipients",
+    name: { en: "Hypromellose (HPMC)", vi: "Hypromellose (HPMC)" },
+    chemicalName: { en: "Hydroxypropyl methylcellulose", vi: "Hydroxypropyl methylcellulose" },
+    casNumber: "9004-65-3",
+    summary: {
+      en: "HPMC enquiries defined by intended function, viscosity grade, formulation conditions and required documents.",
+      vi: "Yêu cầu HPMC được xác định theo chức năng, cấp độ nhớt, điều kiện công thức và bộ tài liệu cần thiết.",
+    },
+    applications: {
+      en: ["Excipient assessment", "Coating or binding applications", "Formulation trials"],
+      vi: ["Đánh giá tá dược", "Ứng dụng bao phim hoặc kết dính", "Thử nghiệm công thức"],
+    },
+    enquiryFields: {
+      en: ["Intended function and dosage form", "Viscosity grade or reference", "Target standard", "Quantity and document requirements"],
+      vi: ["Chức năng và dạng sản phẩm", "Cấp độ nhớt hoặc grade tham chiếu", "Tiêu chuẩn mục tiêu", "Số lượng và yêu cầu tài liệu"],
+    },
+    image: "/images/ingredients-powder.svg",
   },
   {
     slug: "excipients",
@@ -125,6 +291,8 @@ export const products: Product[] = [
   {
     slug: "pet-resin-bottle-grade",
     category: "industrial-packaging-materials",
+    entryType: "material",
+    commercialStatus: "enquiry-only",
     name: { en: "PET Resin (Bottle Grade)", vi: "Nhựa PET (dùng cho chai)" },
     summary: {
       en: "Bottle-grade PET enquiries reviewed against the current grade, preform or bottle, equipment and expected volume.",
@@ -140,6 +308,8 @@ export const products: Product[] = [
   {
     slug: "hdpe-resin-blow-moulding",
     category: "industrial-packaging-materials",
+    entryType: "material",
+    commercialStatus: "enquiry-only",
     name: { en: "HDPE Resin (Blow Moulding)", vi: "Nhựa HDPE (thổi khuôn)" },
     summary: {
       en: "HDPE blow-moulding enquiries reviewed against the current grade, machine, mould, container and expected volume.",
@@ -165,6 +335,29 @@ export const products: Product[] = [
     },
     featured: true,
     image: "/images/editorial/warehouse.webp",
+  },
+  {
+    slug: "fully-refined-paraffin-wax",
+    category: "industrial-packaging-materials",
+    entryType: "material",
+    commercialStatus: "enquiry-only",
+    parentSlug: "paraffin-wax",
+    name: { en: "Fully Refined Paraffin Wax", vi: "Sáp paraffin tinh chế hoàn toàn" },
+    chemicalName: { en: "Paraffin wax", vi: "Sáp paraffin" },
+    casNumber: "8002-74-2",
+    summary: {
+      en: "Fully refined paraffin wax enquiries defined by application, melting range, oil content, physical form and packaging.",
+      vi: "Yêu cầu sáp paraffin tinh chế hoàn toàn được xác định theo ứng dụng, khoảng nóng chảy, hàm lượng dầu, dạng vật lý và bao bì.",
+    },
+    applications: {
+      en: ["Selected industrial processing", "Candle and wax formulations", "Product-specific formulation assessment"],
+      vi: ["Một số quy trình công nghiệp", "Công thức nến và sáp", "Đánh giá công thức theo từng sản phẩm"],
+    },
+    enquiryFields: {
+      en: ["Application and comparison grade", "Melting range and test method", "Oil content and colour requirements", "Physical form, packaging and quantity"],
+      vi: ["Ứng dụng và grade tham chiếu", "Khoảng nóng chảy và phương pháp thử", "Yêu cầu hàm lượng dầu và màu", "Dạng vật lý, bao bì và số lượng"],
+    },
+    image: "/images/ingredients-powder.svg",
   },
   {
     slug: "specialty-chemicals-on-request",

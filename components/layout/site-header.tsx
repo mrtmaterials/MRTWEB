@@ -47,12 +47,12 @@ export function SiteHeader({ catalog, labels, locale }: SiteHeaderProps) {
         </Link>
 
         <nav className="ml-auto hidden items-center gap-1 xl:flex">
-          <details className="group relative">
-            <summary className="flex min-h-11 cursor-pointer list-none items-center gap-1 rounded-full px-3 text-sm font-medium text-[var(--ink)] transition-colors hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--green-600)] [&::-webkit-details-marker]:hidden">
+          <div className="group relative">
+            <Link className="flex min-h-11 items-center gap-1 rounded-full px-3 text-sm font-medium text-[var(--ink)] transition-colors hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--green-600)]" href={path("/products")}>
               {labels.products}
-              <span aria-hidden="true" className="text-xs transition-transform group-open:rotate-180">⌄</span>
-            </summary>
-            <div className="absolute left-0 top-[calc(100%+0.6rem)] w-[min(42rem,calc(100vw-3rem))] rounded-[20px] bg-white p-4 shadow-[0_18px_50px_rgba(15,26,23,0.14)] ring-1 ring-[var(--line)]">
+              <span aria-hidden="true" className="text-xs transition-transform group-hover:rotate-180 group-focus-within:rotate-180">⌄</span>
+            </Link>
+            <div className="invisible absolute left-0 top-[calc(100%+0.6rem)] w-[min(42rem,calc(100vw-3rem))] translate-y-1 rounded-[20px] bg-white p-4 opacity-0 shadow-[0_18px_50px_rgba(15,26,23,0.14)] ring-1 ring-[var(--line)] transition before:absolute before:-top-3 before:left-0 before:h-3 before:w-full before:content-[''] group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100">
               <div className="grid gap-2 sm:grid-cols-3">
                 {catalog.map((category) => (
                   <Link
@@ -67,7 +67,7 @@ export function SiteHeader({ catalog, labels, locale }: SiteHeaderProps) {
                 ))}
               </div>
             </div>
-          </details>
+          </div>
           {navItems.slice(1).map((item) => (
             <Link className="inline-flex min-h-11 items-center rounded-full px-3 text-sm font-medium text-[var(--ink)] transition-colors hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--green-600)]" href={item.href} key={item.href}>
               {item.label}

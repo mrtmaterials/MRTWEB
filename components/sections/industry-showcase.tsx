@@ -8,6 +8,7 @@ import { useState } from "react";
 import { Reveal } from "@/components/motion/reveal";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
+import { industryAnchors } from "@/data/industries";
 
 type IndustryShowcaseProps = {
   body: string;
@@ -56,7 +57,7 @@ export function IndustryShowcase({ body, eyebrow, items, locale, title }: Indust
             <Reveal delay={index * 0.05} key={item}>
               <Link
                 className="group grid grid-cols-[3rem_1fr_auto] items-center gap-4 border-b border-white/20 py-5 transition-colors hover:border-[var(--green-400)] focus-visible:border-[var(--green-400)] focus-visible:outline-none"
-                href={`/${locale}/industries`}
+                href={`/${locale}/industries#${industryAnchors[index]}`}
                 onFocus={() => setActive(index)}
                 onPointerEnter={() => setActive(index)}
               >
