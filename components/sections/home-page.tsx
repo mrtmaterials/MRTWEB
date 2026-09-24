@@ -225,7 +225,7 @@ export function HomePage({ dictionary, locale }: HomePageProps) {
             <p className="mt-7 max-w-sm text-sm leading-7 text-[var(--muted)]">{locale === "vi" ? "Bốn bước dùng để xác nhận định danh nguyên liệu, yêu cầu kỹ thuật, điều kiện báo giá và thông tin giao nhận." : "The four stages confirm material identity, technical requirements, quotation details and delivery information."}</p>
           </div>
           <ol className="relative border-t border-[var(--ink)]">
-            <svg aria-hidden="true" className="absolute top-0 left-[5.5rem] hidden h-full w-3 overflow-visible xl:block" preserveAspectRatio="none" viewBox="0 0 12 1000">
+            <svg aria-hidden="true" className="absolute top-0 left-24 hidden h-full w-3 overflow-visible xl:block" preserveAspectRatio="none" viewBox="0 0 12 1000">
               <path d="M6 0 V1000" fill="none" stroke="rgba(15,26,23,0.12)" strokeWidth="1" />
               <path className="route-path" d="M6 0 V1000" fill="none" pathLength="1" stroke="var(--green-600)" strokeLinecap="round" strokeWidth="2" />
             </svg>
