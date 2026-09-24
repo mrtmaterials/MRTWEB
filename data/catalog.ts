@@ -19,6 +19,7 @@ export type Product = {
   name: Localized<string>;
   chemicalName?: Localized<string>;
   casNumber?: string;
+  visualCode?: string;
   summary: Localized<string>;
   applications: Localized<string[]>;
   enquiryFields?: Localized<string[]>;
@@ -109,6 +110,7 @@ export const products: Product[] = [
     name: { en: "Sodium Bicarbonate", vi: "Natri bicarbonat" },
     chemicalName: { en: "Sodium hydrogen carbonate", vi: "Natri hydro carbonat" },
     casNumber: "144-55-8",
+    visualCode: "NaHCO₃",
     summary: {
       en: "Sodium bicarbonate enquiries defined by application, target grade, assay and required documents.",
       vi: "Yêu cầu natri bicarbonat được xác định theo ứng dụng, grade mục tiêu, hàm lượng và bộ tài liệu cần thiết.",
@@ -132,6 +134,7 @@ export const products: Product[] = [
     name: { en: "Trisodium Citrate Dihydrate", vi: "Trinatri citrat dihydrat" },
     chemicalName: { en: "Trisodium citrate dihydrate", vi: "Trinatri citrat dihydrat" },
     casNumber: "6132-04-3",
+    visualCode: "Na₃C₆H₅O₇·2H₂O",
     summary: {
       en: "Trisodium citrate dihydrate enquiries defined by application, target grade, assay and particle requirements.",
       vi: "Yêu cầu trinatri citrat dihydrat được xác định theo ứng dụng, grade, hàm lượng và yêu cầu kích thước hạt.",
@@ -155,6 +158,7 @@ export const products: Product[] = [
     name: { en: "Magnesium Oxide", vi: "Magiê oxit" },
     chemicalName: { en: "Magnesium oxide", vi: "Magiê oxit" },
     casNumber: "1309-48-4",
+    visualCode: "MgO",
     summary: {
       en: "Magnesium oxide enquiries defined by target grade, assay, elemental-magnesium requirement and application.",
       vi: "Yêu cầu magiê oxit được xác định theo grade, hàm lượng, mục tiêu magiê nguyên tố và ứng dụng.",
@@ -177,6 +181,7 @@ export const products: Product[] = [
     parentSlug: "magnesium-salts",
     name: { en: "Magnesium Citrate", vi: "Magiê citrat" },
     chemicalName: { en: "Magnesium citrate — exact chemical form to be confirmed", vi: "Magiê citrat — cần xác nhận dạng hóa học cụ thể" },
+    visualCode: "Mg citrate",
     summary: {
       en: "Magnesium citrate enquiries require the exact chemical form, target grade, elemental-magnesium contribution and document set.",
       vi: "Yêu cầu magiê citrat cần nêu dạng hóa học cụ thể, grade, hàm lượng magiê nguyên tố và bộ tài liệu.",
@@ -214,6 +219,7 @@ export const products: Product[] = [
     name: { en: "Xanthan Gum", vi: "Gôm xanthan" },
     chemicalName: { en: "Xanthan gum", vi: "Gôm xanthan" },
     casNumber: "11138-66-2",
+    visualCode: "Xanthan",
     summary: {
       en: "Xanthan gum enquiries defined by application, viscosity target, hydration process and required grade.",
       vi: "Yêu cầu gôm xanthan được xác định theo ứng dụng, độ nhớt mục tiêu, quy trình hydrat hóa và grade cần thiết.",
@@ -237,6 +243,7 @@ export const products: Product[] = [
     name: { en: "Sodium Carboxymethyl Cellulose (CMC)", vi: "Natri carboxymethyl cellulose (CMC)" },
     chemicalName: { en: "Sodium carboxymethyl cellulose", vi: "Natri carboxymethyl cellulose" },
     casNumber: "9004-32-4",
+    visualCode: "CMC",
     summary: {
       en: "CMC enquiries defined by application, viscosity grade, substitution information and process conditions.",
       vi: "Yêu cầu CMC được xác định theo ứng dụng, cấp độ nhớt, thông tin mức độ thế và điều kiện quy trình.",
@@ -260,6 +267,7 @@ export const products: Product[] = [
     name: { en: "Hypromellose (HPMC)", vi: "Hypromellose (HPMC)" },
     chemicalName: { en: "Hydroxypropyl methylcellulose", vi: "Hydroxypropyl methylcellulose" },
     casNumber: "9004-65-3",
+    visualCode: "HPMC",
     summary: {
       en: "HPMC enquiries defined by intended function, viscosity grade, formulation conditions and required documents.",
       vi: "Yêu cầu HPMC được xác định theo chức năng, cấp độ nhớt, điều kiện công thức và bộ tài liệu cần thiết.",
@@ -293,6 +301,7 @@ export const products: Product[] = [
     category: "industrial-packaging-materials",
     entryType: "material",
     commercialStatus: "enquiry-only",
+    visualCode: "PET",
     name: { en: "PET Resin (Bottle Grade)", vi: "Nhựa PET (dùng cho chai)" },
     summary: {
       en: "Bottle-grade PET enquiries reviewed against the current grade, preform or bottle, equipment and expected volume.",
@@ -310,6 +319,7 @@ export const products: Product[] = [
     category: "industrial-packaging-materials",
     entryType: "material",
     commercialStatus: "enquiry-only",
+    visualCode: "HDPE",
     name: { en: "HDPE Resin (Blow Moulding)", vi: "Nhựa HDPE (thổi khuôn)" },
     summary: {
       en: "HDPE blow-moulding enquiries reviewed against the current grade, machine, mould, container and expected volume.",
@@ -345,6 +355,7 @@ export const products: Product[] = [
     name: { en: "Fully Refined Paraffin Wax", vi: "Sáp paraffin tinh chế hoàn toàn" },
     chemicalName: { en: "Paraffin wax", vi: "Sáp paraffin" },
     casNumber: "8002-74-2",
+    visualCode: "Paraffin",
     summary: {
       en: "Fully refined paraffin wax enquiries defined by application, melting range, oil content, physical form and packaging.",
       vi: "Yêu cầu sáp paraffin tinh chế hoàn toàn được xác định theo ứng dụng, khoảng nóng chảy, hàm lượng dầu, dạng vật lý và bao bì.",

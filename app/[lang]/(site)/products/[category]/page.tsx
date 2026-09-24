@@ -94,6 +94,7 @@ export default async function CategoryPage({ params }: PageProps) {
           className="mb-12"
           description={localize(category.description, lang)}
           eyebrow={`[ 0${category.order} / ${copy.nav.products.toUpperCase()} ]`}
+          level="h1"
           title={categoryName}
         />
 

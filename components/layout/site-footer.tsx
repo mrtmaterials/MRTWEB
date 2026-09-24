@@ -25,40 +25,35 @@ export function SiteFooter({ address, labels, locale, phone }: SiteFooterProps) 
   const path = (suffix = "") => `/${locale}${suffix}`;
 
   return (
-    <footer className="overflow-hidden bg-[var(--ink)] pt-16 text-white sm:pt-20">
-      <div className="mx-auto grid max-w-[1440px] gap-12 px-5 sm:px-8 md:grid-cols-[1.2fr_repeat(3,1fr)] lg:px-12">
+    <footer className="border-t border-[var(--line)] bg-[#edf1ef] py-16 text-[var(--ink)] sm:py-20">
+      <div className="mx-auto grid max-w-[1440px] gap-10 px-5 sm:grid-cols-2 sm:px-8 xl:grid-cols-[1.2fr_repeat(3,minmax(0,1fr))] xl:gap-12 lg:px-12">
         <div>
-          <div className="relative isolate inline-block before:absolute before:inset-[-1.25rem] before:-z-10 before:rounded-full before:bg-[radial-gradient(circle,rgba(255,255,255,0.13),transparent_68%)]">
-            <BrandLogo className="h-auto w-52" sizes="208px" />
-          </div>
-          <p className="mt-5 max-w-xs text-sm leading-6 text-white/68">{locale === "vi" ? "Tiếp nhận yêu cầu tìm nguồn nguyên liệu thực phẩm, vật liệu bao bì và hóa chất cho doanh nghiệp sản xuất tại Việt Nam." : "Material sourcing enquiries for food ingredients, packaging materials and chemicals for manufacturers in Vietnam."}</p>
+          <BrandLogo className="h-auto w-44" sizes="176px" />
+          <p className="mt-5 max-w-xs text-sm leading-6 text-[var(--muted)]">{locale === "vi" ? "Tiếp nhận yêu cầu tìm nguồn nguyên liệu thực phẩm, vật liệu bao bì và hóa chất cho doanh nghiệp sản xuất tại Việt Nam." : "Material sourcing enquiries for food ingredients, packaging materials and chemicals for manufacturers in Vietnam."}</p>
         </div>
-        <address className="not-italic">
-          <p className="mb-3 font-mono text-xs uppercase tracking-[0.15em] text-[var(--accent-mint)]">{labels.sales}</p>
-          <EmailLink className="break-all text-sm text-white/78 transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--green-400)]" domain="mrtmaterials.com" local="sales" />
-          <a className="mt-3 block text-sm text-white/78 transition-colors hover:text-white" href={`tel:${phone.e164}`}>{phone.display}</a>
+        <address className="min-w-0 not-italic">
+          <p className="mb-3 font-mono text-xs uppercase tracking-[0.15em] text-[var(--green-600)]">{labels.sales}</p>
+          <EmailLink className="break-all text-sm text-[var(--muted)] transition-colors hover:text-[var(--green-600)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--green-600)]" domain="mrtmaterials.com" local="sales" />
+          <a className="mt-3 block text-sm text-[var(--muted)] transition-colors hover:text-[var(--green-600)]" href={`tel:${phone.e164}`}>{phone.display}</a>
         </address>
-        <address className="not-italic">
-          <p className="mb-3 font-mono text-xs uppercase tracking-[0.15em] text-[var(--accent-mint)]">{labels.accounts}</p>
-          <EmailLink className="break-all text-sm text-white/78 transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--green-400)]" domain={company.emails.accounts[1]} local={company.emails.accounts[0]} />
+        <address className="min-w-0 not-italic">
+          <p className="mb-3 font-mono text-xs uppercase tracking-[0.15em] text-[var(--green-600)]">{labels.accounts}</p>
+          <EmailLink className="break-all text-sm text-[var(--muted)] transition-colors hover:text-[var(--green-600)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--green-600)]" domain={company.emails.accounts[1]} local={company.emails.accounts[0]} />
         </address>
-        <address className="not-italic">
-          <p className="mb-3 font-mono text-xs uppercase tracking-[0.15em] text-[var(--accent-mint)]">{labels.address}</p>
-          <p className="max-w-56 text-sm leading-6 text-white/78">{address}</p>
+        <address className="min-w-0 not-italic">
+          <p className="mb-3 font-mono text-xs uppercase tracking-[0.15em] text-[var(--green-600)]">{labels.address}</p>
+          <p className="max-w-56 text-sm leading-6 text-[var(--muted)]">{address}</p>
         </address>
       </div>
-      <div className="mx-auto mt-16 flex max-w-[1440px] flex-wrap items-center gap-x-5 gap-y-2 px-5 text-sm text-white/62 sm:px-8 lg:px-12">
-        <Link className="transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--green-400)]" href={path("/products")}>{locale === "vi" ? "Sản phẩm" : "Products"}</Link>
-        <Link className="transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--green-400)]" href={path("/industries")}>{locale === "vi" ? "Ứng dụng" : "Applications"}</Link>
-        <Link className="transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--green-400)]" href={path("/insights")}>{labels.insights}</Link>
-        <Link className="transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--green-400)]" href={path("/about")}>{locale === "vi" ? "Giới thiệu" : "About"}</Link>
-        <Link className="transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--green-400)]" href={path("/contact")}>{locale === "vi" ? "Liên hệ" : "Contact"}</Link>
-        <Link className="transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--green-400)]" href={path("/privacy")}>{labels.privacy}</Link>
-        <Link className="transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--green-400)]" href={path("/terms")}>{labels.terms}</Link>
+      <div className="mx-auto mt-16 flex max-w-[1440px] flex-wrap items-center gap-x-5 gap-y-2 border-t border-[var(--line)] px-5 pt-6 text-sm text-[var(--muted)] sm:px-8 lg:px-12">
+        <Link className="transition-colors hover:text-[var(--green-600)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--green-600)]" href={path("/products")}>{locale === "vi" ? "Sản phẩm" : "Products"}</Link>
+        <Link className="transition-colors hover:text-[var(--green-600)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--green-600)]" href={path("/industries")}>{locale === "vi" ? "Ứng dụng" : "Applications"}</Link>
+        <Link className="transition-colors hover:text-[var(--green-600)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--green-600)]" href={path("/insights")}>{labels.insights}</Link>
+        <Link className="transition-colors hover:text-[var(--green-600)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--green-600)]" href={path("/about")}>{locale === "vi" ? "Giới thiệu" : "About"}</Link>
+        <Link className="transition-colors hover:text-[var(--green-600)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--green-600)]" href={path("/contact")}>{locale === "vi" ? "Liên hệ" : "Contact"}</Link>
+        <Link className="transition-colors hover:text-[var(--green-600)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--green-600)]" href={path("/privacy")}>{labels.privacy}</Link>
+        <Link className="transition-colors hover:text-[var(--green-600)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--green-600)]" href={path("/terms")}>{labels.terms}</Link>
       </div>
-      <p aria-hidden="true" className="mt-12 whitespace-nowrap text-center text-[15vw] font-semibold leading-[0.72] tracking-[-0.08em] text-white/[0.09] sm:mt-16">
-        MRT MATERIALS
-      </p>
     </footer>
   );
 }

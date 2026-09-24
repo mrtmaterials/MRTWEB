@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { ProductCard } from "@/components/catalog/product-card";
+import { ProductVisual } from "@/components/catalog/product-visual";
 import { ButtonLink } from "@/components/ui/button-link";
 import { Container } from "@/components/ui/container";
 import { getCategory, getProduct, getProductsByCategory, products } from "@/data/catalog";
@@ -26,12 +26,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!isLocale(lang)) return {};
   const product = getProduct(category, slug);
   if (!product) return {};
+  const categoryData = getCategory(category);
   return pageMetadata(
     lang,
     localize(product.name, lang),
     localize(product.summary, lang),
     `products/${category}/${slug}`,
-    product.image,
+    product.entryType === "material" ? categoryData?.image : product.image,
   );
 }
 
@@ -58,7 +59,7 @@ export default async function ProductPage({ params }: PageProps) {
     name,
     description: localize(product.summary, lang),
     category: localize(category.name, lang),
-    image: `${company.url}${product.image}`,
+    image: `${company.url}${product.entryType === "material" ? category.image : product.image}`,
     url: productUrl,
     inLanguage: lang,
     mainEntityOfPage: productUrl,
@@ -113,7 +114,7 @@ export default async function ProductPage({ params }: PageProps) {
             </p>
           </div>
           <div className="relative aspect-[4/3] overflow-hidden rounded-[var(--radius-card)] bg-white">
-            <Image alt={`${name} — ${localize(category.name, lang)}`} className="object-cover" fill priority sizes="(min-width: 1024px) 50vw, 100vw" src={product.image} />
+            <ProductVisual categoryName={localize(category.name, lang)} locale={lang} priority product={product} />
           </div>
         </section>
 

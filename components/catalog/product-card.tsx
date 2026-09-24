@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import { ProductVisual } from "@/components/catalog/product-visual";
 import type { Product } from "@/data/catalog";
 import type { Locale } from "@/lib/i18n";
 import { localize, withLocale } from "@/lib/i18n";
@@ -19,7 +19,7 @@ export function ProductCard({ product, locale, categoryName, detailsLabel, quote
   return (
     <article className="group flex h-full flex-col overflow-hidden rounded-[20px] bg-white shadow-[0_12px_34px_rgba(15,26,23,0.06)]">
       <Link href={href} className="relative block aspect-[4/3] overflow-hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--green-600)] focus-visible:ring-inset">
-        <Image src={product.image} alt={`${localize(product.name, locale)} — ${categoryName}`} fill sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw" className="object-cover transition-transform duration-500 group-hover:scale-[1.04] motion-reduce:transition-none" />
+        <ProductVisual categoryName={categoryName} locale={locale} product={product} />
       </Link>
       <div className="flex flex-1 flex-col gap-4 p-6">
         <p className="font-mono text-[11px] font-medium uppercase tracking-[0.14em] text-[var(--green-600)]">{categoryName}</p>

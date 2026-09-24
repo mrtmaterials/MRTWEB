@@ -20,7 +20,14 @@ export function ProductsExplorer({ categories, products, locale, copy }: Product
     const search = query.trim().toLocaleLowerCase(locale);
     return products.filter((product) => {
       const categoryMatch = category === "all" || product.category === category;
-      const searchable = [localize(product.name, locale), localize(product.summary, locale), ...localize(product.applications, locale)].join(" ").toLocaleLowerCase(locale);
+      const searchable = [
+        localize(product.name, locale),
+        product.chemicalName ? localize(product.chemicalName, locale) : "",
+        product.casNumber ?? "",
+        ...(product.grades ?? []),
+        localize(product.summary, locale),
+        ...localize(product.applications, locale),
+      ].join(" ").toLocaleLowerCase(locale);
       return categoryMatch && (!search || searchable.includes(search));
     });
   }, [category, locale, products, query]);
