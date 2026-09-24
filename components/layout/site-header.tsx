@@ -36,14 +36,14 @@ export function SiteHeader({ catalog, labels, locale }: SiteHeaderProps) {
   ];
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/70 bg-[color:rgba(244,246,247,0.78)] backdrop-blur-xl">
-      <div className="mx-auto flex min-h-[5.25rem] max-w-[1440px] items-center gap-4 px-5 sm:px-8 lg:px-12">
+    <header className="sticky top-0 z-50 border-b border-[var(--line)] bg-[var(--bg)]">
+      <div className="mx-auto flex min-h-24 max-w-[1440px] items-center gap-4 px-5 sm:px-8 lg:px-12">
         <Link
           aria-label="MRT Materials"
           className="relative z-10 shrink-0 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--green-600)]"
           href={path()}
         >
-          <BrandLogo className="h-[72px] w-[88px] object-contain sm:h-[78px] sm:w-[96px]" priority sizes="96px" />
+          <BrandLogo className="h-auto w-24 object-contain sm:w-28" priority sizes="(max-width: 640px) 96px, 112px" />
         </Link>
 
         <nav className="ml-auto hidden items-center gap-1 xl:flex">

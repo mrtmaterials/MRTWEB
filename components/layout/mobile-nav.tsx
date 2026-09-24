@@ -57,7 +57,7 @@ export function MobileNav({ closeLabel, items, openLabel, quoteHref, quoteLabel 
       </button>
       {isOpen ? (
         <div
-          className="absolute inset-x-0 top-full h-[calc(100dvh-5.25rem)] overflow-y-auto border-t border-[var(--line)] bg-[var(--bg)] px-5 py-7 shadow-xl"
+          className="absolute inset-x-0 top-full h-[calc(100dvh-6rem)] overflow-y-auto border-t border-[var(--line)] bg-[var(--bg)] px-5 py-7 shadow-xl"
           data-lenis-prevent
           id={panelId}
         >

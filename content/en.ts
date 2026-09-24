@@ -61,7 +61,7 @@ export const en = {
   ], note: "MRT Materials does not make certification claims on this website. Please contact us with your documentation requirements." },
   contact: {
     eyebrow: "Contact / RFQ", title: "Send a material sourcing request", intro: "Send the material name, application, grade or specification, quantity, required documents and delivery location.",
-    sales: "Sales", accounts: "Accounts", address: "Address", map: "Open location in OpenStreetMap", phone: "Phone",
+    sales: "Sales", accounts: "Accountant", address: "Address", map: "Open location in OpenStreetMap", phone: "Phone",
     form: { company: "Company name", contactPerson: "Contact person", email: "Email", phone: "Phone", country: "Country", product: "Product / material", grade: "Grade / specification", quantity: "Quantity & unit", deliveryDate: "Target delivery date", message: "Message", attachment: "Specification, sample COA or datasheet", submit: "Send request", required: "Required", honeypot: "Leave this field empty", fileNote: "Up to 5 PDF, Word, Excel or image files; maximum 10 MB in total.", success: "Your request has been sent to MRT Materials sales.", error: "Check the required fields and attachments, then try again or email sales@mrtmaterials.com." },
   },
   legal: {

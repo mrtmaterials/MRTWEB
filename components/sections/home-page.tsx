@@ -112,7 +112,7 @@ export function HomePage({ dictionary, locale }: HomePageProps) {
     <>
       <script dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd).replace(/</g, "\\u003c") }} type="application/ld+json" />
       <HomeScrollEffects />
-      <section className="hero-stage relative isolate min-h-[calc(100svh-5.25rem)] overflow-hidden bg-[var(--ink)] text-white">
+      <section className="hero-stage relative isolate min-h-[calc(100svh-6rem)] overflow-hidden bg-[var(--ink)] text-white">
         <Image
           alt="Quality-control specialist working in a controlled laboratory environment"
           className="hero-media absolute inset-0 h-full w-full object-cover object-[62%_center]"
@@ -124,7 +124,7 @@ export function HomePage({ dictionary, locale }: HomePageProps) {
         <div aria-hidden="true" className="absolute inset-0 bg-[linear-gradient(90deg,rgba(6,20,16,0.98)_0%,rgba(6,20,16,0.92)_42%,rgba(6,20,16,0.42)_72%,rgba(6,20,16,0.12)_100%)] max-lg:bg-[linear-gradient(180deg,rgba(6,20,16,0.78)_0%,rgba(6,20,16,0.92)_64%,rgba(6,20,16,0.98)_100%)]" />
         <div aria-hidden="true" className="hero-aperture absolute inset-0 hidden mix-blend-screen lg:block" />
         <div aria-hidden="true" className="film-grain absolute inset-0 opacity-[0.08] mix-blend-soft-light" />
-        <Container className="hero-container relative flex min-h-[calc(100svh-5.25rem)] items-end py-14 sm:py-20 lg:items-center lg:py-24">
+        <Container className="hero-container relative flex min-h-[calc(100svh-6rem)] items-end py-14 sm:py-20 lg:items-center lg:py-24">
           <div className="relative z-10 max-w-[72rem]">
             <Reveal>
               <p className="font-mono text-xs font-semibold uppercase tracking-[0.22em] text-[var(--accent-mint)]">
@@ -219,13 +219,13 @@ export function HomePage({ dictionary, locale }: HomePageProps) {
 
       <section className="process-section overflow-x-clip py-24 sm:py-32">
         <Container className="grid gap-14 xl:grid-cols-[0.72fr_1.28fr]">
-          <div className="xl:sticky xl:top-28 xl:self-start">
+          <div className="xl:self-start">
             <Reveal><SectionHeading eyebrow={home.process.eyebrow} title={home.process.title} /></Reveal>
             <div className="mt-8 h-1 overflow-hidden rounded-full bg-[var(--line)]"><div className="process-progress h-full w-full origin-left bg-[var(--green-600)]" /></div>
             <p className="mt-7 max-w-sm text-sm leading-7 text-[var(--muted)]">{locale === "vi" ? "Bốn bước dùng để xác nhận định danh nguyên liệu, yêu cầu kỹ thuật, điều kiện báo giá và thông tin giao nhận." : "The four stages confirm material identity, technical requirements, quotation details and delivery information."}</p>
           </div>
           <ol className="relative border-t border-[var(--ink)]">
-            <svg aria-hidden="true" className="absolute top-0 left-[2.35rem] hidden h-full w-3 overflow-visible xl:block" preserveAspectRatio="none" viewBox="0 0 12 1000">
+            <svg aria-hidden="true" className="absolute top-0 left-[5.5rem] hidden h-full w-3 overflow-visible xl:block" preserveAspectRatio="none" viewBox="0 0 12 1000">
               <path d="M6 0 V1000" fill="none" stroke="rgba(15,26,23,0.12)" strokeWidth="1" />
               <path className="route-path" d="M6 0 V1000" fill="none" pathLength="1" stroke="var(--green-600)" strokeLinecap="round" strokeWidth="2" />
             </svg>

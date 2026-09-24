@@ -7,7 +7,7 @@ type BrandLogoProps = {
 };
 
 /**
- * The supplied company logo is a raster lockup. Keep its full 4:3 artwork
+ * The supplied company logo is a raster lockup. Keep its full artwork
  * intact; use the separate brand-mark.svg only where a compact app icon is
  * required.
  */
